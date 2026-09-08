@@ -1,0 +1,72 @@
+.ha-db {
+  --ha-ink: #16354a;
+  --ha-muted: #486274;
+  --ha-blue: #184c71;
+  --ha-teal: #126462;
+  --ha-line: #d4e1e8;
+  color: var(--ha-ink);
+  font-family: inherit;
+  line-height: 1.6;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+}
+.ha-db *, .ha-db *::before, .ha-db *::after { box-sizing: border-box; }
+.ha-db .ha-heading { margin-bottom: 1.6rem; }
+.ha-db .ha-eyebrow {
+  color: var(--ha-teal);
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .075em;
+  text-transform: uppercase;
+  margin: 0 0 .45rem;
+}
+.ha-db .ha-heading h3 { color: var(--ha-ink); font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.2; margin: 0 0 .65rem; font-weight: 750; }
+.ha-db .ha-heading > p:last-child { color: var(--ha-muted); margin: 0; }
+.ha-db.ha-overview { background: #f2f7fa; border: 1px solid var(--ha-line); border-radius: 1.25rem; padding: clamp(1rem, 3vw, 2rem); }
+.ha-db .ha-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: 1.25rem; align-items: stretch; }
+.ha-db .ha-card { min-width: 0; background: #ffffff; color: var(--ha-ink); border: 1px solid var(--ha-line); border-radius: 1rem; padding: 1.5rem; display: flex; flex-direction: column; box-shadow: 0 4px 16px rgba(22, 53, 74, .045); }
+.ha-db .ha-card-top { display: flex; gap: .6rem; align-items: flex-start; justify-content: space-between; margin-bottom: 1.3rem; }
+.ha-db .ha-badge { display: inline-block; border: 1px solid #bdd4e5; border-radius: 2rem; background: #eaf2fa; color: var(--ha-blue); font-size: .85rem; font-weight: 700; padding: .3rem .8rem; max-width: 100%; }
+.ha-db .ha-actions { flex: 0 0 auto; }
+.ha-db .ha-actions:empty { display: none; }
+.ha-db .ha-field-caption { color: var(--ha-muted); font-size: .78rem; font-weight: 700; line-height: 1.4; margin: 0 0 .5rem; }
+.ha-db .ha-card-title { color: var(--ha-ink); font-size: 1.5rem; line-height: 1.25; font-weight: 750; margin: 0 0 1.3rem; hyphens: auto; }
+.ha-db .ha-question { border-left: 3px solid #3e8b88; border-radius: 0 .65rem .65rem 0; background: #eef8f6; padding: 1rem 1.1rem; margin-bottom: 1.3rem; }
+.ha-db .ha-question .ha-field-caption { color: var(--ha-teal); }
+.ha-db .ha-question-text { font-size: 1rem; line-height: 1.65; }
+.ha-db .ha-question-text > :last-child, .ha-db .ha-members > :last-child { margin-bottom: 0; }
+.ha-db .ha-card-bottom { margin-top: auto; }
+.ha-db .ha-members { color: var(--ha-ink); font-size: .9rem; }
+.ha-db .ha-detail-link { color: var(--ha-blue); display: inline-flex; align-items: center; gap: .7rem; min-height: 44px; padding: .5rem 0; margin-top: .75rem; font-weight: 700; text-decoration: underline; text-underline-offset: .2em; }
+.ha-db .ha-detail-link:hover { color: #10334d; }
+.ha-db a:focus-visible, .ha-db button:focus-visible, .ha-db input:focus-visible, .ha-db textarea:focus-visible { outline: 3px solid #184c71; outline-offset: 3px; }
+.ha-db.ha-single { max-width: 56rem; margin-inline: auto; }
+.ha-db.ha-single .ha-card { padding: clamp(1.25rem, 4vw, 2.5rem); }
+.ha-db.ha-single .ha-card-title { font-size: clamp(1.6rem, 3vw, 2.3rem); }
+.ha-db.ha-entry { max-width: 52rem; margin-inline: auto; background: #ffffff; padding: clamp(1rem, 3vw, 2rem); border: 1px solid var(--ha-line); border-radius: 1.25rem; }
+.ha-db .ha-notice, .ha-db .ha-check { background: #eef8f6; border: 1px solid #bddbd7; border-radius: .75rem; padding: 1rem 1.2rem; }
+.ha-db .ha-notice strong, .ha-db .ha-check strong { color: var(--ha-teal); }
+.ha-db .ha-notice p, .ha-db .ha-check p { margin: .3rem 0 0; }
+.ha-db .ha-required-note { color: var(--ha-muted); font-size: .85rem; margin: 1.2rem 0 0; }
+.ha-db .ha-form-fields { margin: .2rem 0 1.5rem; }
+.ha-db .ha-field { min-width: 0; }
+.ha-db .ha-form-fields > .ha-field { padding: 1.4rem 0; border-bottom: 1px solid var(--ha-line); }
+.ha-db .ha-field-label { color: var(--ha-ink); font-weight: 700; display: block; margin: 0 0 .45rem; font-size: 1.05rem; }
+.ha-db .ha-step { display: inline-block; color: var(--ha-teal); font-size: .8rem; margin-right: .4rem; }
+.ha-db .ha-hint { color: var(--ha-muted); font-size: .9rem; margin: 0 0 .7rem; }
+.ha-db .ha-control input[type="text"], .ha-db .ha-control textarea, .ha-db.ha-search input[type="text"] { display: block; width: 100%; max-width: 100%; min-height: 46px; border: 1px solid #8099a8; border-radius: .5rem; padding: .7rem .85rem; font: inherit; color: var(--ha-ink); background: #ffffff; }
+.ha-db .ha-control textarea { min-height: 8rem; resize: vertical; }
+.ha-db .ha-control input::placeholder, .ha-db .ha-control textarea::placeholder { color: #526978; opacity: 1; }
+.ha-db .ha-control > div { width: 100%; }
+.ha-db.ha-search { padding: 1rem 0; }
+.ha-db .ha-search-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+@media (max-width: 600px) {
+  .ha-db .ha-card { padding: 1.1rem; }
+  .ha-db .ha-card-title { font-size: 1.3rem; }
+  .ha-db .ha-search-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (forced-colors: active) {
+  .ha-db .ha-badge, .ha-db .ha-question, .ha-db .ha-notice, .ha-db .ha-check { border: 1px solid CanvasText; }
+}

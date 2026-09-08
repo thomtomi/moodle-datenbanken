@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<preset>
+  <description>Hausarbeiten: eine Erfassung je Gruppe mit vier Textfeldern und responsiven Karten. Moodle-Gruppenmodus nach dem Import separat konfigurieren.</description>
+  <settings>
+    <intro>&lt;div class="ha-instruction"&gt;
+  &lt;h3 style="color: #000000;"&gt;Einführung&lt;/h3&gt;
+  &lt;p&gt;Halten Sie als Gruppe fest, welches Thema Sie in Ihrer Hausarbeit untersuchen und welche Forschungsfrage Sie beantworten möchten. Eine Person erfasst die gemeinsam abgestimmten Angaben für die ganze Gruppe.&lt;/p&gt;
+  &lt;h3 style="color: #000000;"&gt;Lernziele&lt;/h3&gt;
+  &lt;p&gt;Sie sind in der Lage, ein Thema mit einer klar eingegrenzten Forschungsfrage zu verbinden und Ihre gemeinsame Arbeitsgrundlage nachvollziehbar zu dokumentieren.&lt;/p&gt;
+  &lt;h3 style="color: #000000;"&gt;Auftrag&lt;/h3&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Stimmen Sie Gruppenname, Gruppenmitglieder, Thema und Forschungsfrage gemeinsam ab. Bestimmen Sie eine Person, die den Eintrag übernimmt.&lt;/li&gt;
+    &lt;li&gt;Prüfen Sie in der Listenansicht, ob Ihre Gruppe bereits einen Eintrag hat. Lassen Sie einen vorhandenen Eintrag durch die eintragende Person bearbeiten, statt einen weiteren anzulegen.&lt;/li&gt;
+    &lt;li&gt;Öffnen Sie die Erfassungsansicht. Falls Moodle eine Gruppenauswahl anzeigt, wählen Sie Ihre Hausarbeitsgruppe. Übernehmen Sie deren Namen genau in das Feld «Gruppenname», zum Beispiel «Gruppe 01».&lt;/li&gt;
+    &lt;li&gt;Erfassen Sie alle Gruppenmitglieder einschliesslich der eintragenden Person. Trennen Sie die Namen durch ein Semikolon und ein Leerzeichen, zum Beispiel «Meier; Müller». Ergänzen Sie bei gleichen Nachnamen den Vornamen.&lt;/li&gt;
+    &lt;li&gt;Tragen Sie ein aussagekräftiges Thema und eine konkrete Forschungsfrage ein. Grenzen Sie den untersuchten Zusammenhang so ein, dass die Frage im Rahmen Ihrer Hausarbeit bearbeitet werden kann.&lt;/li&gt;
+    &lt;li&gt;Prüfen Sie gemeinsam alle vier Angaben und speichern Sie den Eintrag. Kontrollieren Sie danach die Darstellung in der Listen- oder Einzelansicht.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;Als Ergebnis hinterlegen Sie genau einen vollständigen, gemeinsam abgestimmten Datenbankeintrag pro Gruppe in dieser Aktivität; eine zusätzliche Datei ist für diese Erfassung nicht abzugeben.&lt;/p&gt;
+&lt;/div&gt;
+</intro>
+    <comments>0</comments>
+    <requiredentries>0</requiredentries>
+    <requiredentriestoview>0</requiredentriestoview>
+    <maxentries>1</maxentries>
+    <rssarticles>0</rssarticles>
+    <approval>0</approval>
+    <defaultsortdir>0</defaultsortdir>
+    <defaultsort>Gruppenname</defaultsort>
+  </settings>
+  <field>
+    <type>text</type>
+    <name>Gruppenname</name>
+    <description>Name der zugeordneten Moodle-Gruppe, zum Beispiel Gruppe 01.</description>
+    <required>1</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>text</type>
+    <name>Gruppenmitglieder</name>
+    <description>Alle Namen, getrennt durch Semikolon und Leerzeichen, zum Beispiel Meier; Müller.</description>
+    <required>1</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>text</type>
+    <name>Thema der Hausarbeit</name>
+    <description>Kurzer, aussagekräftiger Titel des gemeinsam gewählten Themas.</description>
+    <required>1</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>text</type>
+    <name>Forschungsfrage</name>
+    <description>Konkrete, eingegrenzte und gemeinsam abgestimmte Forschungsfrage.</description>
+    <required>1</required>
+    <param1>0</param1>
+  </field>
+</preset>
