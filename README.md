@@ -1,11 +1,15 @@
 ---
 title: "Moodle-Datenbanken"
-date: 2026-09-08
+date: 2026-09-09
 ---
 
 # Moodle-Datenbanken
 
 Moodle-Datenbank-Aktivitäten für die Berufsmaturitätsschule: Felddefinitionen, Vorlagen, Presets und Importdateien.
+
+## Vorbereitete Datenbanken
+
+- [Hausarbeit-Gruppenerfassung](03-datenbanken/hausarbeit-gruppenerfassung/README.md): vier Exportfelder, geführte Erfassung und responsive Karten; für die eigene Gruppe und die Lehrperson. ZIP, lokale Vorschau und Prüfprotokoll sind im Aktivitätsordner enthalten. Moodle-Import und Gruppenzugriff sind noch in der Zielinstanz zu testen.
 
 ## Regeln für Agents
 
@@ -14,6 +18,14 @@ Die gemeinsamen Regeln und der vollständige Workflow stehen in [00-setup/agent_
 Die [Beispieldatei](00-setup/agent_instruction_example.md) dient nur als Referenz aus einem anderen Projekt.
 
 Die [Redaktionsvorlage zum Instruktionsdesign](00-setup/instruktionsdesign_template.md) bildet die gemeinsame Grundlage für das Vorgehen der Lernenden. Die Agents wählen je Datenbank die passenden Abschnitte aus und dokumentieren die Auswahl kurz in der Aktivitätsspezifikation.
+
+## Lokaler Agent mit Continue
+
+Für VSCodium mit Continue und lokalem Ollama stehen die projektbezogenen Regeln in `.continue/rules/` bereit. Die [Einrichtung für Qwen3 Coder 30B](00-setup/continue-qwen3-coder-30b.md) beschreibt die einmalige VM-Konfiguration, den Kontrollauftrag und die Modellparameter. Die kopierbare [Continue-Konfiguration](00-setup/continue-config-qwen3-coder-30b.yaml) gehört auf der VM nach `~/.continue/config.yaml`, nicht in eine produktive Moodle-Instanz.
+
+## Lokales RAG
+
+Das [lokale RAG](01-kontextwissen/rag/README.md) kombiniert geprüfte Projektdokumente mit kuratierten Internetquellen und beantwortet Fragen lokal über Ollama. Es enthält einen CLI-Workflow für Quellenabruf, manuellen MoodleDocs-Import, Embedding-Index und quellenbasierte Antworten mit `qwen3-coder:30b`.
 
 ## Einbindung überprüfen
 

@@ -1,0 +1,19 @@
+{
+  "reference": "Moodle v5.1.0; Zielinstanz offen, kein Moodle-Importtest",
+  "fields": 44,
+  "seats": 21,
+  "files": {
+    "preset.xml": "6376cddf0cd9b5b571323fd95697b29608275fde447aa927ad87e97b7e3bd262",
+    "singletemplate.html": "c981bf3c08649fa14c0751f14d097a9891218f19f904ef2cc84656b0e0f25213",
+    "listtemplateheader.html": "2e3193fa5f12d507d473611d817e93afb0b515d04e2f66cd06cb7089d5f851ca",
+    "listtemplatefooter.html": "5eb51658c4ff035fecdeb4c269efb2d33a67ac9928a2a6c2d2d9a14630a0ec35",
+    "listtemplate.html": "d183810344d001c80f3ad771205c9b68313db856cf396154c2723709074a925b",
+    "addtemplate.html": "9cebb9a23d69b54701151cfd3ff1128fe9383a565288ff9b190cd1f6a2af3b8a",
+    "asearchtemplate.html": "197ee402dedecbacf8c7af115ff340eefd9ce0b86dff9ad0742f5da528e0d67d",
+    "rsstemplate.html": "54615e65a2ab15c49d0abe668958c618c536e699d8a79ff738c197fe81d090a8",
+    "rsstitletemplate.html": "be8fb230df8a4660e0d1970d027e1cb4d007f0dd409be102339fd4346530d122",
+    "jstemplate.js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "csstemplate.css": "0007b4e0551353e12d9ebb2c0935d7981a99adf2fd32881032765fd349fbafdb"
+  },
+  "zip_sha256": "c852c7fa2d73f8ba413858d7e3479c6e694743e8cdf25c70f905d55eeb0bfc16"
+}

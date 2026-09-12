@@ -1,0 +1,277 @@
+<div class="lp-db lp-db-add">
+  <header class="lp-add-header">
+    <div>
+      <p class="lp-eyebrow">Planung</p>
+      <h3>Lektionsplanung erfassen</h3>
+    </div>
+    <p class="lp-add-note">Klasse, Datum, Themen und Zeitfenster</p>
+  </header>
+
+  <section class="lp-form-band">
+    <div class="lp-section-title">
+      <span class="lp-section-mark">1</span>
+      <div>
+        <p class="lp-eyebrow">Basis</p>
+        <h4>Unterricht</h4>
+      </div>
+    </div>
+    <div class="lp-form-grid lp-form-grid-main">
+      <div class="lp-field" data-lp-field="klasse">
+        <span class="lp-label">Klasse</span>
+        [[klasse]]
+      </div>
+      <div class="lp-field" data-placeholder="2026-09-04" data-lp-date data-lp-field="unterrichtsdatum">
+        <span class="lp-label">Unterrichtsdatum</span>
+        [[unterrichtsdatum]]
+      </div>
+      <div class="lp-field lp-week-field" data-lp-field="kalenderwoche">
+        <span class="lp-label">Kalenderwoche</span>
+        <span class="lp-auto-week" data-lp-week-output></span>
+        <div class="lp-auto-week-storage">[[kalenderwoche]]</div>
+      </div>
+      <div class="lp-field lp-field-wide lp-topic-field" data-lp-field="thema" data-lp-topic-picker>
+        <span class="lp-label">Themen</span>
+        [[thema]]
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-form-band">
+    <div class="lp-section-title">
+      <span class="lp-section-mark">2</span>
+      <div>
+        <p class="lp-eyebrow">Ablauf</p>
+        <h4>Lektionsblöcke</h4>
+      </div>
+    </div>
+
+    <details class="lp-lesson-editor" open>
+      <summary>1. Lektion</summary>
+      <div class="lp-field lp-slot-field">
+        <label class="lp-label" for="lp-slot-1">Zeitfenster der 1. Lektion</label>
+        <select id="lp-slot-1" class="lp-slot-select" disabled data-lp-slot-select data-lp-target-start="lektion_1_beginn" data-lp-target-end="lektion_1_ende">
+          <option value="">Zeitfenster wählen</option>
+          <option value="07:40|08:25">07:40 bis 08:25</option>
+          <option value="08:35|09:20">08:35 bis 09:20</option>
+          <option value="09:25|10:10">09:25 bis 10:10</option>
+          <option value="10:25|11:10">10:25 bis 11:10</option>
+          <option value="11:20|12:05">11:20 bis 12:05</option>
+          <option value="12:10|12:55">12:10 bis 12:55</option>
+          <option value="12:55|13:40">12:55 bis 13:40</option>
+          <option value="13:50|14:35">13:50 bis 14:35</option>
+          <option value="14:45|15:30">14:45 bis 15:30</option>
+          <option value="15:40|16:25">15:40 bis 16:25</option>
+          <option value="16:30|17:15">16:30 bis 17:15</option>
+          <option value="17:30|18:15">17:30 bis 18:15</option>
+        </select>
+      </div>
+      <div class="lp-time-grid">
+        <div class="lp-field" data-lp-field="lektion_1_beginn"><span class="lp-label">Beginn</span>[[lektion_1_beginn]]</div>
+        <div class="lp-field" data-lp-field="lektion_1_ende"><span class="lp-label">Ende</span>[[lektion_1_ende]]</div>
+      </div>
+      <div class="lp-field lp-field-wide"><span class="lp-label">Aktivitäten</span>[[lektion_1_aktivitaeten]]</div>
+    </details>
+
+    <details class="lp-lesson-editor" open>
+      <summary>2. Lektion</summary>
+      <div class="lp-field lp-slot-field">
+        <label class="lp-label" for="lp-slot-2">Zeitfenster der 2. Lektion</label>
+        <select id="lp-slot-2" class="lp-slot-select" disabled data-lp-slot-select data-lp-target-start="lektion_2_beginn" data-lp-target-end="lektion_2_ende">
+          <option value="">Zeitfenster wählen</option>
+          <option value="07:40|08:25">07:40 bis 08:25</option>
+          <option value="08:35|09:20">08:35 bis 09:20</option>
+          <option value="09:25|10:10">09:25 bis 10:10</option>
+          <option value="10:25|11:10">10:25 bis 11:10</option>
+          <option value="11:20|12:05">11:20 bis 12:05</option>
+          <option value="12:10|12:55">12:10 bis 12:55</option>
+          <option value="12:55|13:40">12:55 bis 13:40</option>
+          <option value="13:50|14:35">13:50 bis 14:35</option>
+          <option value="14:45|15:30">14:45 bis 15:30</option>
+          <option value="15:40|16:25">15:40 bis 16:25</option>
+          <option value="16:30|17:15">16:30 bis 17:15</option>
+          <option value="17:30|18:15">17:30 bis 18:15</option>
+        </select>
+      </div>
+      <div class="lp-time-grid">
+        <div class="lp-field" data-lp-field="lektion_2_beginn"><span class="lp-label">Beginn</span>[[lektion_2_beginn]]</div>
+        <div class="lp-field" data-lp-field="lektion_2_ende"><span class="lp-label">Ende</span>[[lektion_2_ende]]</div>
+      </div>
+      <div class="lp-field lp-field-wide"><span class="lp-label">Aktivitäten</span>[[lektion_2_aktivitaeten]]</div>
+    </details>
+
+    <details class="lp-lesson-editor" open>
+      <summary>3. Lektion</summary>
+      <div class="lp-field lp-slot-field">
+        <label class="lp-label" for="lp-slot-3">Zeitfenster der 3. Lektion</label>
+        <select id="lp-slot-3" class="lp-slot-select" disabled data-lp-slot-select data-lp-target-start="lektion_3_beginn" data-lp-target-end="lektion_3_ende">
+          <option value="">Zeitfenster wählen</option>
+          <option value="07:40|08:25">07:40 bis 08:25</option>
+          <option value="08:35|09:20">08:35 bis 09:20</option>
+          <option value="09:25|10:10">09:25 bis 10:10</option>
+          <option value="10:25|11:10">10:25 bis 11:10</option>
+          <option value="11:20|12:05">11:20 bis 12:05</option>
+          <option value="12:10|12:55">12:10 bis 12:55</option>
+          <option value="12:55|13:40">12:55 bis 13:40</option>
+          <option value="13:50|14:35">13:50 bis 14:35</option>
+          <option value="14:45|15:30">14:45 bis 15:30</option>
+          <option value="15:40|16:25">15:40 bis 16:25</option>
+          <option value="16:30|17:15">16:30 bis 17:15</option>
+          <option value="17:30|18:15">17:30 bis 18:15</option>
+        </select>
+      </div>
+      <div class="lp-time-grid">
+        <div class="lp-field" data-lp-field="lektion_3_beginn"><span class="lp-label">Beginn</span>[[lektion_3_beginn]]</div>
+        <div class="lp-field" data-lp-field="lektion_3_ende"><span class="lp-label">Ende</span>[[lektion_3_ende]]</div>
+      </div>
+      <div class="lp-field lp-field-wide"><span class="lp-label">Aktivitäten</span>[[lektion_3_aktivitaeten]]</div>
+    </details>
+
+    <details class="lp-lesson-editor" data-open-if-filled>
+      <summary>4. Lektion</summary>
+      <div class="lp-field lp-slot-field">
+        <label class="lp-label" for="lp-slot-4">Zeitfenster der 4. Lektion</label>
+        <select id="lp-slot-4" class="lp-slot-select" disabled data-lp-slot-select data-lp-target-start="lektion_4_beginn" data-lp-target-end="lektion_4_ende">
+          <option value="">Zeitfenster wählen</option>
+          <option value="07:40|08:25">07:40 bis 08:25</option>
+          <option value="08:35|09:20">08:35 bis 09:20</option>
+          <option value="09:25|10:10">09:25 bis 10:10</option>
+          <option value="10:25|11:10">10:25 bis 11:10</option>
+          <option value="11:20|12:05">11:20 bis 12:05</option>
+          <option value="12:10|12:55">12:10 bis 12:55</option>
+          <option value="12:55|13:40">12:55 bis 13:40</option>
+          <option value="13:50|14:35">13:50 bis 14:35</option>
+          <option value="14:45|15:30">14:45 bis 15:30</option>
+          <option value="15:40|16:25">15:40 bis 16:25</option>
+          <option value="16:30|17:15">16:30 bis 17:15</option>
+          <option value="17:30|18:15">17:30 bis 18:15</option>
+        </select>
+      </div>
+      <div class="lp-time-grid">
+        <div class="lp-field" data-lp-field="lektion_4_beginn"><span class="lp-label">Beginn</span>[[lektion_4_beginn]]</div>
+        <div class="lp-field" data-lp-field="lektion_4_ende"><span class="lp-label">Ende</span>[[lektion_4_ende]]</div>
+      </div>
+      <div class="lp-field lp-field-wide"><span class="lp-label">Aktivitäten</span>[[lektion_4_aktivitaeten]]</div>
+    </details>
+
+    <details class="lp-lesson-editor" data-open-if-filled>
+      <summary>5. Lektion</summary>
+      <div class="lp-field lp-slot-field">
+        <label class="lp-label" for="lp-slot-5">Zeitfenster der 5. Lektion</label>
+        <select id="lp-slot-5" class="lp-slot-select" disabled data-lp-slot-select data-lp-target-start="lektion_5_beginn" data-lp-target-end="lektion_5_ende">
+          <option value="">Zeitfenster wählen</option>
+          <option value="07:40|08:25">07:40 bis 08:25</option>
+          <option value="08:35|09:20">08:35 bis 09:20</option>
+          <option value="09:25|10:10">09:25 bis 10:10</option>
+          <option value="10:25|11:10">10:25 bis 11:10</option>
+          <option value="11:20|12:05">11:20 bis 12:05</option>
+          <option value="12:10|12:55">12:10 bis 12:55</option>
+          <option value="12:55|13:40">12:55 bis 13:40</option>
+          <option value="13:50|14:35">13:50 bis 14:35</option>
+          <option value="14:45|15:30">14:45 bis 15:30</option>
+          <option value="15:40|16:25">15:40 bis 16:25</option>
+          <option value="16:30|17:15">16:30 bis 17:15</option>
+          <option value="17:30|18:15">17:30 bis 18:15</option>
+        </select>
+      </div>
+      <div class="lp-time-grid">
+        <div class="lp-field" data-lp-field="lektion_5_beginn"><span class="lp-label">Beginn</span>[[lektion_5_beginn]]</div>
+        <div class="lp-field" data-lp-field="lektion_5_ende"><span class="lp-label">Ende</span>[[lektion_5_ende]]</div>
+      </div>
+      <div class="lp-field lp-field-wide"><span class="lp-label">Aktivitäten</span>[[lektion_5_aktivitaeten]]</div>
+    </details>
+
+    <details class="lp-lesson-editor" data-open-if-filled>
+      <summary>6. Lektion</summary>
+      <div class="lp-field lp-slot-field">
+        <label class="lp-label" for="lp-slot-6">Zeitfenster der 6. Lektion</label>
+        <select id="lp-slot-6" class="lp-slot-select" disabled data-lp-slot-select data-lp-target-start="lektion_6_beginn" data-lp-target-end="lektion_6_ende">
+          <option value="">Zeitfenster wählen</option>
+          <option value="07:40|08:25">07:40 bis 08:25</option>
+          <option value="08:35|09:20">08:35 bis 09:20</option>
+          <option value="09:25|10:10">09:25 bis 10:10</option>
+          <option value="10:25|11:10">10:25 bis 11:10</option>
+          <option value="11:20|12:05">11:20 bis 12:05</option>
+          <option value="12:10|12:55">12:10 bis 12:55</option>
+          <option value="12:55|13:40">12:55 bis 13:40</option>
+          <option value="13:50|14:35">13:50 bis 14:35</option>
+          <option value="14:45|15:30">14:45 bis 15:30</option>
+          <option value="15:40|16:25">15:40 bis 16:25</option>
+          <option value="16:30|17:15">16:30 bis 17:15</option>
+          <option value="17:30|18:15">17:30 bis 18:15</option>
+        </select>
+      </div>
+      <div class="lp-time-grid">
+        <div class="lp-field" data-lp-field="lektion_6_beginn"><span class="lp-label">Beginn</span>[[lektion_6_beginn]]</div>
+        <div class="lp-field" data-lp-field="lektion_6_ende"><span class="lp-label">Ende</span>[[lektion_6_ende]]</div>
+      </div>
+      <div class="lp-field lp-field-wide"><span class="lp-label">Aktivitäten</span>[[lektion_6_aktivitaeten]]</div>
+    </details>
+  </section>
+
+  <section class="lp-form-band">
+    <div class="lp-section-title">
+      <span class="lp-section-mark">3</span>
+      <div>
+        <p class="lp-eyebrow">Material</p>
+        <h4>Zusatzmaterial</h4>
+      </div>
+    </div>
+    <div class="lp-form-grid lp-form-grid-wide">
+      <div class="lp-field lp-field-wide"><span class="lp-label">Text oder Hinweis</span>[[zusatzmaterial_text]]</div>
+    </div>
+    <div class="lp-form-grid lp-form-grid-main">
+      <div class="lp-field"><span class="lp-label">Link</span>[[zusatzmaterial_link]]</div>
+      <div class="lp-field"><span class="lp-label">Datei</span>[[zusatzmaterial_datei]]</div>
+    </div>
+  </section>
+
+  <section class="lp-form-band">
+    <div class="lp-section-title">
+      <span class="lp-section-mark">4</span>
+      <div>
+        <p class="lp-eyebrow">Aufträge</p>
+        <h4>Hausaufgaben</h4>
+      </div>
+    </div>
+    <div class="lp-field lp-field-wide">[[hausaufgaben]]</div>
+  </section>
+
+  <details class="lp-form-band lp-details-band" data-open-if-filled>
+    <summary>Leistungsnachweis</summary>
+    <div class="lp-form-grid lp-form-grid-main">
+      <div class="lp-field" data-placeholder="z. B. Biologieprüfung I"><span class="lp-label">Titel</span>[[leistungsnachweis_titel]]</div>
+      <div class="lp-field" data-placeholder="2026-09-11" data-lp-date><span class="lp-label">Datum</span>[[leistungsnachweis_datum]]</div>
+      <div class="lp-field" data-placeholder="08:15"><span class="lp-label">Beginn</span>[[leistungsnachweis_beginn]]</div>
+      <div class="lp-field" data-placeholder="09:00"><span class="lp-label">Ende</span>[[leistungsnachweis_ende]]</div>
+    </div>
+    <div class="lp-field lp-field-wide"><span class="lp-label">Themen</span>[[leistungsnachweis_themen]]</div>
+  </details>
+
+  <details class="lp-form-band lp-details-band" data-open-if-filled>
+    <summary>Stützkurs</summary>
+    <div class="lp-form-grid lp-form-grid-main">
+      <div class="lp-field" data-placeholder="z. B. Prüfungsvorbereitung"><span class="lp-label">Anliegen oder Titel</span>[[stuetzkurs_titel]]</div>
+      <div class="lp-field" data-placeholder="2026-09-10" data-lp-date><span class="lp-label">Datum</span>[[stuetzkurs_datum]]</div>
+      <div class="lp-field" data-placeholder="13:30"><span class="lp-label">Beginn</span>[[stuetzkurs_beginn]]</div>
+      <div class="lp-field" data-placeholder="14:30"><span class="lp-label">Ende</span>[[stuetzkurs_ende]]</div>
+    </div>
+    <div class="lp-field lp-field-wide"><span class="lp-label">Ort</span>[[stuetzkurs_ort]]</div>
+    <div class="lp-form-grid lp-form-grid-main">
+      <div class="lp-field" data-placeholder="https://teams.microsoft.com/..."><span class="lp-label">Teams-Link</span>[[stuetzkurs_teams_url]]</div>
+      <div class="lp-field" data-placeholder="https://moodle.strickhof.ch/..."><span class="lp-label">Anmeldelink</span>[[stuetzkurs_anmeldung_url]]</div>
+    </div>
+    <div class="lp-field lp-field-wide"><span class="lp-label">Hinweis</span>[[stuetzkurs_hinweis]]</div>
+  </details>
+
+  <section class="lp-form-band">
+    <div class="lp-section-title">
+      <span class="lp-section-mark">5</span>
+      <div>
+        <p class="lp-eyebrow">Kompetenzen</p>
+        <h4>Lernziele</h4>
+      </div>
+    </div>
+    <p class="lp-add-note">Formulieren Sie die Lernziele mit «Sie sind in der Lage, …».</p>
+    <div class="lp-field lp-field-wide" data-lp-prefill="Sie sind in der Lage, ">[[lernziele]]</div>
+  </section>
+</div>

@@ -1,0 +1,229 @@
+{
+  "version": 1,
+  "plans": [
+    {
+      "id": "2e0a68c1-f91a-46b9-8323-134c19690c8a",
+      "class_name": "BM1-2620",
+      "date": "2026-09-03",
+      "calendar_week": 36,
+      "lessons": [
+        {
+          "id": "21a6d142-8ef5-455a-b324-f44b49677b36",
+          "label": "1. Lektion",
+          "start_time": "13:50",
+          "end_time": "14:35",
+          "activities": [
+            {
+              "id": "ac61ca70-2e8e-4396-835b-a6498e7abc57",
+              "content_html": "[fa-book] Eigenschaften des Lebendigen"
+            },
+            {
+              "id": "ca15a88a-6027-49f7-9026-2a2515d063df",
+              "content_html": "[fa-flag] Definition von Biologie"
+            },
+            {
+              "id": "34955bbe-7ec8-4d12-9dc0-a9a5615c83d3",
+              "content_html": "[fa-sitemap] Ebenen der biologischen Organisation"
+            },
+            {
+              "id": "9b0f889c-d7b6-4d4d-b49e-c92253eb94db",
+              "content_html": "[fa-book] chemische Grundlagen"
+            }
+          ]
+        },
+        {
+          "id": "bd5e7557-9b73-4a5e-ad84-67ab5dbf9e3e",
+          "label": "2. Lektion",
+          "start_time": "14:45",
+          "end_time": "15:30",
+          "activities": [
+            {
+              "id": "9b395ea7-a48b-4b70-9a88-7606cf06ee94",
+              "content_html": "Eigenschaften von Wasser"
+            },
+            {
+              "id": "d2c902bc-f5c7-45e8-b61a-4e6a1857bd53",
+              "content_html": "Biomoleküle"
+            }
+          ]
+        }
+      ],
+      "homework": [
+        {
+          "id": "2063e9a0-43e2-493d-b9cb-ca9a316ff50a",
+          "content_html": "Aufgabe | Die Ebenen in der Biologie"
+        }
+      ],
+      "assessment": {
+        "title": "Biologieprüfung I",
+        "date": "2026-10-22",
+        "start_time": "13:50",
+        "end_time": "14:35",
+        "topics": [
+          {
+            "title": "Grundlagen",
+            "description_html": "Chemische und biologische Grundlagen"
+          },
+          {
+            "title": "Cytologie",
+            "description_html": "Aufbau und Funktion von Zellen und ihren Bestandteilen"
+          }
+        ]
+      },
+      "support_course": {
+        "title": "Prüfungsvorbereitung",
+        "date": "2026-10-01",
+        "start_time": "17:20",
+        "end_time": "18:05",
+        "location_html": "🏫 Strickhof Lindau, Zimmer 603",
+        "teams_url": "https://teams.microsoft.com/meet/353888362433281?p=meg5EvW21NZVSy7D5H",
+        "registration_url": "https://moodle.strickhof.ch/mod/scheduler/view.php?id=72344",
+        "note_html": ""
+      },
+      "learning_objectives": [
+        {
+          "id": "df2fdefa-4bcd-4fc5-9af4-5a7e4b5c5819",
+          "content_html": "die Eigenschaften des Lebendigen zu erläutern und diese anhand von Beispielen zu veranschaulichen."
+        },
+        {
+          "id": "5cb3ac0c-8836-4b8b-bbd5-641ceeabbc08",
+          "content_html": "die hierarchische Organisation der Biosysteme zu benennen."
+        },
+        {
+          "id": "e5a28b8a-7ccb-4cec-9775-df88931b4a4a",
+          "content_html": "grundlegende Fachbegriffe der Systematik zu verwenden."
+        },
+        {
+          "id": "b6b68d2a-610a-40a5-8cd2-d51a36ea5dd4",
+          "content_html": "einen Organismus den drei Domänen zuzuordnen und – falls er zur Domäne der Eukarya gehört – eine weitere Einteilung in die vier Reiche vorzunehmen."
+        },
+        {
+          "id": "d86712dd-c9cc-4ef2-87ce-ee46c45c2665",
+          "content_html": "die hierarchische Klassifikation (Domäne, Reich, Stamm, Klasse, Ordnung usw.) wiederzugeben."
+        },
+        {
+          "id": "e34c4290-3940-4f0e-8b4d-a2eaedda8031",
+          "content_html": "die grobe Funktion der genetischen Information für die Biologie und insbesondere für die Systematik zu erklären."
+        },
+        {
+          "id": "75acca77-191d-42dc-b2bf-b308f6a4fcf6",
+          "content_html": "anzugeben, welche Elemente häufig in Biomolekülen vorkommen (Makronährelemente) und welche zu den Spurenelementen (Mikronährelemente) zählen."
+        },
+        {
+          "id": "5f4ed94a-a82f-408c-a2ca-5c4234796476",
+          "content_html": "die chemischen und physikalischen Eigenschaften von Wasser zu beschreiben."
+        }
+      ],
+      "created_at": "2026-09-03T11:43:53+00:00",
+      "updated_at": "2026-09-03T11:43:59+00:00"
+    },
+    {
+      "id": "512a7fd2-72cd-462d-88f6-d03d1d3f43c6",
+      "class_name": "BM1-2629",
+      "date": "2026-09-10",
+      "calendar_week": 37,
+      "lessons": [
+        {
+          "id": "f33b1654-4d0d-409c-921a-06eaa5ab918a",
+          "label": "1. Lektion",
+          "start_time": "13:50",
+          "end_time": "14:35",
+          "activities": [
+            {
+              "id": "1f007577-1bf5-492e-b07c-6a158233dfbc",
+              "content_html": "[fa-question-circle] Leistungsnachweis | Theorieblatt über Zellbestandteile"
+            },
+            {
+              "id": "998533b0-d3b9-4e1c-bfc5-64943e2ed6c2",
+              "content_html": "[fa-exlamation-cirle] Sicherheitsregeln im Labor"
+            },
+            {
+              "id": "6e15ed3c-b74f-4cc2-96f7-fa100e8f6656",
+              "content_html": "[fa-book] Einführung ins Mikroskopieren"
+            }
+          ]
+        },
+        {
+          "id": "3a5b2e72-85a8-423f-9654-9d0355fca817",
+          "label": "2. Lektion",
+          "start_time": "14:45",
+          "end_time": "15:30",
+          "activities": [
+            {
+              "id": "417fed14-53bf-45ce-820d-799c227d9acc",
+              "content_html": "[fa-flag-checkered] Sie haben folgende Präparate mikroskopiert\n    <ul>\n      <li>Zwiebelhaut mit Färbung</li>\n      <li>Mundschleimhaut mit Färbung</li>\n      <li>Augentierchen (Euglena)</li>\n      <li>Hefe</li>\n    </ul>"
+            }
+          ]
+        }
+      ],
+      "homework": [
+        {
+          "id": "17f13e1a-7e0f-4b42-ab34-0fa1dc5105d9",
+          "content_html": "Bis Freitag, 11. September 2026: «Gruppenwahl | Theorieblatt über Zellbestandteile» einschreiben."
+        },
+        {
+          "id": "a701b1ea-5518-4461-acad-6613a5d967d7",
+          "content_html": "KW 38: «Aufgabe | Theorieblatt über Zellbestandteile (= Leistungsnachweis)»."
+        },
+        {
+          "id": "426d7da5-13f5-44cf-b800-7300da68cba5",
+          "content_html": "KW 38: Erstellen Sie eine Word-Vorlage gemäss «Anleitung &amp; Vorgaben: Erstellung einer Vorlage für ein Textdokument»."
+        },
+        {
+          "id": "c1cb127c-6799-4c8e-b1c8-b7788d741fd1",
+          "content_html": "Sonntag, 20. September 2026, 23:59 Uhr: Stellen Sie Ihr Theorieblatt fertig und laden Sie es auf Moodle hoch."
+        },
+        {
+          "id": "e8b5624d-f1da-440d-a748-398fc5d063dc",
+          "content_html": "Bis Ende KW 39: Schauen Sie zum Abschluss den Erklärfilm «Übrige Zellbestandteile»."
+        }
+      ],
+      "assessment": {
+        "title": "Biologieprüfung I",
+        "date": "2026-10-22",
+        "start_time": "13:50",
+        "end_time": "14:35",
+        "topics": [
+          {
+            "title": "Grundlagen",
+            "description_html": "Chemische und biologische Grundlagen"
+          },
+          {
+            "title": "Cytologie",
+            "description_html": "Aufbau und Funktion von Zellen und ihren Bestandteilen"
+          }
+        ]
+      },
+      "support_course": {
+        "title": "Prüfungsvorbereitung",
+        "date": "2026-10-01",
+        "start_time": "17:20",
+        "end_time": "18:05",
+        "location_html": "Zimmer 603",
+        "teams_url": "https://teams.microsoft.com/meet/353888362433281?p=meg5EvW21NZVSy7D5H",
+        "registration_url": "https://moodle.strickhof.ch/mod/scheduler/view.php?id=72344",
+        "note_html": "Teilnahme ist hybrid möglich über den Link."
+      },
+      "learning_objectives": [
+        {
+          "id": "8f37762f-ce37-4ffa-90dc-74fb47413f00",
+          "content_html": "mithilfe spezifischer Kriterien prokaryontische und eukaryontische Zellen zu unterscheiden und Gemeinsamkeiten zu benennen.\nden Bau von Tier- und Pflanzenzellen"
+        },
+        {
+          "id": "47160829-279f-49e8-8a56-9447f3a7bf35",
+          "content_html": "mit sämtlichen Organellen schematisch zu skizzieren."
+        },
+        {
+          "id": "021574e1-55cf-49f0-8c0c-655af930cce1",
+          "content_html": "anhand von Zellbestandteilen Unterschiede und Gemeinsamkeiten festzumachen."
+        },
+        {
+          "id": "e0b7eaae-5eff-4e47-93f0-1cd03b7c8dbe",
+          "content_html": "die Strukturen und die Komponenten des Endomembransystems zu beschreiben."
+        }
+      ],
+      "created_at": "2026-09-04T12:05:24+00:00",
+      "updated_at": "2026-09-04T12:25:53+00:00"
+    }
+  ]
+}

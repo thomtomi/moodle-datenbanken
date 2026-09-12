@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "remote_sources": [
+    {
+      "id": "continue-rules",
+      "title": "Continue: Rules",
+      "url": "https://docs.continue.dev/customize/deep-dives/rules",
+      "format": "html",
+      "enabled": true
+    },
+    {
+      "id": "continue-configuration",
+      "title": "Continue: Configuration",
+      "url": "https://docs.continue.dev/customize/deep-dives/configuration",
+      "format": "html",
+      "enabled": true
+    },
+    {
+      "id": "ollama-embed-api",
+      "title": "Ollama API: Generate embeddings",
+      "url": "https://docs.ollama.com/api/embed",
+      "format": "html",
+      "enabled": true
+    },
+    {
+      "id": "ollama-qwen3-embedding",
+      "title": "Ollama: Qwen3 Embedding",
+      "url": "https://ollama.com/library/qwen3-embedding",
+      "format": "html",
+      "enabled": true
+    },
+    {
+      "id": "moodledocs-database-activity-501",
+      "title": "MoodleDocs 5.1: Database activity",
+      "url": "https://docs.moodle.org/501/en/Database_activity",
+      "format": "html",
+      "enabled": false,
+      "disabled_reason": "MoodleDocs lieferte beim automatisierten Abruf HTTP 403. Die Seite im Browser speichern und über den Importbefehl aufnehmen."
+    },
+    {
+      "id": "moodledocs-database-templates-501",
+      "title": "MoodleDocs 5.1: Database templates",
+      "url": "https://docs.moodle.org/501/en/Database_templates",
+      "format": "html",
+      "enabled": false,
+      "disabled_reason": "MoodleDocs lieferte beim automatisierten Abruf HTTP 403. Die Seite im Browser speichern und über den Importbefehl aufnehmen."
+    },
+    {
+      "id": "moodledocs-database-presets-501",
+      "title": "MoodleDocs 5.1: Database presets",
+      "url": "https://docs.moodle.org/501/en/Database_presets",
+      "format": "html",
+      "enabled": false,
+      "disabled_reason": "MoodleDocs lieferte beim automatisierten Abruf HTTP 403. Die Seite im Browser speichern und über den Importbefehl aufnehmen."
+    },
+    {
+      "id": "moodledocs-using-database-501",
+      "title": "MoodleDocs 5.1: Using Database",
+      "url": "https://docs.moodle.org/501/en/Using_Database",
+      "format": "html",
+      "enabled": false,
+      "disabled_reason": "MoodleDocs lieferte beim automatisierten Abruf HTTP 403. Die Seite im Browser speichern und über den Importbefehl aufnehmen."
+    },
+    {
+      "id": "moodledocs-groups-501",
+      "title": "MoodleDocs 5.1: Groups",
+      "url": "https://docs.moodle.org/501/en/Groups",
+      "format": "html",
+      "enabled": false,
+      "disabled_reason": "MoodleDocs lieferte beim automatisierten Abruf HTTP 403. Die Seite im Browser speichern und über den Importbefehl aufnehmen."
+    }
+  ],
+  "local_sources": {
+    "include_extensions": [".md", ".html", ".py", ".css", ".js", ".xml"],
+    "exclude_directories": [
+      ".git",
+      ".rag",
+      ".venv",
+      "__pycache__",
+      "node_modules",
+      "02-rohdaten",
+      "ausgabe",
+      "pruefung",
+      "pruefung-moodle-5-1",
+      "data"
+    ]
+  }
+}

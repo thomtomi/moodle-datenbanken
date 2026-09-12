@@ -1,0 +1,417 @@
+{
+  "browser": "Chrome/152.0.7977.82",
+  "source": "Lokaler Mock; keine Moodle-Instanz",
+  "cases": [
+    {
+      "width": 1440,
+      "view": "#liste",
+      "results": [
+        {
+          "name": "Vier native Formularnamen erhalten",
+          "passed": true
+        },
+        {
+          "name": "Forschungsfrage mehrzeilig",
+          "passed": true
+        },
+        {
+          "name": "Vorhandener Fragewert erhalten",
+          "passed": true
+        },
+        {
+          "name": "Alle Pflichtfelder und Hilfen verknüpft",
+          "passed": true
+        },
+        {
+          "name": "Sichtbare Labels korrekt verknüpft",
+          "passed": true
+        },
+        {
+          "name": "Vollständiger Eintrag gültig",
+          "passed": true
+        },
+        {
+          "name": "Leerer Gruppenname ungültig",
+          "passed": true
+        },
+        {
+          "name": "Zurücksetzen erhält Originalwerte",
+          "passed": true
+        },
+        {
+          "name": "Mehrzeiliger Text korrekt in FormData",
+          "passed": true
+        },
+        {
+          "name": "Wiederholte Initialisierung erhält Eingabe",
+          "passed": true
+        },
+        {
+          "name": "Keine doppelten HTML-IDs",
+          "passed": true
+        },
+        {
+          "name": "Kein horizontaler Seitenüberlauf",
+          "passed": true
+        },
+        {
+          "name": "Sichtbare Inhalte innerhalb des Viewports",
+          "passed": true
+        },
+        {
+          "name": "Responsive Spaltenzahl",
+          "passed": true
+        },
+        {
+          "name": "Lange und leere Werte ohne Überlauf",
+          "passed": true
+        },
+        {
+          "name": "Keine externen Ressourcen",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "view": "#liste",
+      "results": [
+        {
+          "name": "Vier native Formularnamen erhalten",
+          "passed": true
+        },
+        {
+          "name": "Forschungsfrage mehrzeilig",
+          "passed": true
+        },
+        {
+          "name": "Vorhandener Fragewert erhalten",
+          "passed": true
+        },
+        {
+          "name": "Alle Pflichtfelder und Hilfen verknüpft",
+          "passed": true
+        },
+        {
+          "name": "Sichtbare Labels korrekt verknüpft",
+          "passed": true
+        },
+        {
+          "name": "Vollständiger Eintrag gültig",
+          "passed": true
+        },
+        {
+          "name": "Leerer Gruppenname ungültig",
+          "passed": true
+        },
+        {
+          "name": "Zurücksetzen erhält Originalwerte",
+          "passed": true
+        },
+        {
+          "name": "Mehrzeiliger Text korrekt in FormData",
+          "passed": true
+        },
+        {
+          "name": "Wiederholte Initialisierung erhält Eingabe",
+          "passed": true
+        },
+        {
+          "name": "Keine doppelten HTML-IDs",
+          "passed": true
+        },
+        {
+          "name": "Kein horizontaler Seitenüberlauf",
+          "passed": true
+        },
+        {
+          "name": "Sichtbare Inhalte innerhalb des Viewports",
+          "passed": true
+        },
+        {
+          "name": "Responsive Spaltenzahl",
+          "passed": true
+        },
+        {
+          "name": "Lange und leere Werte ohne Überlauf",
+          "passed": true
+        },
+        {
+          "name": "Keine externen Ressourcen",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "view": "#erfassung",
+      "results": [
+        {
+          "name": "Vier native Formularnamen erhalten",
+          "passed": true
+        },
+        {
+          "name": "Forschungsfrage mehrzeilig",
+          "passed": true
+        },
+        {
+          "name": "Vorhandener Fragewert erhalten",
+          "passed": true
+        },
+        {
+          "name": "Alle Pflichtfelder und Hilfen verknüpft",
+          "passed": true
+        },
+        {
+          "name": "Sichtbare Labels korrekt verknüpft",
+          "passed": true
+        },
+        {
+          "name": "Vollständiger Eintrag gültig",
+          "passed": true
+        },
+        {
+          "name": "Leerer Gruppenname ungültig",
+          "passed": true
+        },
+        {
+          "name": "Zurücksetzen erhält Originalwerte",
+          "passed": true
+        },
+        {
+          "name": "Mehrzeiliger Text korrekt in FormData",
+          "passed": true
+        },
+        {
+          "name": "Wiederholte Initialisierung erhält Eingabe",
+          "passed": true
+        },
+        {
+          "name": "Keine doppelten HTML-IDs",
+          "passed": true
+        },
+        {
+          "name": "Kein horizontaler Seitenüberlauf",
+          "passed": true
+        },
+        {
+          "name": "Sichtbare Inhalte innerhalb des Viewports",
+          "passed": true
+        },
+        {
+          "name": "Keine externen Ressourcen",
+          "passed": true
+        },
+        {
+          "name": "Tastatur: Tab führt zum nächsten Feld",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "view": "#liste",
+      "results": [
+        {
+          "name": "Vier native Formularnamen erhalten",
+          "passed": true
+        },
+        {
+          "name": "Forschungsfrage mehrzeilig",
+          "passed": true
+        },
+        {
+          "name": "Vorhandener Fragewert erhalten",
+          "passed": true
+        },
+        {
+          "name": "Alle Pflichtfelder und Hilfen verknüpft",
+          "passed": true
+        },
+        {
+          "name": "Sichtbare Labels korrekt verknüpft",
+          "passed": true
+        },
+        {
+          "name": "Vollständiger Eintrag gültig",
+          "passed": true
+        },
+        {
+          "name": "Leerer Gruppenname ungültig",
+          "passed": true
+        },
+        {
+          "name": "Zurücksetzen erhält Originalwerte",
+          "passed": true
+        },
+        {
+          "name": "Mehrzeiliger Text korrekt in FormData",
+          "passed": true
+        },
+        {
+          "name": "Wiederholte Initialisierung erhält Eingabe",
+          "passed": true
+        },
+        {
+          "name": "Keine doppelten HTML-IDs",
+          "passed": true
+        },
+        {
+          "name": "Kein horizontaler Seitenüberlauf",
+          "passed": true
+        },
+        {
+          "name": "Sichtbare Inhalte innerhalb des Viewports",
+          "passed": true
+        },
+        {
+          "name": "Responsive Spaltenzahl",
+          "passed": true
+        },
+        {
+          "name": "Lange und leere Werte ohne Überlauf",
+          "passed": true
+        },
+        {
+          "name": "Keine externen Ressourcen",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "view": "#erfassung",
+      "results": [
+        {
+          "name": "Vier native Formularnamen erhalten",
+          "passed": true
+        },
+        {
+          "name": "Forschungsfrage mehrzeilig",
+          "passed": true
+        },
+        {
+          "name": "Vorhandener Fragewert erhalten",
+          "passed": true
+        },
+        {
+          "name": "Alle Pflichtfelder und Hilfen verknüpft",
+          "passed": true
+        },
+        {
+          "name": "Sichtbare Labels korrekt verknüpft",
+          "passed": true
+        },
+        {
+          "name": "Vollständiger Eintrag gültig",
+          "passed": true
+        },
+        {
+          "name": "Leerer Gruppenname ungültig",
+          "passed": true
+        },
+        {
+          "name": "Zurücksetzen erhält Originalwerte",
+          "passed": true
+        },
+        {
+          "name": "Mehrzeiliger Text korrekt in FormData",
+          "passed": true
+        },
+        {
+          "name": "Wiederholte Initialisierung erhält Eingabe",
+          "passed": true
+        },
+        {
+          "name": "Keine doppelten HTML-IDs",
+          "passed": true
+        },
+        {
+          "name": "Kein horizontaler Seitenüberlauf",
+          "passed": true
+        },
+        {
+          "name": "Sichtbare Inhalte innerhalb des Viewports",
+          "passed": true
+        },
+        {
+          "name": "Keine externen Ressourcen",
+          "passed": true
+        },
+        {
+          "name": "Tastatur: Tab führt zum nächsten Feld",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "view": "#erfassung",
+      "results": [
+        {
+          "name": "Vier native Formularnamen erhalten",
+          "passed": true
+        },
+        {
+          "name": "Forschungsfrage mehrzeilig",
+          "passed": true
+        },
+        {
+          "name": "Vorhandener Fragewert erhalten",
+          "passed": true
+        },
+        {
+          "name": "Alle Pflichtfelder und Hilfen verknüpft",
+          "passed": true
+        },
+        {
+          "name": "Sichtbare Labels korrekt verknüpft",
+          "passed": true
+        },
+        {
+          "name": "Vollständiger Eintrag gültig",
+          "passed": true
+        },
+        {
+          "name": "Leerer Gruppenname ungültig",
+          "passed": true
+        },
+        {
+          "name": "Zurücksetzen erhält Originalwerte",
+          "passed": true
+        },
+        {
+          "name": "Mehrzeiliger Text korrekt in FormData",
+          "passed": true
+        },
+        {
+          "name": "Wiederholte Initialisierung erhält Eingabe",
+          "passed": true
+        },
+        {
+          "name": "Keine doppelten HTML-IDs",
+          "passed": true
+        },
+        {
+          "name": "Kein horizontaler Seitenüberlauf",
+          "passed": true
+        },
+        {
+          "name": "Sichtbare Inhalte innerhalb des Viewports",
+          "passed": true
+        },
+        {
+          "name": "Keine externen Ressourcen",
+          "passed": true
+        },
+        {
+          "name": "Tastatur: Tab führt zum nächsten Feld",
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "tested_at": "2026-09-09",
+  "zip_sha256": "f433617a4440c5bfa9e3046ab2929487d93ce83d894deecd50d69a640ed3d99a",
+  "preview_sha256": "dc12633eb7ec16d80bdc2a548d4d521904923ba950b783b130c7d2dd7ef4619d"
+}

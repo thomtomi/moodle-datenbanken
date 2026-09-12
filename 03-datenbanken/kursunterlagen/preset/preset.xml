@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preset>
+  <description>Übersichtliche Materialsammlung für Lernende. Die Felder stammen aus dem Preset «Unterlagen zum Kurs» vom 2026-09-10.</description>
+  <settings>
+    <intro>&lt;h3 style=&quot;color: #000000;&quot;&gt;[fa-folder-open] Kursunterlagen&lt;/h3&gt;
+&lt;p&gt;Hier finden Sie Arbeitsblätter, Skripte, Anleitungen und weitere Unterlagen zum Kurs. Filtern Sie nach Fachbereich oder Typ und öffnen Sie anschliessend die passende Datei oder den Link.&lt;/p&gt;
+&lt;p&gt;Sie müssen in dieser Aktivität keinen eigenen Eintrag erstellen.&lt;/p&gt;</intro>
+    <comments>0</comments>
+    <requiredentries>0</requiredentries>
+    <requiredentriestoview>0</requiredentriestoview>
+    <maxentries>0</maxentries>
+    <rssarticles>0</rssarticles>
+    <approval>0</approval>
+    <defaultsortdir>0</defaultsortdir>
+    <defaultsort>0</defaultsort>
+  </settings>
+  <field>
+    <type>text</type><name>Titel</name><description>Titel der Unterlage</description><required>1</required>
+  </field>
+  <field>
+    <type>textarea</type><name>Beschreibung</name><description>Kurzbeschreibung des Inhalts</description><required>0</required><param2>40</param2><param3>40</param3><param4>1</param4><param5>0</param5>
+  </field>
+  <field>
+    <type>file</type><name>Datei Hochladen</name><description>Datei zur Unterlage hochladen</description><required>0</required><param3>0</param3>
+  </field>
+  <field>
+    <type>url</type><name>Link</name><description>Weiterführender Link zur Unterlage</description><required>0</required><param1>1</param1><param2>Link</param2><param3>1</param3>
+  </field>
+  <field>
+    <type>text</type><name>Verlag</name><description>Herausgeber:in oder Verlag</description><required>0</required>
+  </field>
+  <field>
+    <type>multimenu</type><name>Fachbereich</name><description>Fachbereich</description><required>1</required><param1>Grundlagen
+Cytologie
+Asexuelle &amp; Sexuelle Reproduktion
+Reproduktionsmedizin
+Ethik
+Skript</param1>
+  </field>
+  <field>
+    <type>radiobutton</type><name>Typ</name><description>Art der Unterlage</description><required>1</required><param1>Aufgabe
+Lösung
+Skript
+Anleitung/Experiment</param1>
+  </field>
+</preset>

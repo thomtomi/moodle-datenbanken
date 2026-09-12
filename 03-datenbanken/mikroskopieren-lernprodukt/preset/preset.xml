@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preset>
+  <description>Moderierte Lernprodukt-Galerie zum Mikroskopieren. Die Feldstruktur stammt aus dem Preset «Mikroskopieren Lernprodukt hier hochladen!» vom 2026-09-10.</description>
+  <settings>
+    <intro>&lt;h3 style=&quot;color: #000000;&quot;&gt;[fa-microscope] Lernprodukte Mikroskopieren&lt;/h3&gt;
+&lt;p&gt;Laden Sie eine scharfe Aufnahme Ihres Präparats hoch und teilen Sie Ihre Beobachtungen mit der Klasse. Ihr Beitrag wird vor der Veröffentlichung durch eine Lehrperson geprüft.&lt;/p&gt;</intro>
+    <comments>1</comments>
+    <requiredentries>0</requiredentries>
+    <requiredentriestoview>0</requiredentriestoview>
+    <maxentries>20</maxentries>
+    <rssarticles>0</rssarticles>
+    <approval>1</approval>
+    <defaultsortdir>0</defaultsortdir>
+    <defaultsort>Präparat</defaultsort>
+  </settings>
+  <field>
+    <type>text</type><name>Präparat</name><description>Bezeichnung des mikroskopierten Präparats</description><required>1</required>
+  </field>
+  <field>
+    <type>picture</type><name>Bild-Videodatei</name><description>Scharfe Aufnahme des Präparats</description><required>1</required><param3>0</param3>
+  </field>
+</preset>

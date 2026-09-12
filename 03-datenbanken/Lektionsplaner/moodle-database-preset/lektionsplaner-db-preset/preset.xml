@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<preset>
+  <description>Lektionsplaner für Biologie-Unterricht: strukturierte Planung pro Klasse und Datum mit bis zu sechs Lektionsblöcken, Hausaufgaben, Leistungsnachweis, Stützkurs und Lernzielen.</description>
+
+  <settings>
+    <intro>&lt;p&gt;Diese Datenbank dient der Erfassung und Anzeige von Lektionsplanungen. Pro Eintrag wird eine Klasse an einem Unterrichtsdatum geplant.&lt;/p&gt;</intro>
+    <comments>0</comments>
+    <requiredentries>0</requiredentries>
+    <requiredentriestoview>0</requiredentriestoview>
+    <maxentries>0</maxentries>
+    <rssarticles>0</rssarticles>
+    <approval>0</approval>
+    <defaultsortdir>1</defaultsortdir>
+    <defaultsort>unterrichtsdatum</defaultsort>
+  </settings>
+
+  <field>
+    <type>menu</type>
+    <name>klasse</name>
+    <description>Klasse.</description>
+    <required>1</required>
+    <param1>BM1-2629
+BM2vz-2627
+BM2tz-2628
+BMLMT-2427</param1>
+  </field>
+
+  <field>
+    <type>text</type>
+    <name>unterrichtsdatum</name>
+    <description>Unterrichtsdatum im Format JJJJ-MM-TT, z. B. 2026-09-04.</description>
+    <required>1</required>
+  </field>
+
+  <field>
+    <type>text</type>
+    <name>kalenderwoche</name>
+    <description>Wird in der Eingabevorlage automatisch aus dem Unterrichtsdatum berechnet.</description>
+    <required>0</required>
+  </field>
+
+  <field>
+    <type>multimenu</type>
+    <name>thema</name>
+    <description>Themen der Unterrichtssequenz.</description>
+    <required>0</required>
+    <param1>Facheinführung
+Grundlagen Biologie: Allgemeine Grundlagen
+Grundlagen Biologie: Chemische Grundlagen
+Cytologie: Aufbau und Funktion von Zellen
+Cytologie: Aufbau und Funktion von Biomembranen
+Cytologie: Stoffaustausch (Zelltransport)
+Cytologie: asexuelle Reproduktion
+Cytologie: sexuelle Reproduktion
+Exkurs: Reproduktionsmedizin</param1>
+  </field>
+
+  <field><type>textarea</type><name>zusatzmaterial_text</name><description>Zusatzmaterial als Text, Hinweise oder kurze Beschreibung.</description><required>0</required><param2>80</param2><param3>5</param3><param5>0</param5></field>
+  <field><type>url</type><name>zusatzmaterial_link</name><description>Optionaler Link zu Zusatzmaterial. In Moodle kann dazu ein Linktext erfasst werden.</description><required>0</required><param1>1</param1><param2></param2><param3>1</param3></field>
+  <field><type>file</type><name>zusatzmaterial_datei</name><description>Optionale Datei als Zusatzmaterial.</description><required>0</required><param3>0</param3></field>
+
+  <field><type>menu</type><name>lektion_1_beginn</name><description>Beginn der 1. Lektion.</description><required>0</required><param1>07:40
+08:35
+09:25
+10:25
+11:20
+12:10
+12:55
+13:50
+14:45
+15:40
+16:30
+17:30</param1></field>
+  <field><type>menu</type><name>lektion_1_ende</name><description>Ende der 1. Lektion.</description><required>0</required><param1>08:25
+09:20
+10:10
+11:10
+12:05
+12:55
+13:40
+14:35
+15:30
+16:25
+17:15
+18:15</param1></field>
+  <field><type>textarea</type><name>lektion_1_aktivitaeten</name><description>Aktivitäten der 1. Lektion.</description><required>0</required><param2>80</param2><param3>6</param3><param5>0</param5></field>
+
+  <field><type>menu</type><name>lektion_2_beginn</name><description>Beginn der 2. Lektion.</description><required>0</required><param1>07:40
+08:35
+09:25
+10:25
+11:20
+12:10
+12:55
+13:50
+14:45
+15:40
+16:30
+17:30</param1></field>
+  <field><type>menu</type><name>lektion_2_ende</name><description>Ende der 2. Lektion.</description><required>0</required><param1>08:25
+09:20
+10:10
+11:10
+12:05
+12:55
+13:40
+14:35
+15:30
+16:25
+17:15
+18:15</param1></field>
+  <field><type>textarea</type><name>lektion_2_aktivitaeten</name><description>Aktivitäten der 2. Lektion.</description><required>0</required><param2>80</param2><param3>6</param3><param5>0</param5></field>
+
+  <field><type>menu</type><name>lektion_3_beginn</name><description>Beginn der 3. Lektion.</description><required>0</required><param1>07:40
+08:35
+09:25
+10:25
+11:20
+12:10
+12:55
+13:50
+14:45
+15:40
+16:30
+17:30</param1></field>
+  <field><type>menu</type><name>lektion_3_ende</name><description>Ende der 3. Lektion.</description><required>0</required><param1>08:25
+09:20
+10:10
+11:10
+12:05
+12:55
+13:40
+14:35
+15:30
+16:25
+17:15
+18:15</param1></field>
+  <field><type>textarea</type><name>lektion_3_aktivitaeten</name><description>Aktivitäten der 3. Lektion.</description><required>0</required><param2>80</param2><param3>6</param3><param5>0</param5></field>
+
+  <field><type>menu</type><name>lektion_4_beginn</name><description>Beginn der 4. Lektion.</description><required>0</required><param1>07:40
+08:35
+09:25
+10:25
+11:20
+12:10
+12:55
+13:50
+14:45
+15:40
+16:30
+17:30</param1></field>
+  <field><type>menu</type><name>lektion_4_ende</name><description>Ende der 4. Lektion.</description><required>0</required><param1>08:25
+09:20
+10:10
+11:10
+12:05
+12:55
+13:40
+14:35
+15:30
+16:25
+17:15
+18:15</param1></field>
+  <field><type>textarea</type><name>lektion_4_aktivitaeten</name><description>Aktivitäten der 4. Lektion.</description><required>0</required><param2>80</param2><param3>6</param3><param5>0</param5></field>
+
+  <field><type>menu</type><name>lektion_5_beginn</name><description>Beginn der 5. Lektion.</description><required>0</required><param1>07:40
+08:35
+09:25
+10:25
+11:20
+12:10
+12:55
+13:50
+14:45
+15:40
+16:30
+17:30</param1></field>
+  <field><type>menu</type><name>lektion_5_ende</name><description>Ende der 5. Lektion.</description><required>0</required><param1>08:25
+09:20
+10:10
+11:10
+12:05
+12:55
+13:40
+14:35
+15:30
+16:25
+17:15
+18:15</param1></field>
+  <field><type>textarea</type><name>lektion_5_aktivitaeten</name><description>Aktivitäten der 5. Lektion.</description><required>0</required><param2>80</param2><param3>6</param3><param5>0</param5></field>
+
+  <field><type>menu</type><name>lektion_6_beginn</name><description>Beginn der 6. Lektion.</description><required>0</required><param1>07:40
+08:35
+09:25
+10:25
+11:20
+12:10
+12:55
+13:50
+14:45
+15:40
+16:30
+17:30</param1></field>
+  <field><type>menu</type><name>lektion_6_ende</name><description>Ende der 6. Lektion.</description><required>0</required><param1>08:25
+09:20
+10:10
+11:10
+12:05
+12:55
+13:40
+14:35
+15:30
+16:25
+17:15
+18:15</param1></field>
+  <field><type>textarea</type><name>lektion_6_aktivitaeten</name><description>Aktivitäten der 6. Lektion.</description><required>0</required><param2>80</param2><param3>6</param3><param5>0</param5></field>
+
+  <field><type>textarea</type><name>hausaufgaben</name><description>Arbeitsaufträge und Hausaufgaben.</description><required>0</required><param2>80</param2><param3>5</param3><param5>0</param5></field>
+
+  <field><type>text</type><name>leistungsnachweis_titel</name><description>Titel des Leistungsnachweises.</description><required>0</required></field>
+  <field><type>text</type><name>leistungsnachweis_datum</name><description>Datum des Leistungsnachweises im Format JJJJ-MM-TT.</description><required>0</required></field>
+  <field><type>text</type><name>leistungsnachweis_beginn</name><description>Beginn des Leistungsnachweises.</description><required>0</required></field>
+  <field><type>text</type><name>leistungsnachweis_ende</name><description>Ende des Leistungsnachweises.</description><required>0</required></field>
+  <field><type>textarea</type><name>leistungsnachweis_themen</name><description>Themen, Kompetenzen oder Hinweise zum Leistungsnachweis.</description><required>0</required><param2>80</param2><param3>5</param3><param5>0</param5></field>
+
+  <field><type>text</type><name>stuetzkurs_titel</name><description>Anliegen oder Titel des Stützkurses.</description><required>0</required></field>
+  <field><type>text</type><name>stuetzkurs_datum</name><description>Datum des Stützkurses im Format JJJJ-MM-TT.</description><required>0</required></field>
+  <field><type>text</type><name>stuetzkurs_beginn</name><description>Beginn des Stützkurses.</description><required>0</required></field>
+  <field><type>text</type><name>stuetzkurs_ende</name><description>Ende des Stützkurses.</description><required>0</required></field>
+  <field><type>textarea</type><name>stuetzkurs_ort</name><description>Ort oder Treffpunkt des Stützkurses.</description><required>0</required><param2>80</param2><param3>3</param3><param5>0</param5></field>
+  <field><type>url</type><name>stuetzkurs_teams_url</name><description>Optionaler Teams-Link.</description><required>0</required><param1>1</param1><param2>Teams</param2><param3>1</param3></field>
+  <field><type>url</type><name>stuetzkurs_anmeldung_url</name><description>Optionaler Anmeldelink.</description><required>0</required><param1>1</param1><param2>Anmeldung</param2><param3>1</param3></field>
+  <field><type>textarea</type><name>stuetzkurs_hinweis</name><description>Weitere Hinweise zum Stützkurs.</description><required>0</required><param2>80</param2><param3>3</param3><param5>0</param5></field>
+
+  <field><type>textarea</type><name>lernziele</name><description>Lernziele der Sequenz.</description><required>0</required><param2>80</param2><param3>6</param3><param5>0</param5></field>
+</preset>

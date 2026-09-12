@@ -1,0 +1,148 @@
+<!doctype html><html lang="de-CH"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Sitzplan – Eingabevorschau</title><style>body{margin:0;background:#eef2ed;font-family:Arial,sans-serif;}main{max-width:1220px;margin:0 auto;padding:24px 16px;} .demo-note{font-size:13px;color:#53635c;margin:0 0 20px} .accesshide{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)} /* Nur eigene Sitzplan-Container; keine Theme-Selektoren oder externen Ressourcen. */
+.sp-db {
+  --sp-ink: #17221f;
+  --sp-muted: #53635c;
+  --sp-teal: #006d68;
+  --sp-deep: #004d49;
+  --sp-line: #cbd8d0;
+  --sp-gold: #e2a72b;
+  color: var(--sp-ink);
+  background: #fff;
+  font-family: "Atkinson Hyperlegible", "Noto Sans", Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0 0 1.5rem;
+  min-width: 0;
+}
+.sp-db *, .sp-db *::before, .sp-db *::after { box-sizing: border-box; }
+.sp-db h3, .sp-db h4, .sp-db p { margin-top: 0; }
+.sp-db h3 { color: var(--sp-ink); font-size: 1.5rem; margin-bottom: .25rem; }
+.sp-db h4 { color: var(--sp-ink); font-size: 1.1rem; margin-bottom: .5rem; }
+.sp-db a { color: var(--sp-deep); }
+.sp-db a:focus, .sp-db summary:focus, .sp-db input:focus, .sp-db .sp-scroll:focus {
+  outline: 3px solid var(--sp-teal);
+  outline-offset: 3px;
+}
+.sp-db .sp-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 1px solid var(--sp-line);
+  border-bottom: 4px solid var(--sp-gold);
+  border-radius: 10px 10px 0 0;
+  padding: 1.1rem 1.4rem;
+  background: linear-gradient(110deg, #edf5f0, #fff 75%);
+  overflow-wrap: anywhere;
+}
+.sp-db .sp-eyebrow {
+  color: var(--sp-teal);
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: .74rem;
+  letter-spacing: .1em;
+  margin-bottom: .25rem;
+}
+.sp-db .sp-meta { color: var(--sp-muted); font-size: .9rem; margin-bottom: 0; }
+.sp-db .sp-actions { flex: 0 0 auto; }
+.sp-db .sp-hint { margin: .75rem 0; color: var(--sp-muted); font-size: .88rem; }
+.sp-db .sp-scroll { overflow-x: auto; padding: .25rem; }
+.sp-db .sp-room {
+  min-width: 56rem;
+  padding: 1.25rem;
+  background: #f5f7f3;
+  border: 1px solid var(--sp-line);
+  border-radius: 8px;
+}
+.sp-db .sp-back { color: var(--sp-muted); text-align: center; font-size: .8rem; margin: 0 0 .8rem; }
+.sp-db .sp-row { margin-bottom: 1.2rem; }
+.sp-db .sp-row-label { color: var(--sp-muted); font-size: .78rem; font-weight: 700; margin-bottom: .35rem; }
+.sp-db .sp-desks { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: .7rem; }
+.sp-db .sp-desk {
+  min-width: 0;
+  border: 1px solid #b8ccc0;
+  border-top: 4px solid var(--sp-teal);
+  border-radius: 7px;
+  background: #fff;
+  padding: .55rem;
+  box-shadow: 0 2px 4px rgba(23, 34, 31, .05);
+}
+.sp-db .sp-place { font-size: .7rem; color: var(--sp-muted); margin-bottom: .4rem; }
+.sp-db .sp-photo { margin: 0 0 .35rem; }
+.sp-db .sp-photo:empty { display: none; }
+.sp-db .sp-photo a { display: block; }
+.sp-db .sp-photo img {
+  display: block;
+  width: 100%;
+  height: 4.8rem;
+  object-fit: contain;
+  border-radius: 4px;
+  background: #eff4f0;
+}
+.sp-db .sp-name { min-height: 2.7em; font-weight: 700; font-size: .93rem; overflow-wrap: anywhere; margin-bottom: 0; }
+.sp-db .sp-name:empty::before { content: "Unbesetzt"; font-weight: 400; color: var(--sp-muted); }
+.sp-db .sp-front { display: grid; justify-items: center; gap: .6rem; margin-top: 1.5rem; }
+.sp-db .sp-pult { border: 1px solid #cda651; border-radius: 6px; background: #fff3ce; padding: .65rem 2rem; font-weight: 700; }
+.sp-db .sp-viewpoint { color: var(--sp-deep); font-size: .85rem; margin: 0; }
+.sp-db .sp-board { width: 65%; border-radius: 5px; background: var(--sp-deep); color: #fff; text-align: center; padding: .35rem 1rem; letter-spacing: .05em; }
+.sp-db .sp-caption { display: flex; justify-content: space-between; color: var(--sp-muted); font-size: .78rem; padding: .5rem 0; }
+.sp-db .sp-summary { padding: 1rem 1.4rem; border: 1px solid var(--sp-line); border-top: 0; border-radius: 0 0 8px 8px; }
+.sp-db .sp-open { display: inline-block; border-radius: 5px; background: var(--sp-teal); color: #fff; padding: .5rem .9rem; font-weight: 700; text-decoration: none; }
+.sp-db .sp-open:hover { background: var(--sp-deep); color: #fff; }
+.sp-db .sp-form-body { padding: 1rem 1.4rem; border: 1px solid var(--sp-line); border-top: 0; }
+.sp-db .sp-form-meta, .sp-db .sp-edit-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.sp-db .sp-field { min-width: 0; margin: 0; padding: .5rem; border: 0; }
+.sp-db .sp-field > legend { float: none; width: auto; margin: 0 0 .3rem; font-weight: 700; font-size: 1rem; }
+.sp-db .sp-editor-row { margin: 1.5rem 0; }
+.sp-db .sp-edit-desk { min-width: 0; margin: 0; border: 1px solid var(--sp-line); border-top: 3px solid var(--sp-teal); border-radius: 6px; padding: .8rem; }
+.sp-db .sp-edit-desk > legend { float: none; width: auto; font-weight: 700; font-size: 1rem; padding: 0 .3rem; }
+.sp-db .sp-photo-editor { margin-top: .7rem; }
+.sp-db .sp-photo-editor > summary { cursor: pointer; color: var(--sp-deep); font-weight: 700; padding: .2rem; }
+.sp-db .sp-photo-editor > div { padding-top: .5rem; }
+.sp-db .sp-photo-editor fieldset { min-width: 0; max-width: 100%; }
+.sp-db .sp-photo-editor input[type="file"] { width: 100%; max-width: 100%; }
+.sp-db .sp-field input[type="text"], .sp-db .sp-edit-desk input[type="text"] { max-width: 100%; width: 100%; min-height: 2.3rem; font: inherit; border: 1px solid #b1c2b8; border-radius: 4px; padding: .4rem .55rem; }
+@media (max-width: 42rem) {
+  .sp-db .sp-form-meta, .sp-db .sp-edit-grid { grid-template-columns: 1fr; }
+  .sp-db .sp-header { align-items: flex-start; }
+  .sp-db .sp-form-body { padding: .8rem; }
+}
+@media print {
+  .sp-db { font-size: 10pt; }
+  .sp-db .sp-actions, .sp-db .sp-hint, .sp-db .sp-open { display: none; }
+  .sp-db .sp-scroll { overflow: visible; }
+  .sp-db .sp-room { min-width: 0; padding: .5rem; }
+  .sp-db .sp-desks { gap: .3rem; }
+  .sp-db .sp-desk { box-shadow: none; padding: .3rem; break-inside: avoid; }
+  .sp-db .sp-photo img { height: 3.5rem; }
+  .sp-db .sp-row { break-inside: avoid; margin-bottom: .6rem; }
+  .sp-db .sp-front { margin-top: .5rem; }
+  .sp-db .sp-board { color: var(--sp-deep); background: #fff; border: 2px solid var(--sp-deep); }
+}
+</style></head><body><main><p class="demo-note">Lokale Vorschau · ausschliesslich synthetische Namen und Symbolbilder · keine Speicherung</p><form><div class="sp-db sp-add">
+<header class="sp-header"><div><p class="sp-eyebrow">Planung</p><h3>Sitzplan erstellen oder bearbeiten</h3></div></header>
+<div class="sp-form-body"><p>Ein Eintrag enthält den ganzen Sitzplan. Nur der Planname ist Pflicht. Leere Namen und Fotos kennzeichnen unbesetzte Plätze.</p><div class="sp-form-meta"><fieldset class="sp-field"><legend>Planname · Pflichtfeld</legend><label class="accesshide" for="field_1">Klasse und Bezeichnung des Sitzplans</label><input type="text" id="field_1" name="field_1" required></fieldset><fieldset class="sp-field"><legend>Raum · optional</legend><label class="accesshide" for="field_2">Zimmerbezeichnung, optional</label><input type="text" id="field_2" name="field_2"></fieldset></div><p class="sp-hint">Reihe 1 ist dem Pult am nächsten; Platz 1 liegt links aus Ihrer Sicht. Name und Foto bei einem Platzwechsel gemeinsam ändern.</p><section class="sp-editor-row"><h4>Reihe 1 · nahe am Pult</h4><div class="sp-edit-grid"><fieldset class="sp-edit-desk"><legend>R1 · P1</legend><fieldset class="sp-field"><legend>Name</legend><label class="accesshide" for="field_3">Reihe 1, Platz 1 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</label><input type="text" id="field_3" name="field_3"></fieldset><details class="sp-photo-editor"><summary>Foto · optional</summary><div><fieldset><legend>Foto für r1_p1_foto</legend><label for="field_4">Bild auswählen (Vorschau)</label><input id="field_4" type="file" accept="image/png,image/jpeg"><input type="hidden" value="12345"><label for="field_4_alttext">Alternativtext</label><input type="text" id="field_4_alttext"></fieldset></div></details></fieldset>
+<fieldset class="sp-edit-desk"><legend>R1 · P2</legend><fieldset class="sp-field"><legend>Name</legend><label class="accesshide" for="field_5">Reihe 1, Platz 2 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</label><input type="text" id="field_5" name="field_5"></fieldset><details class="sp-photo-editor"><summary>Foto · optional</summary><div><fieldset><legend>Foto für r1_p2_foto</legend><label for="field_6">Bild auswählen (Vorschau)</label><input id="field_6" type="file" accept="image/png,image/jpeg"><input type="hidden" value="12345"><label for="field_6_alttext">Alternativtext</label><input type="text" id="field_6_alttext"></fieldset></div></details></fieldset>
+<fieldset class="sp-edit-desk"><legend>R1 · P3</legend><fieldset class="sp-field"><legend>Name</legend><label class="accesshide" for="field_7">Reihe 1, Platz 3 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</label><input type="text" id="field_7" name="field_7"></fieldset><details class="sp-photo-editor"><summary>Foto · optional</summary><div><fieldset><legend>Foto für r1_p3_foto</legend><label for="field_8">Bild auswählen (Vorschau)</label><input id="field_8" type="file" accept="image/png,image/jpeg"><input type="hidden" value="12345"><label for="field_8_alttext">Alternativtext</label><input type="text" id="field_8_alttext"></fieldset></div></details></fieldset>
+<fieldset class="sp-edit-desk"><legend>R1 · P4</legend><fieldset class="sp-field"><legend>Name</legend><label class="accesshide" for="field_9">Reihe 1, Platz 4 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</label><input type="text" id="field_9" name="field_9"></fieldset><details class="sp-photo-editor"><summary>Foto · optional</summary><div><fieldset><legend>Foto für r1_p4_foto</legend><label for="field_10">Bild auswählen (Vorschau)</label><input id="field_10" type="file" accept="image/png,image/jpeg"><input type="hidden" value="12345"><label for="field_10_alttext">Alternativtext</label><input type="text" id="field_10_alttext"></fieldset></div></details></fieldset>
+<fieldset class="sp-edit-desk"><legend>R1 · P5</legend><fieldset class="sp-field"><legend>Name</legend><label class="accesshide" for="field_11">Reihe 1, Platz 5 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</label><input type="text" id="field_11" name="field_11"></fieldset><details class="sp-photo-editor"><summary>Foto · optional</summary><div><fieldset><legend>Foto für r1_p5_foto</legend><label for="field_12">Bild auswählen (Vorschau)</label><input id="field_12" type="file" accept="image/png,image/jpeg"><input type="hidden" value="12345"><label for="field_12_alttext">Alternativtext</label><input type="text" id="field_12_alttext"></fieldset></div></details></fieldset>
+<fieldset class="sp-edit-desk"><legend>R1 · P6</legend><fieldset class="sp-field"><legend>Name</legend><label class="accesshide" for="field_13">Reihe 1, Platz 6 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</label><input type="text" id="field_13" name="field_13"></fieldset><details class="sp-photo-editor"><summary>Foto · optional</summary><div><fieldset><legend>Foto für r1_p6_foto</legend><label for="field_14">Bild auswählen (Vorschau)</label><input id="field_14" type="file" accept="image/png,image/jpeg"><input type="hidden" value="12345"><label for="field_14_alttext">Alternativtext</label><input type="text" id="field_14_alttext"></fieldset></div></details></fieldset>
+<fieldset class="sp-edit-desk"><legend>R1 · P7</legend><fieldset class="sp-field"><legend>Name</legend><label class="accesshide" for="field_15">Reihe 1, Platz 7 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</label><input type="text" id="field_15" name="field_15"></fieldset><details class="sp-photo-editor"><summary>Foto · optional</summary><div><fieldset><legend>Foto für r1_p7_foto</legend><label for="field_16">Bild auswählen (Vorschau)</label><input id="field_16" type="file" accept="image/png,image/jpeg"><input type="hidden" value="12345"><label for="field_16_alttext">Alternativtext</label><input type="text" id="field_16_alttext"></fieldset></div></details></fieldset>
+</div></section>
+<section class="sp-editor-row"><h4>Reihe 2</h4><div class="sp-edit-grid"><fieldset class="sp-edit-desk"><legend>R2 · P1</legend><fieldset class="sp-field"><legend>Name</legend><label class="accesshide" for="field_17">Reihe 2, Platz 1 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</label><input type="text" id="field_17" name="field_17"></fieldset><details class="sp-photo-editor"><summary>Foto · optional</summary><div><fieldset><legend>Foto für r2_p1_foto</legend><label for="field_18">Bild auswählen (Vorschau)</label><input id="field_18" type="file" accept="image/png,image/jpeg"><input type="hidden" value="12345"><label for="field_18_alttext">Alternativtext</label><input type="text" id="field_18_alttext"></fieldset></div></details></fieldset>
+<fieldset class="sp-edit-desk"><legend>R2 · P2</legend><fieldset class="sp-field"><legend>Name</legend><label class="accesshide" for="field_19">Reihe 2, Platz 2 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</label><input type="text" id="field_19" name="field_19"></fieldset><details class="sp-photo-editor"><summary>Foto · optional</summary><div><fieldset><legend>Foto für r2_p2_foto</legend><label for="field_20">Bild auswählen (Vorschau)</label><input id="field_20" type="file" accept="image/png,image/jpeg"><input type="hidden" value="12345"><label for="field_20_alttext">Alternativtext</label><input type="text" id="field_20_alttext"></fieldset></div></details></fieldset>
+<fieldset class="sp-edit-desk"><legend>R2 · P3</legend><fieldset class="sp-field"><legend>Name</legend><label class="accesshide" for="field_21">Reihe 2, Platz 3 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</label><input type="text" id="field_21" name="field_21"></fieldset><details class="sp-photo-editor"><summary>Foto · optional</summary><div><fieldset><legend>Foto für r2_p3_foto</legend><label for="field_22">Bild auswählen (Vorschau)</label><input id="field_22" type="file" accept="image/png,image/jpeg"><input type="hidden" value="12345"><label for="field_22_alttext">Alternativtext</label><input type="text" id="field_22_alttext"></fieldset></div></details></fieldset>
+<fieldset class="sp-edit-desk"><legend>R2 · P4</legend><fieldset class="sp-field"><legend>Name</legend><label class="accesshide" for="field_23">Reihe 2, Platz 4 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</label><input type="text" id="field_23" name="field_23"></fieldset><details class="sp-photo-editor"><summary>Foto · optional</summary><div><fieldset><legend>Foto für r2_p4_foto</legend><label for="field_24">Bild auswählen (Vorschau)</label><input id="field_24" type="file" accept="image/png,image/jpeg"><input type="hidden" value="12345"><label for="field_24_alttext">Alternativtext</label><input type="text" id="field_24_alttext"></fieldset></div></details></fieldset>
+<fieldset class="sp-edit-desk"><legend>R2 · P5</legend><fieldset class="sp-field"><legend>Name</legend><label class="accesshide" for="field_25">Reihe 2, Platz 5 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</label><input type="text" id="field_25" name="field_25"></fieldset><details class="sp-photo-editor"><summary>Foto · optional</summary><div><fieldset><legend>Foto für r2_p5_foto</legend><label for="field_26">Bild auswählen (Vorschau)</label><input id="field_26" type="file" accept="image/png,image/jpeg"><input type="hidden" value="12345"><label for="field_26_alttext">Alternativtext</label><input type="text" id="field_26_alttext"></fieldset></div></details></fieldset>
+<fieldset class="sp-edit-desk"><legend>R2 · P6</legend><fieldset class="sp-field"><legend>Name</legend><label class="accesshide" for="field_27">Reihe 2, Platz 6 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</label><input type="text" id="field_27" name="field_27"></fieldset><details class="sp-photo-editor"><summary>Foto · optional</summary><div><fieldset><legend>Foto für r2_p6_foto</legend><label for="field_28">Bild auswählen (Vorschau)</label><input id="field_28" type="file" accept="image/png,image/jpeg"><input type="hidden" value="12345"><label for="field_28_alttext">Alternativtext</label><input type="text" id="field_28_alttext"></fieldset></div></details></fieldset>
+<fieldset class="sp-edit-desk"><legend>R2 · P7</legend><fieldset class="sp-field"><legend>Name</legend><label class="accesshide" for="field_29">Reihe 2, Platz 7 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</label><input type="text" id="field_29" name="field_29"></fieldset><details class="sp-photo-editor"><summary>Foto · optional</summary><div><fieldset><legend>Foto für r2_p7_foto</legend><label for="field_30">Bild auswählen (Vorschau)</label><input id="field_30" type="file" accept="image/png,image/jpeg"><input type="hidden" value="12345"><label for="field_30_alttext">Alternativtext</label><input type="text" id="field_30_alttext"></fieldset></div></details></fieldset>
+</div></section>
+<section class="sp-editor-row"><h4>Reihe 3</h4><div class="sp-edit-grid"><fieldset class="sp-edit-desk"><legend>R3 · P1</legend><fieldset class="sp-field"><legend>Name</legend><label class="accesshide" for="field_31">Reihe 3, Platz 1 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</label><input type="text" id="field_31" name="field_31"></fieldset><details class="sp-photo-editor"><summary>Foto · optional</summary><div><fieldset><legend>Foto für r3_p1_foto</legend><label for="field_32">Bild auswählen (Vorschau)</label><input id="field_32" type="file" accept="image/png,image/jpeg"><input type="hidden" value="12345"><label for="field_32_alttext">Alternativtext</label><input type="text" id="field_32_alttext"></fieldset></div></details></fieldset>
+<fieldset class="sp-edit-desk"><legend>R3 · P2</legend><fieldset class="sp-field"><legend>Name</legend><label class="accesshide" for="field_33">Reihe 3, Platz 2 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</label><input type="text" id="field_33" name="field_33"></fieldset><details class="sp-photo-editor"><summary>Foto · optional</summary><div><fieldset><legend>Foto für r3_p2_foto</legend><label for="field_34">Bild auswählen (Vorschau)</label><input id="field_34" type="file" accept="image/png,image/jpeg"><input type="hidden" value="12345"><label for="field_34_alttext">Alternativtext</label><input type="text" id="field_34_alttext"></fieldset></div></details></fieldset>
+<fieldset class="sp-edit-desk"><legend>R3 · P3</legend><fieldset class="sp-field"><legend>Name</legend><label class="accesshide" for="field_35">Reihe 3, Platz 3 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</label><input type="text" id="field_35" name="field_35"></fieldset><details class="sp-photo-editor"><summary>Foto · optional</summary><div><fieldset><legend>Foto für r3_p3_foto</legend><label for="field_36">Bild auswählen (Vorschau)</label><input id="field_36" type="file" accept="image/png,image/jpeg"><input type="hidden" value="12345"><label for="field_36_alttext">Alternativtext</label><input type="text" id="field_36_alttext"></fieldset></div></details></fieldset>
+<fieldset class="sp-edit-desk"><legend>R3 · P4</legend><fieldset class="sp-field"><legend>Name</legend><label class="accesshide" for="field_37">Reihe 3, Platz 4 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</label><input type="text" id="field_37" name="field_37"></fieldset><details class="sp-photo-editor"><summary>Foto · optional</summary><div><fieldset><legend>Foto für r3_p4_foto</legend><label for="field_38">Bild auswählen (Vorschau)</label><input id="field_38" type="file" accept="image/png,image/jpeg"><input type="hidden" value="12345"><label for="field_38_alttext">Alternativtext</label><input type="text" id="field_38_alttext"></fieldset></div></details></fieldset>
+<fieldset class="sp-edit-desk"><legend>R3 · P5</legend><fieldset class="sp-field"><legend>Name</legend><label class="accesshide" for="field_39">Reihe 3, Platz 5 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</label><input type="text" id="field_39" name="field_39"></fieldset><details class="sp-photo-editor"><summary>Foto · optional</summary><div><fieldset><legend>Foto für r3_p5_foto</legend><label for="field_40">Bild auswählen (Vorschau)</label><input id="field_40" type="file" accept="image/png,image/jpeg"><input type="hidden" value="12345"><label for="field_40_alttext">Alternativtext</label><input type="text" id="field_40_alttext"></fieldset></div></details></fieldset>
+<fieldset class="sp-edit-desk"><legend>R3 · P6</legend><fieldset class="sp-field"><legend>Name</legend><label class="accesshide" for="field_41">Reihe 3, Platz 6 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</label><input type="text" id="field_41" name="field_41"></fieldset><details class="sp-photo-editor"><summary>Foto · optional</summary><div><fieldset><legend>Foto für r3_p6_foto</legend><label for="field_42">Bild auswählen (Vorschau)</label><input id="field_42" type="file" accept="image/png,image/jpeg"><input type="hidden" value="12345"><label for="field_42_alttext">Alternativtext</label><input type="text" id="field_42_alttext"></fieldset></div></details></fieldset>
+<fieldset class="sp-edit-desk"><legend>R3 · P7</legend><fieldset class="sp-field"><legend>Name</legend><label class="accesshide" for="field_43">Reihe 3, Platz 7 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</label><input type="text" id="field_43" name="field_43"></fieldset><details class="sp-photo-editor"><summary>Foto · optional</summary><div><fieldset><legend>Foto für r3_p7_foto</legend><label for="field_44">Bild auswählen (Vorschau)</label><input id="field_44" type="file" accept="image/png,image/jpeg"><input type="hidden" value="12345"><label for="field_44_alttext">Alternativtext</label><input type="text" id="field_44_alttext"></fieldset></div></details></fieldset>
+</div></section>
+<p>Nutzen Sie zum Speichern die Moodle-Schaltflächen unter diesem Formular.</p></div></div>
+</form></main></body></html>

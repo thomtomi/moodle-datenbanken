@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lektionsplaner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="header-content">
+        <div class="wordmark">
+          <span class="wordmark-mark" aria-hidden="true">LP</span>
+          <div>
+            <p class="eyebrow">Biologie BMS NLL</p>
+            <h1>Lektionsplaner</h1>
+          </div>
+        </div>
+        <div class="header-actions">
+          <button
+            class="button button-quiet"
+            id="new-plan-button"
+            type="button"
+          >
+            Neuer Plan
+          </button>
+          <button class="button button-primary" id="save-button" type="button">
+            Speichern
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <aside class="sidebar" aria-label="Planungsarchiv und Aktivitätssuche">
+        <section class="sidebar-section">
+          <div class="section-heading compact-heading">
+            <div>
+              <p class="eyebrow">Archiv</p>
+              <h2>Eigene Planungen</h2>
+            </div>
+          </div>
+          <div class="filter-row">
+            <label class="screen-reader-text" for="plan-filter"
+              >Planungen filtern</label
+            >
+            <input
+              id="plan-filter"
+              type="search"
+              placeholder="Klasse oder Datum filtern"
+            />
+          </div>
+          <div id="plan-list" class="plan-list" aria-live="polite"></div>
+        </section>
+
+        <section class="sidebar-section search-section">
+          <div class="section-heading compact-heading">
+            <div>
+              <p class="eyebrow">Bausteine</p>
+              <h2>Aktivitäten suchen</h2>
+            </div>
+          </div>
+          <label class="screen-reader-text" for="activity-search"
+            >Aktivitäten durchsuchen</label
+          >
+          <input
+            id="activity-search"
+            type="search"
+            placeholder="Thema oder Methode"
+          />
+          <label class="screen-reader-text" for="search-class-filter"
+            >Klasse eingrenzen</label
+          >
+          <select id="search-class-filter">
+            <option value="">Alle Klassen</option>
+          </select>
+          <label class="target-label" for="search-target"
+            >In diesen Lektionsblock übernehmen</label
+          >
+          <select id="search-target"></select>
+          <p id="search-message" class="muted-message">Suchbegriff eingeben.</p>
+          <div
+            id="search-results"
+            class="search-results"
+            aria-live="polite"
+          ></div>
+        </section>
+      </aside>
+
+      <section class="workspace" aria-label="Lektionsplanung">
+        <form id="plan-form" novalidate>
+          <section class="form-band lesson-meta">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Planung</p>
+                <h2>Unterricht</h2>
+              </div>
+              <output id="calendar-week" class="week-badge">KW -</output>
+            </div>
+            <div class="meta-grid">
+              <label>
+                Klasse
+                <input
+                  id="class-name"
+                  list="class-suggestions"
+                  autocomplete="off"
+                  required
+                />
+                <datalist id="class-suggestions"></datalist>
+              </label>
+              <label>
+                Unterrichtsdatum
+                <input id="lesson-date" type="date" required />
+              </label>
+            </div>
+            <div
+              id="latest-plan-suggestion"
+              class="latest-plan-suggestion"
+              hidden
+            ></div>
+          </section>
+
+          <section class="form-band">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Ablauf</p>
+                <h2>Lektionsblöcke</h2>
+              </div>
+              <button
+                class="icon-text-button"
+                id="add-lesson-button"
+                type="button"
+              >
+                + Lektionsblock
+              </button>
+            </div>
+            <div id="lessons" class="lesson-stack"></div>
+          </section>
+
+          <section class="form-band split-section">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Aufträge</p>
+                <h2>Hausaufgaben</h2>
+              </div>
+              <button
+                class="icon-text-button"
+                data-add-rich-item="homework"
+                type="button"
+              >
+                + Auftrag
+              </button>
+            </div>
+            <div id="homework-items" class="rich-item-stack"></div>
+          </section>
+
+          <section class="form-band split-section">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Leistungsnachweis</p>
+                <h2>Prüfung oder Abgabe</h2>
+              </div>
+            </div>
+            <div class="assessment-grid">
+              <label>
+                Titel
+                <input
+                  id="assessment-title"
+                  placeholder="z. B. Biologieprüfung I"
+                />
+              </label>
+              <label>
+                Datum
+                <input id="assessment-date" type="date" />
+              </label>
+              <label>
+                Beginn
+                <input id="assessment-start" type="time" />
+              </label>
+              <label>
+                Ende
+                <input id="assessment-end" type="time" />
+              </label>
+            </div>
+            <div class="subsection-heading">
+              <h3>Themen</h3>
+              <button
+                class="icon-text-button"
+                id="add-assessment-topic"
+                type="button"
+              >
+                + Thema
+              </button>
+            </div>
+            <div id="assessment-topics" class="topic-stack"></div>
+          </section>
+
+          <section class="form-band split-section">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Unterstützung</p>
+                <h2>Stützkurs</h2>
+              </div>
+            </div>
+            <div class="support-grid">
+              <label class="wide-field">
+                Anliegen oder Titel
+                <input
+                  id="support-title"
+                  placeholder="z. B. Prüfungsvorbereitung"
+                />
+              </label>
+              <label>
+                Datum
+                <input id="support-date" type="date" />
+              </label>
+              <label>
+                Beginn
+                <input id="support-start" type="time" />
+              </label>
+              <label>
+                Ende
+                <input id="support-end" type="time" />
+              </label>
+              <label class="wide-field">
+                Ort (freies HTML möglich)
+                <textarea
+                  id="support-location"
+                  rows="2"
+                  placeholder="z. B. Zimmer 304/305"
+                ></textarea>
+              </label>
+              <label>
+                Teams-Link
+                <input
+                  id="support-teams-url"
+                  type="url"
+                  placeholder="https://teams.microsoft.com/..."
+                />
+              </label>
+              <label>
+                Anmeldelink
+                <input
+                  id="support-registration-url"
+                  type="url"
+                  placeholder="https://moodle.strickhof.ch/..."
+                />
+              </label>
+              <label class="wide-field">
+                Hinweis (freies HTML möglich)
+                <textarea id="support-note" rows="2"></textarea>
+              </label>
+            </div>
+          </section>
+
+          <section class="form-band split-section">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Kompetenzen</p>
+                <h2>Lernziele</h2>
+              </div>
+              <button
+                class="icon-text-button"
+                data-add-rich-item="learning_objectives"
+                type="button"
+              >
+                + Lernziel
+              </button>
+            </div>
+            <div id="learning-objective-items" class="rich-item-stack"></div>
+          </section>
+        </form>
+
+        <section class="export-band" aria-label="Moodle-Export">
+          <div>
+            <p class="eyebrow">Moodle</p>
+            <h2>HTML-Export</h2>
+            <p id="export-status" class="muted-message">
+              Noch nicht gespeichert.
+            </p>
+          </div>
+          <div class="export-actions">
+            <button
+              class="button button-primary"
+              id="copy-export-button"
+              type="button"
+            >
+              Moodle-HTML kopieren
+            </button>
+            <button
+              class="button button-secondary"
+              id="archive-button"
+              type="button"
+            >
+              HTML archivieren
+            </button>
+          </div>
+        </section>
+
+        <section class="preview-band" aria-label="Moodle-Vorschau">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Kontrolle</p>
+              <h2>Vorschau</h2>
+            </div>
+            <p id="character-count" class="character-count">0 Zeichen</p>
+          </div>
+          <iframe
+            id="preview-frame"
+            title="Moodle-Vorschau"
+            sandbox=""
+          ></iframe>
+        </section>
+      </section>
+    </main>
+
+    <dialog id="export-dialog" class="export-dialog">
+      <form method="dialog">
+        <div class="dialog-header">
+          <h2>Moodle-HTML</h2>
+          <button
+            class="icon-button"
+            aria-label="Dialog schliessen"
+            title="Schliessen"
+          >
+            ×
+          </button>
+        </div>
+        <textarea id="export-fallback" rows="16" readonly></textarea>
+        <div class="dialog-actions">
+          <button
+            class="button button-primary"
+            id="dialog-copy-button"
+            type="button"
+          >
+            In Zwischenablage kopieren
+          </button>
+          <button class="button button-secondary" value="cancel">
+            Schliessen
+          </button>
+        </div>
+      </form>
+    </dialog>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preset>
+  <description>Aktive, moderierte Materialbörse für Lernende. Die Feldstruktur stammt aus dem Preset «Zusatzmaterial» vom 2026-09-10.</description>
+  <settings>
+    <intro>&lt;h3 style=&quot;color: #000000;&quot;&gt;[fa-share-alt] Zusatzmaterial teilen&lt;/h3&gt;
+&lt;p&gt;Teilen Sie hilfreiche, fachlich passende Unterlagen mit der Klasse. Beschreiben Sie kurz, weshalb das Material nützlich ist, und hinterlegen Sie eine Datei oder einen Link.&lt;/p&gt;
+&lt;p&gt;Ihr Beitrag wird vor der Veröffentlichung durch eine Lehrperson geprüft.&lt;/p&gt;</intro>
+    <comments>0</comments>
+    <requiredentries>0</requiredentries>
+    <requiredentriestoview>0</requiredentriestoview>
+    <maxentries>0</maxentries>
+    <rssarticles>0</rssarticles>
+    <approval>1</approval>
+    <defaultsortdir>0</defaultsortdir>
+    <defaultsort>0</defaultsort>
+  </settings>
+  <field>
+    <type>text</type><name>Titel</name><description>Titel des Beitrags</description><required>0</required>
+  </field>
+  <field>
+    <type>textarea</type><name>Beschreibung</name><description>Kurze Beschreibung und Nutzen für den Kurs</description><required>0</required><param2>50</param2><param3>10</param3><param4>1</param4><param5>0</param5>
+  </field>
+  <field>
+    <type>url</type><name>Link</name><description>Link zum Zusatzmaterial</description><required>0</required><param1>1</param1><param3>1</param3>
+  </field>
+  <field>
+    <type>file</type><name>Datei</name><description>Datei zum Zusatzmaterial</description><required>0</required><param3>0</param3>
+  </field>
+  <field>
+    <type>radiobutton</type><name>Relevanz</name><description>Relevanz für das Modul</description><required>0</required><param1>prüfungsrelevant
+zur Vertiefung
+zur weiteren Lektüre</param1>
+  </field>
+  <field>
+    <type>text</type><name>Autor</name><description>Autor:in des Inhalts</description><required>0</required>
+  </field>
+  <field>
+    <type>number</type><name>Erscheinungsjahr</name><description>Erscheinungsjahr des Inhalts</description><required>0</required>
+  </field>
+</preset>

@@ -1,0 +1,3 @@
+# Lokale Python-Umgebung und erzeugter RAG-Index
+.venv/
+01-kontextwissen/rag/.rag/

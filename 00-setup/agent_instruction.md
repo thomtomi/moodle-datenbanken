@@ -1,6 +1,6 @@
 ---
 title: "Agent Instruction"
-date: 2026-09-08
+date: 2026-09-10
 ---
 
 # Agent Instructions für Moodle-Datenbank-Aktivitäten
@@ -214,6 +214,7 @@ Im `pruefprotokoll.md` für wesentliche Arbeiten festhalten:
 
 - Auf Deutsch und standardmässig in der Sie-Form kommunizieren, sofern der Nutzer nichts anderes wünscht.
 - Schweizer Rechtschreibung verwenden: echte Umlaute und `ss` statt scharfem s. Technische Bezeichner, Originaldaten, URLs und wörtliche Quellen nicht durch Sprachkorrekturen beschädigen.
+- Inklusive Sprache verwenden. Geschlechtsneutrale Bezeichnungen wie «Lernende» und «Lehrpersonen» bevorzugen; bei gegenderten Personenbezeichnungen den Doppelpunkt verwenden, z. B. «Herausgeber:in» oder «Herausgeber:innen». Originalbezeichnungen und Zitate bleiben unverändert.
 - Sachlich, aktiv und knapp schreiben. Fachbegriffe einheitlich verwenden und bei Bedarf erklären.
 - Für neue eigene Dateien verständliche ASCII-Namen verwenden. Stabile Namen für Standards und Vorlagen, `YYYY-MM-DD` für zeitgebundene Berichte. Vorgegebene Importdateinamen und bestehende Referenzen erhalten.
 - Neue Markdown-Dokumente beginnen mit einem YAML-Kopf mit `title` und `date` im Format `YYYY-MM-DD`; `author` nur bei bekannter Zuordnung. Titel passend zum Dateizweck formulieren. Beim Ändern dieser Regeln das Datum aktualisieren.

@@ -1,0 +1,27 @@
+{
+  "target": "Moodle 5.1; lokaler Build, Moodle-Import nicht geprüft",
+  "source_csv": "lektionsplaner-daten-import.csv",
+  "source_csv_sha256": "b150e82cda0281310fe7b8861acbe63163b662c4acb6b69fc989a79b3bef1d25",
+  "link_map_sha256": "1fb03dbc5dc22d49c56dbc5f6cb3f04f5f2dca001fe2a7387e9d0d5f884eaa8a",
+  "fields": 40,
+  "records_before": 10,
+  "records_after": 10,
+  "changed_cells": 21,
+  "source_files": {
+    "preset.xml": "d5f58dc483bf1eb8023c4627abe2b7296113675eeb456102489007f463b5a55c",
+    "listtemplate.html": "84a610cc9e1e5dc94f3fac821199a043431590023f21741a53225a69dd23f285",
+    "singletemplate.html": "6be4fcd8b374c1c41907035c1c0e8528f7d0ab0898ad6fa344bd48cd2ae7ea82",
+    "asearchtemplate.html": "4962a2cb1b517d0d09429bf607bfc92e0c472f402d7bf12c442079d42a8df897",
+    "addtemplate.html": "6221e1f12096fef8f02c81dcc1217cf9b04d24cd8b1c0974c3850db405d8a723",
+    "rsstemplate.html": "5f4238bbe58b2a3c775726427ca9de6805cbdf7b134361a4eb0c8444ed70aaf6",
+    "csstemplate.css": "ed89786c840f95846e9c8a74ea941c14e61fa254527586c7523b4d9ad891e852",
+    "jstemplate.js": "9c61204c0b20224e1dc118d21f0ed379675033c9c41f4c898bb5419cbaea59a5",
+    "listtemplateheader.html": "f71dc2c686dd766b4a7bc12296166154f75a1b3f5617fc47caaa7c58d67b171e",
+    "listtemplatefooter.html": "3a20693853dd7cebd9e9c387830905b3790c6a8fb4b881388ec7e57e5218f796",
+    "rsstitletemplate.html": "33486b5fe399d380bd2d12f49123fcfa2a97b0ceafc25dffd235690c8d9ef75b"
+  },
+  "outputs": {
+    "lektionsplaner-moodle-5-1.zip": "6b27e418ad939a7c9d77134b96071b1c990f60235e69f0cef1c7b016f9e27eeb",
+    "lektionsplaner-daten-moodle-5-1.csv": "97c52328afcf4efbae0a917ac28aad6a0a2650099193bc4074d8a96e31923dfc"
+  }
+}

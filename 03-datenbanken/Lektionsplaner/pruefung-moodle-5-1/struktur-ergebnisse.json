@@ -1,0 +1,215 @@
+{
+  "source_version": "Moodle v5.1.0",
+  "preset_fields": 40,
+  "field_types": {
+    "menu": 13,
+    "text": 10,
+    "multimenu": 1,
+    "textarea": 12,
+    "url": 3,
+    "file": 1
+  },
+  "zip": [
+    {
+      "file": "lektionsplaner-datenbank-preset-kompatibel.zip",
+      "sha256": "af94c0c883fba2a8e9725b399d6a5d3127086d608cdf75b31461a7291ad56fe7",
+      "files": 11,
+      "crc_error": null,
+      "source_differences": []
+    },
+    {
+      "file": "lektionsplaner-datenbank-preset-optimiert.zip",
+      "sha256": "af94c0c883fba2a8e9725b399d6a5d3127086d608cdf75b31461a7291ad56fe7",
+      "files": 11,
+      "crc_error": null,
+      "source_differences": []
+    },
+    {
+      "file": "lektionsplaner-datenbank-preset.zip",
+      "sha256": "af94c0c883fba2a8e9725b399d6a5d3127086d608cdf75b31461a7291ad56fe7",
+      "files": 11,
+      "crc_error": null,
+      "source_differences": []
+    }
+  ],
+  "csv": [
+    {
+      "file": "Unterrichtsplanung-11_records-20260904_1336.csv",
+      "sha256": "f41cf1461ef69c5b3ff0f109be4f04f26d04a3d02f9c79934531dd0a26e10261",
+      "rows": 11,
+      "columns": 7,
+      "delimiter": ",",
+      "quotechar": "\"",
+      "encoding_read": "UTF-8 (BOM tolerant)",
+      "complete_rows": true,
+      "backup_token_cells": 0,
+      "header_matches_preset": false
+    },
+    {
+      "file": "Unterrichtsplanung-13_records-20260907_1446.csv",
+      "sha256": "7670d4fbd0c03ce3bf3582bf6027ae9edbaa3ea383806b4f18aa4bf0912218d1",
+      "rows": 13,
+      "columns": 40,
+      "delimiter": ",",
+      "quotechar": "\"",
+      "encoding_read": "UTF-8 (BOM tolerant)",
+      "complete_rows": true,
+      "backup_token_cells": 0,
+      "header_matches_preset": true,
+      "invalid_options": [],
+      "invalid_dates": []
+    },
+    {
+      "file": "lektionsplaner-daten-import-aus-unterrichtsplanung.csv",
+      "sha256": "b38f88eb37a36a17d0c22670b314e13cf049a6e3b2eb6c5a1aa4aa54bd15217d",
+      "rows": 11,
+      "columns": 40,
+      "delimiter": ",",
+      "quotechar": "\"",
+      "encoding_read": "UTF-8 (BOM tolerant)",
+      "complete_rows": true,
+      "backup_token_cells": 0,
+      "header_matches_preset": true,
+      "invalid_options": [],
+      "invalid_dates": []
+    },
+    {
+      "file": "lektionsplaner-daten-import.csv",
+      "sha256": "b150e82cda0281310fe7b8861acbe63163b662c4acb6b69fc989a79b3bef1d25",
+      "rows": 10,
+      "columns": 40,
+      "delimiter": ",",
+      "quotechar": "\"",
+      "encoding_read": "UTF-8 (BOM tolerant)",
+      "complete_rows": true,
+      "backup_token_cells": 21,
+      "header_matches_preset": true,
+      "invalid_options": [],
+      "invalid_dates": []
+    }
+  ],
+  "backups": [
+    {
+      "file": "lektionsplaner-datenbank-mit-daten.mbz",
+      "sha256": "9900289d1fd150f9091a184946b04366c48c6b574a9c6d5be1d4bd82e814a9ce",
+      "archive_format": "gzip compressed tar",
+      "moodle_release": "5.0.7 (Build: 20260420)",
+      "fields": 37,
+      "records": 10,
+      "missing_current_fields": [
+        "zusatzmaterial_datei",
+        "zusatzmaterial_link",
+        "zusatzmaterial_text"
+      ],
+      "type_differences": {
+        "klasse": {
+          "backup": "text",
+          "preset": "menu"
+        },
+        "thema": {
+          "backup": "text",
+          "preset": "multimenu"
+        },
+        "lektion_1_beginn": {
+          "backup": "text",
+          "preset": "menu"
+        },
+        "lektion_1_ende": {
+          "backup": "text",
+          "preset": "menu"
+        },
+        "lektion_2_beginn": {
+          "backup": "text",
+          "preset": "menu"
+        },
+        "lektion_2_ende": {
+          "backup": "text",
+          "preset": "menu"
+        },
+        "lektion_3_beginn": {
+          "backup": "text",
+          "preset": "menu"
+        },
+        "lektion_3_ende": {
+          "backup": "text",
+          "preset": "menu"
+        },
+        "lektion_4_beginn": {
+          "backup": "text",
+          "preset": "menu"
+        },
+        "lektion_4_ende": {
+          "backup": "text",
+          "preset": "menu"
+        },
+        "lektion_5_beginn": {
+          "backup": "text",
+          "preset": "menu"
+        },
+        "lektion_5_ende": {
+          "backup": "text",
+          "preset": "menu"
+        },
+        "lektion_6_beginn": {
+          "backup": "text",
+          "preset": "menu"
+        },
+        "lektion_6_ende": {
+          "backup": "text",
+          "preset": "menu"
+        }
+      }
+    },
+    {
+      "file": "sicherung-moodle2-activity-69203-data69203-20260904-1416.mbz",
+      "sha256": "bace538169048ac9254e59778698491a4395556a836826fda3a643ee265e4ecb",
+      "archive_format": "gzip compressed tar",
+      "moodle_release": "5.0.7 (Build: 20260420)",
+      "fields": 7,
+      "records": 10,
+      "missing_current_fields": [
+        "hausaufgaben",
+        "kalenderwoche",
+        "klasse",
+        "leistungsnachweis_beginn",
+        "leistungsnachweis_datum",
+        "leistungsnachweis_ende",
+        "leistungsnachweis_themen",
+        "leistungsnachweis_titel",
+        "lektion_1_aktivitaeten",
+        "lektion_1_beginn",
+        "lektion_1_ende",
+        "lektion_2_aktivitaeten",
+        "lektion_2_beginn",
+        "lektion_2_ende",
+        "lektion_3_aktivitaeten",
+        "lektion_3_beginn",
+        "lektion_3_ende",
+        "lektion_4_aktivitaeten",
+        "lektion_4_beginn",
+        "lektion_4_ende",
+        "lektion_5_aktivitaeten",
+        "lektion_5_beginn",
+        "lektion_5_ende",
+        "lektion_6_aktivitaeten",
+        "lektion_6_beginn",
+        "lektion_6_ende",
+        "lernziele",
+        "stuetzkurs_anmeldung_url",
+        "stuetzkurs_beginn",
+        "stuetzkurs_datum",
+        "stuetzkurs_ende",
+        "stuetzkurs_hinweis",
+        "stuetzkurs_ort",
+        "stuetzkurs_teams_url",
+        "stuetzkurs_titel",
+        "thema",
+        "unterrichtsdatum",
+        "zusatzmaterial_datei",
+        "zusatzmaterial_link",
+        "zusatzmaterial_text"
+      ],
+      "type_differences": {}
+    }
+  ]
+}

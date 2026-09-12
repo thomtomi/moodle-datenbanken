@@ -1,0 +1,222 @@
+{
+  "environment": "Chromium, synthetischer Moodle-5.1-Feldnachbau; kein Moodle, TinyMCE nur als API-Testdouble",
+  "cases": [
+    {
+      "name": "1440: leere optionale Abschnitte geschlossen",
+      "status": "bestanden"
+    },
+    {
+      "name": "1440: Kalenderwoche",
+      "status": "bestanden"
+    },
+    {
+      "name": "1440: Zeitfenster beschriftet",
+      "status": "bestanden"
+    },
+    {
+      "name": "1440: Datum und Lernziele unverändert",
+      "status": "bestanden"
+    },
+    {
+      "name": "1440: kein Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "1440: keine JavaScript-Fehler",
+      "status": "bestanden"
+    },
+    {
+      "name": "390: leere optionale Abschnitte geschlossen",
+      "status": "bestanden"
+    },
+    {
+      "name": "390: Kalenderwoche",
+      "status": "bestanden"
+    },
+    {
+      "name": "390: Zeitfenster beschriftet",
+      "status": "bestanden"
+    },
+    {
+      "name": "390: Datum und Lernziele unverändert",
+      "status": "bestanden"
+    },
+    {
+      "name": "390: kein Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "390: keine JavaScript-Fehler",
+      "status": "bestanden"
+    },
+    {
+      "name": "320: leere optionale Abschnitte geschlossen",
+      "status": "bestanden"
+    },
+    {
+      "name": "320: Kalenderwoche",
+      "status": "bestanden"
+    },
+    {
+      "name": "320: Zeitfenster beschriftet",
+      "status": "bestanden"
+    },
+    {
+      "name": "320: Datum und Lernziele unverändert",
+      "status": "bestanden"
+    },
+    {
+      "name": "320: kein Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "320: keine JavaScript-Fehler",
+      "status": "bestanden"
+    },
+    {
+      "name": "Zeitfenster aktualisiert beide Moodle-Felder",
+      "status": "bestanden"
+    },
+    {
+      "name": "Themenbutton synchronisiert Mehrfachauswahl",
+      "status": "bestanden"
+    },
+    {
+      "name": "Satzanfang nur auf Klick",
+      "status": "bestanden"
+    },
+    {
+      "name": "Vorhandene Lernziele bleiben erhalten",
+      "status": "bestanden"
+    },
+    {
+      "name": "Bewusst geleerte Lernziele bleiben leer",
+      "status": "bestanden"
+    },
+    {
+      "name": "Nur belegter optionaler Bereich wird geöffnet",
+      "status": "bestanden"
+    },
+    {
+      "name": "Manuell geschlossener Bereich bleibt geschlossen",
+      "status": "bestanden"
+    },
+    {
+      "name": "Datum 09.09.2026",
+      "status": "bestanden"
+    },
+    {
+      "name": "KW für 09.09.2026",
+      "status": "bestanden"
+    },
+    {
+      "name": "Datum 29.02.2024",
+      "status": "bestanden"
+    },
+    {
+      "name": "KW für 29.02.2024",
+      "status": "bestanden"
+    },
+    {
+      "name": "Datum 2021-01-01",
+      "status": "bestanden"
+    },
+    {
+      "name": "KW für 2021-01-01",
+      "status": "bestanden"
+    },
+    {
+      "name": "Unbekanntes Datum erhalten: 31.02.2026",
+      "status": "bestanden"
+    },
+    {
+      "name": "Bestehende Woche und Hinweis: 31.02.2026",
+      "status": "bestanden"
+    },
+    {
+      "name": "Unbekanntes Datum erhalten: 29.02.2023",
+      "status": "bestanden"
+    },
+    {
+      "name": "Bestehende Woche und Hinweis: 29.02.2023",
+      "status": "bestanden"
+    },
+    {
+      "name": "Unbekanntes Datum erhalten: morgen",
+      "status": "bestanden"
+    },
+    {
+      "name": "Bestehende Woche und Hinweis: morgen",
+      "status": "bestanden"
+    },
+    {
+      "name": "Korrektur eines unbekannten Datums",
+      "status": "bestanden"
+    },
+    {
+      "name": "Nicht bereiter Editor wird nicht überschrieben",
+      "status": "bestanden"
+    },
+    {
+      "name": "Satzanfang über Editor-API synchronisiert",
+      "status": "bestanden"
+    },
+    {
+      "name": "Editor-Inhalt hat Vorrang vor leerer Textarea",
+      "status": "bestanden"
+    },
+    {
+      "name": "Ohne JS bleiben native Eingaben erreichbar",
+      "status": "bestanden"
+    },
+    {
+      "name": "single/1440: langer Inhalt ohne Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "single/1440: leere Lektionen verborgen",
+      "status": "bestanden"
+    },
+    {
+      "name": "list/1440: langer Inhalt ohne Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "list/1440: drei Karten",
+      "status": "bestanden"
+    },
+    {
+      "name": "single/390: langer Inhalt ohne Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "single/390: leere Lektionen verborgen",
+      "status": "bestanden"
+    },
+    {
+      "name": "list/390: langer Inhalt ohne Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "list/390: drei Karten",
+      "status": "bestanden"
+    },
+    {
+      "name": "single/320: langer Inhalt ohne Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "single/320: leere Lektionen verborgen",
+      "status": "bestanden"
+    },
+    {
+      "name": "list/320: langer Inhalt ohne Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "list/320: drei Karten",
+      "status": "bestanden"
+    }
+  ],
+  "browser": "Chrome/152.0.7977.82"
+}

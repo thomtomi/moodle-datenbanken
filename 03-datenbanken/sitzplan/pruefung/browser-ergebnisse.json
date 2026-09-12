@@ -1,0 +1,320 @@
+{
+  "environment": "Lokale synthetische HTML-Vorschauen, kein Moodle und keine echten Datei-Uploads",
+  "cases": [
+    {
+      "name": "vorschau.html/1200: 21 Plätze",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau.html/1200: kein Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau.html/1200: Lehrpersonenperspektive",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau.html/1200: keine abgeschnittenen Namen",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau.html/1200: Fotos geladen",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-leer.html/1200: 21 Plätze",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-leer.html/1200: kein Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-leer.html/1200: Lehrpersonenperspektive",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-leer.html/1200: keine abgeschnittenen Namen",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-leer.html/1200: Fotos geladen",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-leer.html/1200: kein leerer Bildbereich",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-lang.html/1200: 21 Plätze",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-lang.html/1200: kein Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-lang.html/1200: Lehrpersonenperspektive",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-lang.html/1200: keine abgeschnittenen Namen",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-lang.html/1200: Fotos geladen",
+      "status": "bestanden"
+    },
+    {
+      "name": "Eingabe/1200: kein Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "Eingabe/1200: Felder beschriftet",
+      "status": "bestanden"
+    },
+    {
+      "name": "Eingabe/1200: einziges Pflichtfeld",
+      "status": "bestanden"
+    },
+    {
+      "name": "Eingabe/1200: 21 Fotofelder vorhanden",
+      "status": "bestanden"
+    },
+    {
+      "name": "Eingabe/1200: aufgeklappter Upload erreichbar",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-liste.html/1200: kein Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-suche.html/1200: kein Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau.html/390: 21 Plätze",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau.html/390: kein Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau.html/390: Lehrpersonenperspektive",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau.html/390: keine abgeschnittenen Namen",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau.html/390: Fotos geladen",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-leer.html/390: 21 Plätze",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-leer.html/390: kein Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-leer.html/390: Lehrpersonenperspektive",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-leer.html/390: keine abgeschnittenen Namen",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-leer.html/390: Fotos geladen",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-leer.html/390: kein leerer Bildbereich",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-lang.html/390: 21 Plätze",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-lang.html/390: kein Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-lang.html/390: Lehrpersonenperspektive",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-lang.html/390: keine abgeschnittenen Namen",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-lang.html/390: Fotos geladen",
+      "status": "bestanden"
+    },
+    {
+      "name": "Eingabe/390: kein Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "Eingabe/390: Felder beschriftet",
+      "status": "bestanden"
+    },
+    {
+      "name": "Eingabe/390: einziges Pflichtfeld",
+      "status": "bestanden"
+    },
+    {
+      "name": "Eingabe/390: 21 Fotofelder vorhanden",
+      "status": "bestanden"
+    },
+    {
+      "name": "Eingabe/390: aufgeklappter Upload erreichbar",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-liste.html/390: kein Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-suche.html/390: kein Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau.html/320: 21 Plätze",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau.html/320: kein Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau.html/320: Lehrpersonenperspektive",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau.html/320: keine abgeschnittenen Namen",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau.html/320: Fotos geladen",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau.html/320: lokaler Scrollbereich",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-leer.html/320: 21 Plätze",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-leer.html/320: kein Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-leer.html/320: Lehrpersonenperspektive",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-leer.html/320: keine abgeschnittenen Namen",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-leer.html/320: Fotos geladen",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-leer.html/320: kein leerer Bildbereich",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-leer.html/320: lokaler Scrollbereich",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-lang.html/320: 21 Plätze",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-lang.html/320: kein Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-lang.html/320: Lehrpersonenperspektive",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-lang.html/320: keine abgeschnittenen Namen",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-lang.html/320: Fotos geladen",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-lang.html/320: lokaler Scrollbereich",
+      "status": "bestanden"
+    },
+    {
+      "name": "Eingabe/320: kein Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "Eingabe/320: Felder beschriftet",
+      "status": "bestanden"
+    },
+    {
+      "name": "Eingabe/320: einziges Pflichtfeld",
+      "status": "bestanden"
+    },
+    {
+      "name": "Eingabe/320: 21 Fotofelder vorhanden",
+      "status": "bestanden"
+    },
+    {
+      "name": "Eingabe/320: aufgeklappter Upload erreichbar",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-liste.html/320: kein Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "vorschau-suche.html/320: kein Seitenüberlauf",
+      "status": "bestanden"
+    },
+    {
+      "name": "Scrollbereich: sichtbarer Tastaturfokus",
+      "status": "bestanden"
+    },
+    {
+      "name": "Scrollbereich: per Pfeiltaste bedienbar",
+      "status": "bestanden"
+    },
+    {
+      "name": "Fotoabschnitt: per Tastatur geöffnet",
+      "status": "bestanden"
+    },
+    {
+      "name": "Druck-CSS: Plan passt ohne Scrollen",
+      "status": "bestanden"
+    },
+    {
+      "name": "Druck-CSS: 21 Plätze bleiben erhalten",
+      "status": "bestanden"
+    }
+  ],
+  "browser": "Chrome/152.0.7977.82",
+  "focus_observation": {
+    "element": "sp-scroll",
+    "focused": true,
+    "style": "solid",
+    "width": "3px"
+  }
+}

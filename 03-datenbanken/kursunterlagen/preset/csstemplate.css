@@ -1,0 +1,279 @@
+/* Kursunterlagen: eigenständige, Moodle-schonende Gestaltung ohne JavaScript. */
+.ku-db {
+  --ku-surface: #ffffff;
+  --ku-ink: #17221f;
+  --ku-muted: #5e6a65;
+  --ku-line: #d5ded8;
+  --ku-teal: #006d68;
+  --ku-teal-deep: #004d49;
+  --ku-gold: #e2a72b;
+  --ku-mint: #e0eee4;
+  --ku-shadow: 0 10px 24px rgba(23, 34, 31, 0.08);
+  color: var(--ku-ink);
+  font-family: "Atkinson Hyperlegible", "Noto Sans", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.ku-db *,
+.ku-db *::before,
+.ku-db *::after { box-sizing: border-box; }
+
+.ku-db h3,
+.ku-db h4,
+.ku-db p { margin-top: 0; }
+
+.ku-db h3,
+.ku-db h4 {
+  color: var(--ku-ink);
+  font-weight: 800;
+}
+
+.ku-db h3 { font-size: 1.55rem; margin-bottom: 0.25rem; }
+.ku-db h4 { font-size: 1.12rem; margin-bottom: 0.35rem; }
+
+.ku-eyebrow {
+  margin-bottom: 0.2rem;
+  color: var(--ku-teal);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ku-list-header,
+.ku-single-header,
+.ku-search-card {
+  background: linear-gradient(120deg, rgba(0, 109, 104, 0.08), rgba(255, 255, 255, 0) 60%), var(--ku-surface);
+}
+
+.ku-list-header,
+.ku-single-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 1px solid var(--ku-line);
+  border-bottom: 4px solid var(--ku-gold);
+  border-radius: 8px 8px 0 0;
+  padding: 1.25rem 1.35rem;
+}
+
+.ku-header-note,
+.ku-form-note,
+.ku-topic-line { color: var(--ku-muted); margin-bottom: 0; }
+
+.ku-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.ku-card,
+.ku-single,
+.ku-search,
+.ku-add {
+  min-width: 0;
+  border: 1px solid var(--ku-line);
+  border-radius: 8px;
+  background: var(--ku-surface);
+  box-shadow: var(--ku-shadow);
+  overflow: hidden;
+}
+
+.ku-list-grid .ku-card { display: flex; flex-direction: column; }
+
+.ku-compact-card {
+  gap: 0.55rem;
+  padding: 1rem 1.15rem;
+}
+
+.ku-compact-line,
+.ku-compact-title { margin-bottom: 0; }
+
+.ku-compact-line {
+  color: var(--ku-muted);
+  overflow-wrap: anywhere;
+}
+
+.ku-compact-title a {
+  color: var(--ku-teal-deep);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.ku-compact-title a:hover { text-decoration: underline; }
+
+.ku-compact-title a:focus-visible {
+  outline: 3px solid var(--ku-gold);
+  outline-offset: 2px;
+}
+
+.ku-compact-label {
+  color: #34413b;
+  font-weight: 800;
+}
+
+.ku-compact-link:empty { display: none; }
+
+.ku-compact-link a {
+  color: var(--ku-teal-deep);
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.ku-compact-link a:focus-visible {
+  outline: 3px solid var(--ku-gold);
+  outline-offset: 2px;
+}
+
+.ku-card-header,
+.ku-card-body,
+.ku-card-footer,
+.ku-single-body,
+.ku-form-body,
+.ku-search-card { padding: 1rem 1.15rem; }
+
+.ku-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.8rem;
+  border-bottom: 1px solid var(--ku-line);
+  background: #fbfcfa;
+}
+
+.ku-card-header h4 { overflow-wrap: anywhere; }
+
+.ku-topic {
+  display: inline-block;
+  flex: 0 1 auto;
+  border: 1px solid #b6d4c6;
+  border-radius: 999px;
+  background: var(--ku-mint);
+  color: var(--ku-teal-deep);
+  font-size: 0.78rem;
+  font-weight: 750;
+  line-height: 1.25;
+  padding: 0.25rem 0.55rem;
+  overflow-wrap: anywhere;
+}
+
+.ku-card-body { flex: 1 1 auto; }
+.ku-description { overflow-wrap: anywhere; }
+.ku-description > :last-child { margin-bottom: 0; }
+
+.ku-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  border-top: 1px solid var(--ku-line);
+}
+
+.ku-resource-links {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  min-width: 0;
+}
+
+.ku-resource-links a,
+.ku-more-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  border: 1px solid var(--ku-teal);
+  border-radius: 6px;
+  background: var(--ku-teal);
+  color: #ffffff !important;
+  font-weight: 800;
+  padding: 0.35rem 0.65rem;
+  text-decoration: none !important;
+  overflow-wrap: anywhere;
+}
+
+.ku-resource-links a:hover,
+.ku-more-link:hover { background: var(--ku-teal-deep); color: #ffffff !important; }
+
+.ku-resource-links a:focus-visible,
+.ku-more-link:focus-visible,
+.ku-db input:focus-visible,
+.ku-db textarea:focus-visible,
+.ku-db select:focus-visible {
+  outline: 3px solid #e2a72b;
+  outline-offset: 2px;
+}
+
+.ku-file:empty,
+.ku-link:empty { display: none; }
+
+.ku-single { max-width: 60rem; }
+.ku-actions { display: flex; align-items: center; gap: 0.5rem; }
+.ku-single-body > .ku-section + .ku-section { border-top: 1px solid var(--ku-line); }
+.ku-section { padding: 1.15rem 1.35rem; }
+.ku-section h4 { color: var(--ku-teal-deep); }
+.ku-publisher p { margin-bottom: 0; }
+
+.ku-search-card { border-radius: 8px; }
+.ku-search-grid,
+.ku-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.ku-field { min-width: 0; }
+.ku-field-wide { grid-column: 1 / -1; }
+.ku-label { display: block; margin-bottom: 0.35rem; color: #34413b; font-size: 0.84rem; font-weight: 800; }
+
+.ku-add .ku-form-body { border: 1px solid var(--ku-line); border-top: 0; border-radius: 0 0 8px 8px; }
+.ku-db input[type="text"],
+.ku-db input[type="url"],
+.ku-db textarea,
+.ku-db select,
+.ku-db .form-control,
+.ku-db .form-select {
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid #bfcac4;
+  border-radius: 5px;
+  background: #ffffff;
+  color: var(--ku-ink);
+  font: inherit;
+}
+
+.ku-db input[type="text"],
+.ku-db input[type="url"],
+.ku-db select,
+.ku-db .form-control,
+.ku-db .form-select { min-height: 2.35rem; padding: 0.45rem 0.55rem; }
+.ku-db textarea { min-height: 7rem; padding: 0.55rem; resize: vertical; }
+.ku-db .filemanager,
+.ku-db .filepicker,
+.ku-db .fp-restrictions,
+.ku-db .mod-data-input { max-width: 100%; }
+
+.ku-visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+}
+
+@media (max-width: 42rem) {
+  .ku-list-header,
+  .ku-single-header,
+  .ku-card-header,
+  .ku-card-footer { align-items: flex-start; flex-direction: column; }
+  .ku-list-grid,
+  .ku-search-grid,
+  .ku-form-grid { grid-template-columns: 1fr; }
+  .ku-field-wide { grid-column: auto; }
+  .ku-resource-links { width: 100%; }
+}

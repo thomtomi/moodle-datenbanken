@@ -1,0 +1,29 @@
+{
+  "status": "bestanden",
+  "source": "Lokaler Artefakt- und Datenvergleich, kein Moodle-Import",
+  "fields": 40,
+  "records_before": 10,
+  "records_after": 10,
+  "changed_cells": 21,
+  "other_data_changes": 0,
+  "link_targets_verified_against_reference_export": 4,
+  "zip_files": 11,
+  "zip_matches_source": true,
+  "build_reproducible": true,
+  "preserved_originals": [
+    "moodle-database-preset/lektionsplaner-daten-import.csv",
+    "moodle-database-preset/sicherung-moodle2-activity-69203-data69203-20260904-1416.mbz",
+    "moodle-database-preset/lektionsplaner-daten-import-aus-unterrichtsplanung.csv",
+    "moodle-database-preset/lektionsplaner-datenbank-preset-optimiert.zip",
+    "moodle-database-preset/lektionsplaner-datenbank-mit-daten.mbz",
+    "moodle-database-preset/Unterrichtsplanung-11_records-20260904_1336.csv",
+    "moodle-database-preset/lektionsplaner-datenbank-preset-kompatibel.zip",
+    "moodle-database-preset/lektionsplaner-datenbank-preset.zip",
+    "moodle-database-preset/Unterrichtsplanung-13_records-20260907_1446.csv",
+    "data/lektionen.json"
+  ],
+  "output_sha256": {
+    "lektionsplaner-moodle-5-1.zip": "6b27e418ad939a7c9d77134b96071b1c990f60235e69f0cef1c7b016f9e27eeb",
+    "lektionsplaner-daten-moodle-5-1.csv": "97c52328afcf4efbae0a917ac28aad6a0a2650099193bc4074d8a96e31923dfc"
+  }
+}

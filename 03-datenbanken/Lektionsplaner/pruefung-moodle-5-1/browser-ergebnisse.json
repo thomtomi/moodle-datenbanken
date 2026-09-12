@@ -1,0 +1,307 @@
+{
+  "browser": "Chrome/152.0.7977.82",
+  "environment": "Lokales HTML mit synthetischen Feldern nach Moodle 5.1.0; kein Moodle und kein TinyMCE",
+  "cases": [
+    {
+      "variant": "iso",
+      "width": 1440,
+      "date": "2026-09-09",
+      "week": "KW 37",
+      "optionalSections": [
+        {
+          "name": "4. Lektion",
+          "open": true,
+          "hiddenValues": [
+            "12345"
+          ]
+        },
+        {
+          "name": "5. Lektion",
+          "open": true,
+          "hiddenValues": [
+            "12345"
+          ]
+        },
+        {
+          "name": "6. Lektion",
+          "open": true,
+          "hiddenValues": [
+            "12345"
+          ]
+        },
+        {
+          "name": "Leistungsnachweis",
+          "open": true,
+          "hiddenValues": [
+            "12345"
+          ]
+        },
+        {
+          "name": "Stützkurs",
+          "open": true,
+          "hiddenValues": [
+            "12345",
+            "12345"
+          ]
+        }
+      ],
+      "unlabelledSlots": 6,
+      "slotStart": "07:40",
+      "slotEnd": "08:25",
+      "selectedTopics": [
+        "Facheinführung"
+      ],
+      "pressed": "true",
+      "horizontalOverflow": false,
+      "errors": []
+    },
+    {
+      "variant": "iso",
+      "width": 390,
+      "date": "2026-09-09",
+      "week": "KW 37",
+      "optionalSections": [
+        {
+          "name": "4. Lektion",
+          "open": true,
+          "hiddenValues": [
+            "12345"
+          ]
+        },
+        {
+          "name": "5. Lektion",
+          "open": true,
+          "hiddenValues": [
+            "12345"
+          ]
+        },
+        {
+          "name": "6. Lektion",
+          "open": true,
+          "hiddenValues": [
+            "12345"
+          ]
+        },
+        {
+          "name": "Leistungsnachweis",
+          "open": true,
+          "hiddenValues": [
+            "12345"
+          ]
+        },
+        {
+          "name": "Stützkurs",
+          "open": true,
+          "hiddenValues": [
+            "12345",
+            "12345"
+          ]
+        }
+      ],
+      "unlabelledSlots": 6,
+      "slotStart": "07:40",
+      "slotEnd": "08:25",
+      "selectedTopics": [
+        "Facheinführung"
+      ],
+      "pressed": "true",
+      "horizontalOverflow": false,
+      "errors": []
+    },
+    {
+      "variant": "iso",
+      "width": 320,
+      "date": "2026-09-09",
+      "week": "KW 37",
+      "optionalSections": [
+        {
+          "name": "4. Lektion",
+          "open": true,
+          "hiddenValues": [
+            "12345"
+          ]
+        },
+        {
+          "name": "5. Lektion",
+          "open": true,
+          "hiddenValues": [
+            "12345"
+          ]
+        },
+        {
+          "name": "6. Lektion",
+          "open": true,
+          "hiddenValues": [
+            "12345"
+          ]
+        },
+        {
+          "name": "Leistungsnachweis",
+          "open": true,
+          "hiddenValues": [
+            "12345"
+          ]
+        },
+        {
+          "name": "Stützkurs",
+          "open": true,
+          "hiddenValues": [
+            "12345",
+            "12345"
+          ]
+        }
+      ],
+      "unlabelledSlots": 6,
+      "slotStart": "07:40",
+      "slotEnd": "08:25",
+      "selectedTopics": [
+        "Facheinführung"
+      ],
+      "pressed": "true",
+      "horizontalOverflow": false,
+      "errors": []
+    },
+    {
+      "variant": "legacy",
+      "width": 1440,
+      "date": "",
+      "week": "",
+      "optionalSections": [
+        {
+          "name": "4. Lektion",
+          "open": true,
+          "hiddenValues": [
+            "12345"
+          ]
+        },
+        {
+          "name": "5. Lektion",
+          "open": true,
+          "hiddenValues": [
+            "12345"
+          ]
+        },
+        {
+          "name": "6. Lektion",
+          "open": true,
+          "hiddenValues": [
+            "12345"
+          ]
+        },
+        {
+          "name": "Leistungsnachweis",
+          "open": true,
+          "hiddenValues": [
+            "12345"
+          ]
+        },
+        {
+          "name": "Stützkurs",
+          "open": true,
+          "hiddenValues": [
+            "12345",
+            "12345"
+          ]
+        }
+      ],
+      "unlabelledSlots": 6,
+      "slotStart": "07:40",
+      "slotEnd": "08:25",
+      "selectedTopics": [
+        "Facheinführung"
+      ],
+      "pressed": "true",
+      "horizontalOverflow": false,
+      "errors": []
+    }
+  ],
+  "displayCases": [
+    {
+      "view": "single",
+      "width": 1440,
+      "horizontalOverflow": false,
+      "week": [
+        "KW 37"
+      ],
+      "cards": 0,
+      "hiddenGroups": 18,
+      "visibleLessons": [
+        "1. Lektion",
+        "6. Lektion"
+      ],
+      "unresolvedPlaceholders": false
+    },
+    {
+      "view": "list",
+      "width": 1440,
+      "horizontalOverflow": false,
+      "week": [
+        "KW 37",
+        "KW 37",
+        "KW 37"
+      ],
+      "cards": 3,
+      "hiddenGroups": 3,
+      "visibleLessons": [],
+      "unresolvedPlaceholders": false
+    },
+    {
+      "view": "single",
+      "width": 390,
+      "horizontalOverflow": false,
+      "week": [
+        "KW 37"
+      ],
+      "cards": 0,
+      "hiddenGroups": 18,
+      "visibleLessons": [
+        "1. Lektion",
+        "6. Lektion"
+      ],
+      "unresolvedPlaceholders": false
+    },
+    {
+      "view": "list",
+      "width": 390,
+      "horizontalOverflow": false,
+      "week": [
+        "KW 37",
+        "KW 37",
+        "KW 37"
+      ],
+      "cards": 3,
+      "hiddenGroups": 3,
+      "visibleLessons": [],
+      "unresolvedPlaceholders": false
+    },
+    {
+      "view": "single",
+      "width": 320,
+      "horizontalOverflow": false,
+      "week": [
+        "KW 37"
+      ],
+      "cards": 0,
+      "hiddenGroups": 18,
+      "visibleLessons": [
+        "1. Lektion",
+        "6. Lektion"
+      ],
+      "unresolvedPlaceholders": false
+    },
+    {
+      "view": "list",
+      "width": 320,
+      "horizontalOverflow": false,
+      "week": [
+        "KW 37",
+        "KW 37",
+        "KW 37"
+      ],
+      "cards": 3,
+      "hiddenGroups": 3,
+      "visibleLessons": [],
+      "unresolvedPlaceholders": false
+    }
+  ]
+}
