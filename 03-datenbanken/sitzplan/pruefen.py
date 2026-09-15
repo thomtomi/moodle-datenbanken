@@ -20,10 +20,11 @@ def main():
     actual = [{node.tag: node.text or '' for node in field} for field in fieldnodes]
     assert actual == build.fields()
     assert sum(f['required'] == '1' for f in actual) == 1
-    assert sum(f['type'] == 'picture' for f in actual) == 21
+    assert len(actual) == len(build.fields()) == 2 + len(build.layout_fields()) + build.ROWS * build.PLACES * 2
+    assert sum(f['type'] == 'picture' for f in actual) == build.ROWS * build.PLACES
     record = data['singletemplate.html']
-    codes = re.findall(r'data-seat="(r\d-p\d)"', record)
-    assert codes == [f'r{r}-p{p}' for r in [3, 2, 1] for p in range(1, 8)]
+    codes = re.findall(r'data-seat="(r\d+-p\d+)"', record)
+    assert codes == [f'r{r}-p{p}' for r in range(build.ROWS, 0, -1) for p in range(1, build.PLACES + 1)]
     parser = html5lib.HTMLParser(namespaceHTMLElements=False)
     fragment = parser.parseFragment(record)
     for desk in fragment.iter('div'):
@@ -57,7 +58,7 @@ def main():
         for target in re.findall(r'\]\(([^)]+)\)', text):
             if not target.startswith('http'):
                 assert (path.parent / target).exists(), (path, target)
-    print('Bestanden: 44 Felder, 21 zugeordnete Plätze, Orientierung, HTML, CSS-Geltungsbereich, ZIP und Dokumentlinks.')
+    print(f'Bestanden: {len(actual)} Felder, {build.ROWS * build.PLACES} zugeordnete Plätze, Orientierung, HTML, CSS-Geltungsbereich, ZIP und Dokumentlinks.')
 
 
 if __name__ == '__main__':

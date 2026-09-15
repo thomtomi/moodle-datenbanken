@@ -1,6 +1,6 @@
 ---
 title: "Sitzplan: vollständige Feldliste"
-date: 2026-09-12
+date: 2026-09-14
 ---
 
 # Feldliste Sitzplan
@@ -11,6 +11,15 @@ Generiert durch `build.py`. Platzbezeichnungen sind aus Sicht der Lehrperson. Be
 | --- | --- | --- | --- | --- |
 | `Plan` | text | ja | Klasse und Bezeichnung des Sitzplans | BMS · September |
 | `Raum` | text | nein | Zimmerbezeichnung, optional | B 204 |
+| `Reihen` | menu | nein | Anzahl Reihen: 1 bis 8; leer entspricht 3. | 3 |
+| `r1_tische` | menu | nein | Tische in Reihe 1: 1 bis 16; leer entspricht 7. | 7 |
+| `r2_tische` | menu | nein | Tische in Reihe 2: 1 bis 16; leer entspricht 7. | 7 |
+| `r3_tische` | menu | nein | Tische in Reihe 3: 1 bis 16; leer entspricht 7. | 7 |
+| `r4_tische` | menu | nein | Tische in Reihe 4: 1 bis 16; leer entspricht 7. | 7 |
+| `r5_tische` | menu | nein | Tische in Reihe 5: 1 bis 16; leer entspricht 7. | 7 |
+| `r6_tische` | menu | nein | Tische in Reihe 6: 1 bis 16; leer entspricht 7. | 7 |
+| `r7_tische` | menu | nein | Tische in Reihe 7: 1 bis 16; leer entspricht 7. | 7 |
+| `r8_tische` | menu | nein | Tische in Reihe 8: 1 bis 16; leer entspricht 7. | 7 |
 | `r1_p1_name` | text | nein | Reihe 1, Platz 1 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
 | `r1_p1_foto` | picture | nein | Reihe 1, Platz 1 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
 | `r1_p2_name` | text | nein | Reihe 1, Platz 2 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
@@ -25,6 +34,24 @@ Generiert durch `build.py`. Platzbezeichnungen sind aus Sicht der Lehrperson. Be
 | `r1_p6_foto` | picture | nein | Reihe 1, Platz 6 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
 | `r1_p7_name` | text | nein | Reihe 1, Platz 7 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
 | `r1_p7_foto` | picture | nein | Reihe 1, Platz 7 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r1_p8_name` | text | nein | Reihe 1, Platz 8 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r1_p8_foto` | picture | nein | Reihe 1, Platz 8 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r1_p9_name` | text | nein | Reihe 1, Platz 9 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r1_p9_foto` | picture | nein | Reihe 1, Platz 9 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r1_p10_name` | text | nein | Reihe 1, Platz 10 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r1_p10_foto` | picture | nein | Reihe 1, Platz 10 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r1_p11_name` | text | nein | Reihe 1, Platz 11 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r1_p11_foto` | picture | nein | Reihe 1, Platz 11 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r1_p12_name` | text | nein | Reihe 1, Platz 12 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r1_p12_foto` | picture | nein | Reihe 1, Platz 12 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r1_p13_name` | text | nein | Reihe 1, Platz 13 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r1_p13_foto` | picture | nein | Reihe 1, Platz 13 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r1_p14_name` | text | nein | Reihe 1, Platz 14 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r1_p14_foto` | picture | nein | Reihe 1, Platz 14 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r1_p15_name` | text | nein | Reihe 1, Platz 15 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r1_p15_foto` | picture | nein | Reihe 1, Platz 15 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r1_p16_name` | text | nein | Reihe 1, Platz 16 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r1_p16_foto` | picture | nein | Reihe 1, Platz 16 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
 | `r2_p1_name` | text | nein | Reihe 2, Platz 1 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
 | `r2_p1_foto` | picture | nein | Reihe 2, Platz 1 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
 | `r2_p2_name` | text | nein | Reihe 2, Platz 2 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
@@ -39,6 +66,24 @@ Generiert durch `build.py`. Platzbezeichnungen sind aus Sicht der Lehrperson. Be
 | `r2_p6_foto` | picture | nein | Reihe 2, Platz 6 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
 | `r2_p7_name` | text | nein | Reihe 2, Platz 7 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
 | `r2_p7_foto` | picture | nein | Reihe 2, Platz 7 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r2_p8_name` | text | nein | Reihe 2, Platz 8 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r2_p8_foto` | picture | nein | Reihe 2, Platz 8 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r2_p9_name` | text | nein | Reihe 2, Platz 9 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r2_p9_foto` | picture | nein | Reihe 2, Platz 9 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r2_p10_name` | text | nein | Reihe 2, Platz 10 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r2_p10_foto` | picture | nein | Reihe 2, Platz 10 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r2_p11_name` | text | nein | Reihe 2, Platz 11 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r2_p11_foto` | picture | nein | Reihe 2, Platz 11 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r2_p12_name` | text | nein | Reihe 2, Platz 12 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r2_p12_foto` | picture | nein | Reihe 2, Platz 12 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r2_p13_name` | text | nein | Reihe 2, Platz 13 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r2_p13_foto` | picture | nein | Reihe 2, Platz 13 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r2_p14_name` | text | nein | Reihe 2, Platz 14 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r2_p14_foto` | picture | nein | Reihe 2, Platz 14 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r2_p15_name` | text | nein | Reihe 2, Platz 15 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r2_p15_foto` | picture | nein | Reihe 2, Platz 15 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r2_p16_name` | text | nein | Reihe 2, Platz 16 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r2_p16_foto` | picture | nein | Reihe 2, Platz 16 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
 | `r3_p1_name` | text | nein | Reihe 3, Platz 1 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
 | `r3_p1_foto` | picture | nein | Reihe 3, Platz 1 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
 | `r3_p2_name` | text | nein | Reihe 3, Platz 2 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
@@ -53,5 +98,183 @@ Generiert durch `build.py`. Platzbezeichnungen sind aus Sicht der Lehrperson. Be
 | `r3_p6_foto` | picture | nein | Reihe 3, Platz 6 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
 | `r3_p7_name` | text | nein | Reihe 3, Platz 7 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
 | `r3_p7_foto` | picture | nein | Reihe 3, Platz 7 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r3_p8_name` | text | nein | Reihe 3, Platz 8 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r3_p8_foto` | picture | nein | Reihe 3, Platz 8 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r3_p9_name` | text | nein | Reihe 3, Platz 9 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r3_p9_foto` | picture | nein | Reihe 3, Platz 9 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r3_p10_name` | text | nein | Reihe 3, Platz 10 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r3_p10_foto` | picture | nein | Reihe 3, Platz 10 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r3_p11_name` | text | nein | Reihe 3, Platz 11 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r3_p11_foto` | picture | nein | Reihe 3, Platz 11 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r3_p12_name` | text | nein | Reihe 3, Platz 12 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r3_p12_foto` | picture | nein | Reihe 3, Platz 12 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r3_p13_name` | text | nein | Reihe 3, Platz 13 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r3_p13_foto` | picture | nein | Reihe 3, Platz 13 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r3_p14_name` | text | nein | Reihe 3, Platz 14 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r3_p14_foto` | picture | nein | Reihe 3, Platz 14 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r3_p15_name` | text | nein | Reihe 3, Platz 15 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r3_p15_foto` | picture | nein | Reihe 3, Platz 15 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r3_p16_name` | text | nein | Reihe 3, Platz 16 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r3_p16_foto` | picture | nein | Reihe 3, Platz 16 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r4_p1_name` | text | nein | Reihe 4, Platz 1 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r4_p1_foto` | picture | nein | Reihe 4, Platz 1 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r4_p2_name` | text | nein | Reihe 4, Platz 2 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r4_p2_foto` | picture | nein | Reihe 4, Platz 2 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r4_p3_name` | text | nein | Reihe 4, Platz 3 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r4_p3_foto` | picture | nein | Reihe 4, Platz 3 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r4_p4_name` | text | nein | Reihe 4, Platz 4 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r4_p4_foto` | picture | nein | Reihe 4, Platz 4 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r4_p5_name` | text | nein | Reihe 4, Platz 5 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r4_p5_foto` | picture | nein | Reihe 4, Platz 5 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r4_p6_name` | text | nein | Reihe 4, Platz 6 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r4_p6_foto` | picture | nein | Reihe 4, Platz 6 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r4_p7_name` | text | nein | Reihe 4, Platz 7 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r4_p7_foto` | picture | nein | Reihe 4, Platz 7 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r4_p8_name` | text | nein | Reihe 4, Platz 8 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r4_p8_foto` | picture | nein | Reihe 4, Platz 8 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r4_p9_name` | text | nein | Reihe 4, Platz 9 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r4_p9_foto` | picture | nein | Reihe 4, Platz 9 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r4_p10_name` | text | nein | Reihe 4, Platz 10 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r4_p10_foto` | picture | nein | Reihe 4, Platz 10 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r4_p11_name` | text | nein | Reihe 4, Platz 11 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r4_p11_foto` | picture | nein | Reihe 4, Platz 11 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r4_p12_name` | text | nein | Reihe 4, Platz 12 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r4_p12_foto` | picture | nein | Reihe 4, Platz 12 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r4_p13_name` | text | nein | Reihe 4, Platz 13 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r4_p13_foto` | picture | nein | Reihe 4, Platz 13 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r4_p14_name` | text | nein | Reihe 4, Platz 14 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r4_p14_foto` | picture | nein | Reihe 4, Platz 14 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r4_p15_name` | text | nein | Reihe 4, Platz 15 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r4_p15_foto` | picture | nein | Reihe 4, Platz 15 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r4_p16_name` | text | nein | Reihe 4, Platz 16 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r4_p16_foto` | picture | nein | Reihe 4, Platz 16 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r5_p1_name` | text | nein | Reihe 5, Platz 1 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r5_p1_foto` | picture | nein | Reihe 5, Platz 1 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r5_p2_name` | text | nein | Reihe 5, Platz 2 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r5_p2_foto` | picture | nein | Reihe 5, Platz 2 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r5_p3_name` | text | nein | Reihe 5, Platz 3 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r5_p3_foto` | picture | nein | Reihe 5, Platz 3 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r5_p4_name` | text | nein | Reihe 5, Platz 4 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r5_p4_foto` | picture | nein | Reihe 5, Platz 4 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r5_p5_name` | text | nein | Reihe 5, Platz 5 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r5_p5_foto` | picture | nein | Reihe 5, Platz 5 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r5_p6_name` | text | nein | Reihe 5, Platz 6 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r5_p6_foto` | picture | nein | Reihe 5, Platz 6 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r5_p7_name` | text | nein | Reihe 5, Platz 7 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r5_p7_foto` | picture | nein | Reihe 5, Platz 7 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r5_p8_name` | text | nein | Reihe 5, Platz 8 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r5_p8_foto` | picture | nein | Reihe 5, Platz 8 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r5_p9_name` | text | nein | Reihe 5, Platz 9 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r5_p9_foto` | picture | nein | Reihe 5, Platz 9 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r5_p10_name` | text | nein | Reihe 5, Platz 10 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r5_p10_foto` | picture | nein | Reihe 5, Platz 10 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r5_p11_name` | text | nein | Reihe 5, Platz 11 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r5_p11_foto` | picture | nein | Reihe 5, Platz 11 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r5_p12_name` | text | nein | Reihe 5, Platz 12 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r5_p12_foto` | picture | nein | Reihe 5, Platz 12 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r5_p13_name` | text | nein | Reihe 5, Platz 13 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r5_p13_foto` | picture | nein | Reihe 5, Platz 13 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r5_p14_name` | text | nein | Reihe 5, Platz 14 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r5_p14_foto` | picture | nein | Reihe 5, Platz 14 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r5_p15_name` | text | nein | Reihe 5, Platz 15 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r5_p15_foto` | picture | nein | Reihe 5, Platz 15 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r5_p16_name` | text | nein | Reihe 5, Platz 16 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r5_p16_foto` | picture | nein | Reihe 5, Platz 16 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r6_p1_name` | text | nein | Reihe 6, Platz 1 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r6_p1_foto` | picture | nein | Reihe 6, Platz 1 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r6_p2_name` | text | nein | Reihe 6, Platz 2 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r6_p2_foto` | picture | nein | Reihe 6, Platz 2 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r6_p3_name` | text | nein | Reihe 6, Platz 3 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r6_p3_foto` | picture | nein | Reihe 6, Platz 3 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r6_p4_name` | text | nein | Reihe 6, Platz 4 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r6_p4_foto` | picture | nein | Reihe 6, Platz 4 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r6_p5_name` | text | nein | Reihe 6, Platz 5 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r6_p5_foto` | picture | nein | Reihe 6, Platz 5 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r6_p6_name` | text | nein | Reihe 6, Platz 6 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r6_p6_foto` | picture | nein | Reihe 6, Platz 6 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r6_p7_name` | text | nein | Reihe 6, Platz 7 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r6_p7_foto` | picture | nein | Reihe 6, Platz 7 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r6_p8_name` | text | nein | Reihe 6, Platz 8 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r6_p8_foto` | picture | nein | Reihe 6, Platz 8 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r6_p9_name` | text | nein | Reihe 6, Platz 9 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r6_p9_foto` | picture | nein | Reihe 6, Platz 9 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r6_p10_name` | text | nein | Reihe 6, Platz 10 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r6_p10_foto` | picture | nein | Reihe 6, Platz 10 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r6_p11_name` | text | nein | Reihe 6, Platz 11 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r6_p11_foto` | picture | nein | Reihe 6, Platz 11 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r6_p12_name` | text | nein | Reihe 6, Platz 12 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r6_p12_foto` | picture | nein | Reihe 6, Platz 12 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r6_p13_name` | text | nein | Reihe 6, Platz 13 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r6_p13_foto` | picture | nein | Reihe 6, Platz 13 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r6_p14_name` | text | nein | Reihe 6, Platz 14 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r6_p14_foto` | picture | nein | Reihe 6, Platz 14 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r6_p15_name` | text | nein | Reihe 6, Platz 15 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r6_p15_foto` | picture | nein | Reihe 6, Platz 15 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r6_p16_name` | text | nein | Reihe 6, Platz 16 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r6_p16_foto` | picture | nein | Reihe 6, Platz 16 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r7_p1_name` | text | nein | Reihe 7, Platz 1 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r7_p1_foto` | picture | nein | Reihe 7, Platz 1 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r7_p2_name` | text | nein | Reihe 7, Platz 2 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r7_p2_foto` | picture | nein | Reihe 7, Platz 2 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r7_p3_name` | text | nein | Reihe 7, Platz 3 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r7_p3_foto` | picture | nein | Reihe 7, Platz 3 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r7_p4_name` | text | nein | Reihe 7, Platz 4 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r7_p4_foto` | picture | nein | Reihe 7, Platz 4 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r7_p5_name` | text | nein | Reihe 7, Platz 5 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r7_p5_foto` | picture | nein | Reihe 7, Platz 5 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r7_p6_name` | text | nein | Reihe 7, Platz 6 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r7_p6_foto` | picture | nein | Reihe 7, Platz 6 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r7_p7_name` | text | nein | Reihe 7, Platz 7 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r7_p7_foto` | picture | nein | Reihe 7, Platz 7 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r7_p8_name` | text | nein | Reihe 7, Platz 8 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r7_p8_foto` | picture | nein | Reihe 7, Platz 8 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r7_p9_name` | text | nein | Reihe 7, Platz 9 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r7_p9_foto` | picture | nein | Reihe 7, Platz 9 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r7_p10_name` | text | nein | Reihe 7, Platz 10 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r7_p10_foto` | picture | nein | Reihe 7, Platz 10 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r7_p11_name` | text | nein | Reihe 7, Platz 11 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r7_p11_foto` | picture | nein | Reihe 7, Platz 11 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r7_p12_name` | text | nein | Reihe 7, Platz 12 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r7_p12_foto` | picture | nein | Reihe 7, Platz 12 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r7_p13_name` | text | nein | Reihe 7, Platz 13 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r7_p13_foto` | picture | nein | Reihe 7, Platz 13 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r7_p14_name` | text | nein | Reihe 7, Platz 14 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r7_p14_foto` | picture | nein | Reihe 7, Platz 14 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r7_p15_name` | text | nein | Reihe 7, Platz 15 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r7_p15_foto` | picture | nein | Reihe 7, Platz 15 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r7_p16_name` | text | nein | Reihe 7, Platz 16 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r7_p16_foto` | picture | nein | Reihe 7, Platz 16 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r8_p1_name` | text | nein | Reihe 8, Platz 1 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r8_p1_foto` | picture | nein | Reihe 8, Platz 1 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r8_p2_name` | text | nein | Reihe 8, Platz 2 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r8_p2_foto` | picture | nein | Reihe 8, Platz 2 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r8_p3_name` | text | nein | Reihe 8, Platz 3 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r8_p3_foto` | picture | nein | Reihe 8, Platz 3 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r8_p4_name` | text | nein | Reihe 8, Platz 4 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r8_p4_foto` | picture | nein | Reihe 8, Platz 4 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r8_p5_name` | text | nein | Reihe 8, Platz 5 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r8_p5_foto` | picture | nein | Reihe 8, Platz 5 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r8_p6_name` | text | nein | Reihe 8, Platz 6 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r8_p6_foto` | picture | nein | Reihe 8, Platz 6 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r8_p7_name` | text | nein | Reihe 8, Platz 7 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r8_p7_foto` | picture | nein | Reihe 8, Platz 7 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r8_p8_name` | text | nein | Reihe 8, Platz 8 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r8_p8_foto` | picture | nein | Reihe 8, Platz 8 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r8_p9_name` | text | nein | Reihe 8, Platz 9 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r8_p9_foto` | picture | nein | Reihe 8, Platz 9 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r8_p10_name` | text | nein | Reihe 8, Platz 10 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r8_p10_foto` | picture | nein | Reihe 8, Platz 10 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r8_p11_name` | text | nein | Reihe 8, Platz 11 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r8_p11_foto` | picture | nein | Reihe 8, Platz 11 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r8_p12_name` | text | nein | Reihe 8, Platz 12 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r8_p12_foto` | picture | nein | Reihe 8, Platz 12 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r8_p13_name` | text | nein | Reihe 8, Platz 13 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r8_p13_foto` | picture | nein | Reihe 8, Platz 13 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r8_p14_name` | text | nein | Reihe 8, Platz 14 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r8_p14_foto` | picture | nein | Reihe 8, Platz 14 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r8_p15_name` | text | nein | Reihe 8, Platz 15 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r8_p15_foto` | picture | nein | Reihe 8, Platz 15 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
+| `r8_p16_name` | text | nein | Reihe 8, Platz 16 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz. | Lernende:r 01 |
+| `r8_p16_foto` | picture | nein | Reihe 8, Platz 16 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen. | portraet-beispiel.jpg |
 
 Fotos: ein Bild je Platz, maximal 2 MiB; Instanzgrenzen können niedriger liegen. Bildbreite und Thumbnailbreite 160 px, proportionale Höhe; CSS passt die Darstellung dem Tisch an.

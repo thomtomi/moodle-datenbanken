@@ -2,7 +2,7 @@
 (function () {
     'use strict';
     var maxRows = 8;
-    var maxPlaces = 12;
+    var maxPlaces = 16;
 
     function initialise(root) {
         if (root.dataset.spReady === 'true') {
@@ -48,7 +48,7 @@
                 root.querySelectorAll('[data-sp-place], [data-sp-config]').forEach(function (node) { node.hidden = false; });
                 root.style.removeProperty('--sp-columns');
                 root.style.removeProperty('--sp-min-width');
-                warning.textContent = 'Raumaufteilung unvollständig oder ungültig. Alle 96 möglichen Plätze werden angezeigt. Prüfen Sie Reihen (1–8) und Tische (1–12) in der Bearbeitung.';
+                warning.textContent = 'Raumaufteilung unvollständig oder ungültig. Alle 128 möglichen Plätze werden angezeigt. Prüfen Sie Reihen (1–8) und Tische (1–16) in der Bearbeitung.';
                 warning.hidden = false;
                 status.textContent = '';
                 return;

@@ -14,11 +14,12 @@
   min-width: 0;
 }
 .sp-db *, .sp-db *::before, .sp-db *::after { box-sizing: border-box; }
+.sp-db [hidden] { display: none !important; }
 .sp-db h3, .sp-db h4, .sp-db p { margin-top: 0; }
 .sp-db h3 { color: var(--sp-ink); font-size: 1.5rem; margin-bottom: .25rem; }
 .sp-db h4 { color: var(--sp-ink); font-size: 1.1rem; margin-bottom: .5rem; }
 .sp-db a { color: var(--sp-deep); }
-.sp-db a:focus, .sp-db summary:focus, .sp-db input:focus, .sp-db .sp-scroll:focus {
+.sp-db a:focus, .sp-db summary:focus, .sp-db input:focus, .sp-db select:focus, .sp-db .sp-scroll:focus {
   outline: 3px solid var(--sp-teal);
   outline-offset: 3px;
 }
@@ -45,9 +46,19 @@
 .sp-db .sp-meta { color: var(--sp-muted); font-size: .9rem; margin-bottom: 0; }
 .sp-db .sp-actions { flex: 0 0 auto; }
 .sp-db .sp-hint { margin: .75rem 0; color: var(--sp-muted); font-size: .88rem; }
+.sp-db .sp-layout-editor { margin-top: 1.5rem; padding: 1rem; background: #f5f7f3; border-radius: 8px; }
+.sp-db .sp-layout-status { padding: .65rem 1rem; background: #edf5f0; color: var(--sp-deep); font-weight: 700; }
+.sp-db .sp-layout-status:empty { display: none; }
+.sp-db .sp-layout-warning { padding: .8rem; background: #fff3ce; border: 1px solid #cda651; }
+.sp-db .sp-layout-readout { margin: .75rem 0; }
+.sp-db .sp-layout-readout summary { color: var(--sp-deep); cursor: pointer; }
+.sp-db .sp-layout-readout dl { display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; padding: .7rem; background: #f5f7f3; font-size: .85rem; }
+.sp-db .sp-layout-readout dt { font-weight: 700; }
+.sp-db .sp-layout-readout dd { margin: 0; }
+.sp-db .sp-layout-readout dd:empty::after { content: "Standard"; }
 .sp-db .sp-scroll { overflow-x: auto; padding: .25rem; }
 .sp-db .sp-room {
-  min-width: 56rem;
+  min-width: var(--sp-min-width, 96rem);
   padding: 1.25rem;
   background: #f5f7f3;
   border: 1px solid var(--sp-line);
@@ -56,7 +67,7 @@
 .sp-db .sp-back { color: var(--sp-muted); text-align: center; font-size: .8rem; margin: 0 0 .8rem; }
 .sp-db .sp-row { margin-bottom: 1.2rem; }
 .sp-db .sp-row-label { color: var(--sp-muted); font-size: .78rem; font-weight: 700; margin-bottom: .35rem; }
-.sp-db .sp-desks { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: .7rem; }
+.sp-db .sp-desks { display: grid; grid-template-columns: repeat(var(--sp-columns, 12), minmax(0, 1fr)); gap: .7rem; }
 .sp-db .sp-desk {
   min-width: 0;
   border: 1px solid #b8ccc0;
@@ -101,6 +112,7 @@
 .sp-db .sp-photo-editor fieldset { min-width: 0; max-width: 100%; }
 .sp-db .sp-photo-editor input[type="file"] { width: 100%; max-width: 100%; }
 .sp-db .sp-field input[type="text"], .sp-db .sp-edit-desk input[type="text"] { max-width: 100%; width: 100%; min-height: 2.3rem; font: inherit; border: 1px solid #b1c2b8; border-radius: 4px; padding: .4rem .55rem; }
+.sp-db .sp-field select { max-width: 100%; width: 100%; min-height: 2.5rem; font: inherit; }
 @media (max-width: 42rem) {
   .sp-db .sp-form-meta, .sp-db .sp-edit-grid { grid-template-columns: 1fr; }
   .sp-db .sp-header { align-items: flex-start; }
@@ -108,7 +120,7 @@
 }
 @media print {
   .sp-db { font-size: 10pt; }
-  .sp-db .sp-actions, .sp-db .sp-hint, .sp-db .sp-open { display: none; }
+  .sp-db .sp-actions, .sp-db .sp-hint, .sp-db .sp-open, .sp-db .sp-layout-readout { display: none; }
   .sp-db .sp-scroll { overflow: visible; }
   .sp-db .sp-room { min-width: 0; padding: .5rem; }
   .sp-db .sp-desks { gap: .3rem; }
@@ -119,4 +131,111 @@
   .sp-db .sp-board { color: var(--sp-deep); background: #fff; border: 2px solid var(--sp-deep); }
 }
 </style></head><body><main><p class="demo-note">Lokale Vorschau · ausschliesslich synthetische Namen und Symbolbilder · keine Speicherung</p><form><div class="sp-db sp-search"><div class="sp-header"><h3>Sitzpläne suchen</h3></div><div class="sp-form-body sp-form-meta"><fieldset class="sp-field"><legend>Planname</legend><label class="accesshide" for="field_1">Klasse und Bezeichnung des Sitzplans</label><input type="text" id="field_1" name="field_1" required></fieldset><fieldset class="sp-field"><legend>Raum</legend><label class="accesshide" for="field_2">Zimmerbezeichnung, optional</label><input type="text" id="field_2" name="field_2"></fieldset></div></div>
-</form></main></body></html>
+</form></main><script>/* Raumaufteilung als progressive Erweiterung; keine Namen, Bilder oder Uploads verändern. */
+(function () {
+    'use strict';
+    var maxRows = 8;
+    var maxPlaces = 16;
+
+    function initialise(root) {
+        if (root.dataset.spReady === 'true') {
+            return;
+        }
+        var isEditor = root.classList.contains('sp-add');
+        var warning = root.querySelector('.sp-layout-warning');
+        var status = root.querySelector('.sp-layout-status');
+        var config = root.querySelectorAll('[data-sp-config]');
+        var rows = root.querySelectorAll('[data-sp-row]');
+        if (!warning || !status || config.length !== 9 || rows.length !== maxRows) {
+            return; // Fehlende Vorlagenteile: Vollansicht und sichtbarer Hinweis bleiben erhalten.
+        }
+
+        function read(key, maximum, fallback) {
+            var holder = root.querySelector('[data-sp-config="' + key + '"]');
+            if (!holder) {
+                return null;
+            }
+            var select = holder.querySelector('select');
+            if (isEditor && !select) {
+                return null;
+            }
+            var raw = (select ? select.value : holder.textContent).trim();
+            if (raw === '') {
+                return fallback;
+            }
+            if (!/^\d{1,2}$/.test(raw)) {
+                return null;
+            }
+            var number = Number(raw);
+            return number >= 1 && number <= maximum ? number : null;
+        }
+
+        function update() {
+            var rowCount = read('rows', maxRows, 3);
+            var places = [];
+            for (var r = 1; r <= maxRows; r++) {
+                places.push(read('row-' + r, maxPlaces, 7));
+            }
+            if (rowCount === null || places.indexOf(null) !== -1) {
+                rows.forEach(function (row) { row.hidden = false; });
+                root.querySelectorAll('[data-sp-place], [data-sp-config]').forEach(function (node) { node.hidden = false; });
+                root.style.removeProperty('--sp-columns');
+                root.style.removeProperty('--sp-min-width');
+                warning.textContent = 'Raumaufteilung unvollständig oder ungültig. Alle 128 möglichen Plätze werden angezeigt. Prüfen Sie Reihen (1–8) und Tische (1–16) in der Bearbeitung.';
+                warning.hidden = false;
+                status.textContent = '';
+                return;
+            }
+            var columns = Math.max.apply(null, places.slice(0, rowCount));
+            root.style.setProperty('--sp-columns', String(columns));
+            root.style.setProperty('--sp-min-width', String(Math.max(24, columns * 8)) + 'rem');
+            rows.forEach(function (row) {
+                var number = Number(row.dataset.spRow);
+                row.hidden = number > rowCount;
+                row.querySelectorAll('[data-sp-place]').forEach(function (seat) {
+                    seat.hidden = Number(seat.dataset.spPlace) > places[number - 1];
+                });
+            });
+            // Die ausgeblendeten Originalfelder bleiben aktiv im Moodle-Formular.
+            // Weder value/disabled noch Datei-IDs werden verändert oder entfernt.
+            if (isEditor) {
+                for (var r = 1; r <= maxRows; r++) {
+                    root.querySelector('[data-sp-config="row-' + r + '"]').hidden = r > rowCount;
+                }
+            }
+            var total = places.slice(0, rowCount).reduce(function (sum, count) { return sum + count; }, 0);
+            status.textContent = rowCount + (rowCount === 1 ? ' Reihe' : ' Reihen') + ' · ' + total + (total === 1 ? ' Tisch' : ' Tische') + ' · Lehrpersonensicht';
+            warning.hidden = true;
+        }
+
+        if (isEditor) {
+            config.forEach(function (holder) {
+                var select = holder.querySelector('select');
+                if (select) {
+                    // Nur leere Raumgrössen vorbelegen; Sitzplatzinhalte bleiben unberührt.
+                    if (select.value === '') {
+                        select.value = holder.dataset.spConfig === 'rows' ? '3' : '7';
+                    }
+                    select.addEventListener('change', update);
+                }
+            });
+            var form = root.closest('form');
+            if (form) {
+                form.addEventListener('reset', function () { window.setTimeout(update, 0); });
+            }
+        }
+        root.dataset.spReady = 'true';
+        update();
+    }
+
+    function start() {
+        document.querySelectorAll('.sp-db.sp-single, .sp-db.sp-add').forEach(initialise);
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', start, {once: true});
+    } else {
+        start();
+    }
+    window.addEventListener('pageshow', start);
+}());
+</script></body></html>

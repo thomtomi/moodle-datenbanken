@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Erzeugt bis zu 8 × 12 Plätze, Moodle-Vorlagen und synthetische Vorschauen.
+"""Erzeugt bis zu 8 × 16 Plätze, Moodle-Vorlagen und synthetische Vorschauen.
 
 Quellen: Moodle v5.1.0 manager::TEMPLATES_LIST und data_field_picture.
 Dieses Skript, instruktion.html, sitzplan.js und preset/csstemplate.css sind die Quellen.
@@ -22,7 +22,7 @@ FILES = ('preset.xml', 'listtemplate.html', 'singletemplate.html', 'asearchtempl
          'addtemplate.html', 'rsstemplate.html', 'csstemplate.css', 'jstemplate.js',
          'listtemplateheader.html', 'listtemplatefooter.html', 'rsstitletemplate.html')
 ROWS = 8
-PLACES = 12
+PLACES = 16
 
 
 def layout_fields() -> list[tuple[str, str, str, int, int]]:
@@ -100,7 +100,7 @@ def layout_readout() -> str:
 
 def layout_status() -> str:
     # Auch bei blockiertem oder fehlerhaftem JS keine irreführend verkürzte Raumansicht.
-    return ('<p class="sp-layout-warning">Raumaufteilung noch nicht angewendet: Alle 96 möglichen Plätze sind aufgeführt. '
+    return ('<p class="sp-layout-warning">Raumaufteilung noch nicht angewendet: Alle 128 möglichen Plätze sind aufgeführt. '
             'Für die eingestellte Anordnung muss das Sitzplan-JavaScript geladen sein.</p>'
             '<p class="sp-layout-status" role="status" aria-live="polite"></p>')
 
@@ -108,7 +108,7 @@ def layout_status() -> str:
 def templates() -> dict[str, str]:
     intro = (ROOT / 'instruktion.html').read_text(encoding='utf-8')
     xml = ET.Element('preset')
-    ET.SubElement(xml, 'description').text = 'Flexibler Sitzplan: 1 bis 8 Querreihen mit je 1 bis 12 Tischen; pro Platz Name und optionales Foto.'
+    ET.SubElement(xml, 'description').text = 'Flexibler Sitzplan: 1 bis 8 Querreihen mit je 1 bis 16 Tischen; pro Platz Name und optionales Foto.'
     settings = ET.SubElement(xml, 'settings')
     for name, value in {'intro': intro, 'comments': '0', 'requiredentries': '0', 'requiredentriestoview': '0',
                         'maxentries': '0', 'rssarticles': '0', 'approval': '0', 'defaultsortdir': '0', 'defaultsort': 'Plan'}.items():
@@ -131,7 +131,7 @@ def templates() -> dict[str, str]:
     adding = ('<div class="sp-db sp-add">\n' + header('Planung', 'Sitzplan erstellen oder bearbeiten')
               + '<div class="sp-form-body"><p>Ein Eintrag enthält den ganzen Sitzplan. Nur der Planname ist Pflicht. Leere Namen und Fotos kennzeichnen unbesetzte Plätze.</p>'
               + '<div class="sp-form-meta">' + control('Plan', 'Planname · Pflichtfeld') + control('Raum', 'Raum · optional') + '</div>'
-              + '<section class="sp-layout-editor"><h4>Raumaufteilung</h4><p>Wählen Sie 1 bis 8 Reihen und je Reihe 1 bis 12 Tische. Leere Auswahl: 3 Reihen bzw. 7 Tische. Kürzere Reihen beginnen links.</p>'
+              + '<section class="sp-layout-editor"><h4>Raumaufteilung</h4><p>Wählen Sie 1 bis 8 Reihen und je Reihe 1 bis 16 Tische. Leere Auswahl: 3 Reihen bzw. 7 Tische. Kürzere Reihen beginnen links.</p>'
               + '<div class="sp-form-meta">' + ''.join(control(name, label, key) for name, key, label, maximum, default in layout_fields()) + '</div></section>'
               + '<p class="sp-hint">Beim Verkleinern werden Plätze nur ausgeblendet. Ihre Namen und Fotos bleiben gespeichert und erscheinen beim Vergrössern wieder. Ausblenden ist kein Löschen und kein Zugriffsschutz.</p>'
               + layout_status()
@@ -160,7 +160,7 @@ def templates() -> dict[str, str]:
 def validate(data: dict[str, str]) -> None:
     assert set(data) == set(FILES)
     names = {field['name'] for field in fields()}
-    assert len(names) == 203
+    assert len(names) == 2 + len(layout_fields()) + ROWS * PLACES * 2
     for path, content in data.items():
         if not path.endswith('.html'):
             continue
@@ -172,7 +172,7 @@ def validate(data: dict[str, str]) -> None:
         assert not re.search(r'<[^>]*\[\[', content), path
     for path in ['addtemplate.html', 'singletemplate.html']:
         refs = re.findall(r'\[\[([^\]]+)\]\]', data[path])
-        assert len(refs) == 203 and set(refs) == names, path
+        assert len(refs) == len(names) and set(refs) == names, path
     assert not re.search(r'innerHTML|outerHTML|document\.write|\beval\s*\(|\bfetch\s*\(|XMLHttpRequest|localStorage|sessionStorage', data['jstemplate.js'])
     assert '[[' not in data['jstemplate.js']
     assert not re.search(r'@import|url\s*\(', data['csstemplate.css'], re.I)
@@ -189,7 +189,7 @@ def sample_values(case: str = 'normal') -> dict[str, str]:
     elif case == 'uneven':
         values.update(Reihen='4', r1_tische='6', r2_tische='5', r3_tische='4', r4_tische='3')
     elif case == 'maximum':
-        values.update(Reihen='8', **{f'r{r}_tische': '12' for r in range(1, ROWS + 1)})
+        values.update(Reihen='8', **{f'r{r}_tische': str(PLACES) for r in range(1, ROWS + 1)})
     elif case == 'minimum':
         values.update(Reihen='1', r1_tische='1')
     elif case == 'invalid':
@@ -215,13 +215,13 @@ def replace_tokens(template: str, values: dict[str, str]) -> str:
     return re.sub(r'\[\[([^\]]+)\]\]', lambda m: values[m[1]], template).replace('##moreurl##', 'vorschau.html').replace('##actionsmenu##', '')
 
 
-def preview_document(body: str, css: str, title: str) -> str:
+def preview_document(body: str, css: str, title: str, javascript: str) -> str:
     return ('<!doctype html><html lang="de-CH"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
             + '<title>' + title + '</title><style>'
             + 'body{margin:0;background:#eef2ed;font-family:Arial,sans-serif;}main{max-width:1220px;margin:0 auto;padding:24px 16px;} '
               '.demo-note{font-size:13px;color:#53635c;margin:0 0 20px} .accesshide{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)} '
             + css + '</style></head><body><main><p class="demo-note">Lokale Vorschau · ausschliesslich synthetische Namen und Symbolbilder · keine Speicherung</p>'
-            + body + '</main><script src="preset/jstemplate.js"></script></body></html>\n')
+            + body + '</main><script>' + javascript + '</script></body></html>\n')
 
 
 def preview(data: dict[str, str]) -> dict[str, str]:
@@ -230,7 +230,7 @@ def preview(data: dict[str, str]) -> dict[str, str]:
                            ('four', 'vorschau-vier-reihen.html'), ('uneven', 'vorschau-ungleich.html'),
                            ('maximum', 'vorschau-maximal.html'), ('minimum', 'vorschau-minimal.html'),
                            ('legacy', 'vorschau-altbestand.html'), ('invalid', 'vorschau-ungueltig.html')]:
-        output[filename] = preview_document(replace_tokens(data['singletemplate.html'], sample_values(case)), data['csstemplate.css'], 'Sitzplan – lokale Vorschau')
+        output[filename] = preview_document(replace_tokens(data['singletemplate.html'], sample_values(case)), data['csstemplate.css'], 'Sitzplan – lokale Vorschau', data['jstemplate.js'])
     forms = {}
     for number, field in enumerate(fields(), 1):
         ident = f'field_{number}'
@@ -245,13 +245,13 @@ def preview(data: dict[str, str]) -> dict[str, str]:
             forms[field['name']] = (f'<fieldset><legend>Foto für {field["name"]}</legend><label for="{ident}">Bild auswählen (Vorschau)</label>'
                                    f'<input id="{ident}" type="file" accept="image/png,image/jpeg"><input type="hidden" value="12345">'
                                    f'<label for="{ident}_alttext">Alternativtext</label><input type="text" id="{ident}_alttext"></fieldset>')
-    output['vorschau-eingabe.html'] = preview_document('<form>' + replace_tokens(data['addtemplate.html'], forms) + '</form>', data['csstemplate.css'], 'Sitzplan – Eingabevorschau')
+    output['vorschau-eingabe.html'] = preview_document('<form>' + replace_tokens(data['addtemplate.html'], forms) + '</form>', data['csstemplate.css'], 'Sitzplan – Eingabevorschau', data['jstemplate.js'])
     output['vorschau-mehrere.html'] = preview_document(''.join(replace_tokens(data['singletemplate.html'], sample_values(case))
-                                                             for case in ['four', 'minimum']), data['csstemplate.css'], 'Sitzplan – getrennte Raumaufteilungen')
+                                                             for case in ['four', 'minimum']), data['csstemplate.css'], 'Sitzplan – getrennte Raumaufteilungen', data['jstemplate.js'])
     # Zwei Einträge, um Listenrahmen und wiederholte Komponenten zu prüfen.
     listing = data['listtemplateheader.html'] + ''.join(replace_tokens(data['listtemplate.html'], sample_values(case)) for case in ['normal', 'long']) + data['listtemplatefooter.html']
-    output['vorschau-liste.html'] = preview_document(listing, data['csstemplate.css'], 'Sitzplan – Listenansicht')
-    output['vorschau-suche.html'] = preview_document('<form>' + replace_tokens(data['asearchtemplate.html'], forms) + '</form>', data['csstemplate.css'], 'Sitzplan – Suche')
+    output['vorschau-liste.html'] = preview_document(listing, data['csstemplate.css'], 'Sitzplan – Listenansicht', data['jstemplate.js'])
+    output['vorschau-suche.html'] = preview_document('<form>' + replace_tokens(data['asearchtemplate.html'], forms) + '</form>', data['csstemplate.css'], 'Sitzplan – Suche', data['jstemplate.js'])
     output['vorschau-foto.svg'] = ('<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">'
                                   '<rect width="160" height="160" rx="12" fill="#e0eee4"/>'
                                   '<circle cx="80" cy="57" r="28" fill="#6e9b8d"/>'
@@ -260,7 +260,7 @@ def preview(data: dict[str, str]) -> dict[str, str]:
 
 
 def field_document() -> str:
-    content = '---\ntitle: "Sitzplan: vollständige Feldliste"\ndate: 2026-09-12\n---\n\n# Feldliste Sitzplan\n\n'
+    content = '---\ntitle: "Sitzplan: vollständige Feldliste"\ndate: 2026-09-14\n---\n\n# Feldliste Sitzplan\n\n'
     content += 'Generiert durch `build.py`. Platzbezeichnungen sind aus Sicht der Lehrperson. Beispiele sind synthetisch.\n\n'
     content += '| Feldname | Moodle-Typ | Pflicht | Zweck / Format | Beispiel |\n| --- | --- | --- | --- | --- |\n'
     for field in fields():
@@ -281,7 +281,7 @@ def build() -> dict:
     buffer = io.BytesIO()
     with zipfile.ZipFile(buffer, 'w') as archive:
         for name in FILES:
-            entry = zipfile.ZipInfo(name, date_time=(2026, 9, 12, 0, 0, 0))
+            entry = zipfile.ZipInfo(name, date_time=(2026, 9, 14, 0, 0, 0))
             entry.compress_type = zipfile.ZIP_DEFLATED
             entry.external_attr = 0o100644 << 16
             archive.writestr(entry, data[name].encode('utf-8'))

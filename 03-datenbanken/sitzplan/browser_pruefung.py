@@ -21,10 +21,10 @@ def main():
     output = ROOT / 'pruefung'
     output.mkdir(exist_ok=True)
     report = {'environment': 'Lokale synthetische HTML-Vorschauen, kein Moodle und keine echten Datei-Uploads', 'cases': []}
-    with tempfile.TemporaryDirectory(prefix='sitzplan-browser-') as temp:
+    with tempfile.TemporaryDirectory(prefix='sitzplan-browser-', ignore_cleanup_errors=True) as temp:
         profile = Path(temp) / 'profile'
         with (Path(temp) / 'browser.log').open('w') as log:
-            browser = subprocess.Popen(['chromium', '--headless', '--disable-gpu', '--no-first-run',
+            browser = subprocess.Popen(['chromium', '--headless', '--disable-gpu', '--no-first-run', '--allow-file-access-from-files',
                 '--disable-background-networking', '--disable-component-update', '--no-default-browser-check',
                 '--remote-debugging-port=0', '--user-data-dir=' + str(profile), 'about:blank'], stdout=log, stderr=log)
             try:
@@ -52,7 +52,7 @@ def main():
                     cdp.call('Page.navigate', {'url': url})
                     deadline = time.monotonic() + 6
                     while time.monotonic() < deadline:
-                        if cdp.evaluate('location.href===' + json.dumps(url) + '&&document.readyState==="complete"'):
+                        if cdp.evaluate('location.href===' + json.dumps(url) + '&&document.readyState==="complete"&&(!document.querySelector(".sp-db.sp-single, .sp-db.sp-add")||document.querySelector(".sp-db.sp-single, .sp-db.sp-add").dataset.spReady==="true")'):
                             return
                         time.sleep(.05)
                     raise RuntimeError('Vorschau nicht geladen: ' + filename)
@@ -65,7 +65,7 @@ def main():
                     for filename in ['vorschau.html', 'vorschau-leer.html', 'vorschau-lang.html']:
                         load(filename, width)
                         case = f'{filename}/{width}'
-                        check(case + ': 21 Plätze', 'document.querySelectorAll(".sp-desk").length===21')
+                        check(case + ': 21 sichtbare Plätze', '[...document.querySelectorAll(".sp-desk")].filter(e=>!e.closest("[hidden]")).length===21')
                         check(case + ': kein Seitenüberlauf', 'document.documentElement.scrollWidth<=innerWidth')
                         check(case + ': Lehrpersonenperspektive', '''(()=>{
                           const rect=s=>document.querySelector(s).getBoundingClientRect();
@@ -87,12 +87,22 @@ def main():
                     check(f'Eingabe/{width}: kein Seitenüberlauf', 'document.documentElement.scrollWidth<=innerWidth')
                     check(f'Eingabe/{width}: Felder beschriftet', '[...document.querySelectorAll("input:not([type=hidden])")].every(e=>e.labels.length>0)')
                     check(f'Eingabe/{width}: einziges Pflichtfeld', 'document.querySelectorAll("[required]").length===1')
-                    check(f'Eingabe/{width}: 21 Fotofelder vorhanden', 'document.querySelectorAll("input[type=file]").length===21')
+                    check(f'Eingabe/{width}: 128 Fotofelder vorhanden', 'document.querySelectorAll("input[type=file]").length===128')
                     cdp.evaluate('document.querySelector("details").open=true')
                     check(f'Eingabe/{width}: aufgeklappter Upload erreichbar', 'document.querySelector("input[type=file]").getBoundingClientRect().height>0&&document.documentElement.scrollWidth<=innerWidth')
                     for filename in ['vorschau-liste.html', 'vorschau-suche.html']:
                         load(filename, width)
                         check(f'{filename}/{width}: kein Seitenüberlauf', 'document.documentElement.scrollWidth<=innerWidth')
+                for filename, expected in [('vorschau-vier-reihen.html', 20), ('vorschau-ungleich.html', 18),
+                                           ('vorschau-minimal.html', 1), ('vorschau-maximal.html', 128)]:
+                    load(filename, 1200)
+                    check(filename + ': sichtbare Plätze gemäss Aufteilung',
+                          '[...document.querySelectorAll(".sp-desk")].filter(e=>!e.closest("[hidden]")).length===' + str(expected))
+                    check(filename + ': keine sichtbaren Felder ausserhalb der Aufteilung',
+                          '[...document.querySelectorAll(".sp-row[hidden] .sp-desk, .sp-desk[hidden]")].every(e=>e.getClientRects().length===0)')
+                load('vorschau-ungueltig.html', 1200)
+                check('Ungültige Aufteilung: sichtbarer Hinweis', '!document.querySelector(".sp-layout-warning").hidden')
+                check('Ungültige Aufteilung: alle 128 Plätze sichtbar', '[...document.querySelectorAll(".sp-desk")].filter(e=>!e.closest("[hidden]")).length===128')
                 load('vorschau.html', 390)
                 cdp.evaluate('document.querySelector(".sp-scroll").focus()')
                 report['focus_observation'] = cdp.evaluate('({element:document.activeElement.className,focused:document.hasFocus(),style:getComputedStyle(document.activeElement).outlineStyle,width:getComputedStyle(document.activeElement).outlineWidth})')
@@ -111,7 +121,7 @@ def main():
                 load('vorschau.html', 1120)
                 cdp.call('Emulation.setEmulatedMedia', {'media': 'print'})
                 check('Druck-CSS: Plan passt ohne Scrollen', 'document.querySelector(".sp-scroll").scrollWidth<=document.querySelector(".sp-scroll").clientWidth+1')
-                check('Druck-CSS: 21 Plätze bleiben erhalten', 'document.querySelectorAll(".sp-desk").length===21&&getComputedStyle(document.querySelector(".sp-desk")).display!=="none"')
+                check('Druck-CSS: 21 sichtbare Standardplätze bleiben erhalten', '[...document.querySelectorAll(".sp-desk")].filter(e=>!e.closest("[hidden]")).length===21&&getComputedStyle(document.querySelector(".sp-desk")).display!=="none"')
                 cdp.call('Browser.close')
                 cdp.sock.close()
             finally:

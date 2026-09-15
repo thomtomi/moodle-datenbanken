@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='utf-8'?>
+<preset>
+  <description>Interne Checkliste zur dokumentierten Prüfung von Moodle-Kursen vor der Rückmeldung an Lehrpersonen.</description>
+  <settings>
+    <intro>&lt;div class="kc-instruction"&gt;
+  &lt;h3 style="color: #000000"&gt;Einfuehrung&lt;/h3&gt;
+  &lt;p&gt;
+    Diese Datenbank dokumentiert die redaktionelle Funktionspruefung von
+    Moodle-Kursen. Ein Eintrag umfasst alle vereinbarten Pruefpunkte eines
+    Kurses und dient als Grundlage fuer eine nachvollziehbare Rueckmeldung.
+  &lt;/p&gt;
+  &lt;h3 style="color: #000000"&gt;Auftrag&lt;/h3&gt;
+  &lt;ol&gt;
+    &lt;li&gt;
+      Oeffnen Sie den Kurs ueber den Kurslink und pruefen Sie alle acht
+      Statuskriterien vollstaendig.
+    &lt;/li&gt;
+    &lt;li&gt;
+      Erfassen Sie Kursname, Kurslink und Pruefdatum. Verwenden Sie fuer das
+      Datum das Format &lt;code&gt;YYYY-MM-DD&lt;/code&gt;.
+    &lt;/li&gt;
+    &lt;li&gt;
+      Waehlen Sie fuer jedes Kriterium genau einen Status. Verwenden Sie «Nicht
+      anwendbar» nur, wenn der Pruefpunkt im Kurs nicht vorkommt. Verwenden Sie
+      «Nicht geprueft», wenn die Kontrolle noch aussteht.
+    &lt;/li&gt;
+    &lt;li&gt;
+      Falls externe Links nicht funktionieren, dokumentieren Sie jeden Befund im
+      dafuer vorgesehenen Feld mit URL und kurzer Fehlerbeschreibung.
+    &lt;/li&gt;
+    &lt;li&gt;
+      Ergaenzen Sie besondere Hinweise nur, wenn sie fuer die Rueckmeldung an
+      die zustaendige Lehrperson relevant sind.
+    &lt;/li&gt;
+    &lt;li&gt;
+      Pruefen Sie die Angaben nochmals und speichern Sie den Eintrag. Bei
+      «Kursstruktur und Kursfuehrung: Korrektur noetig» ist fuer die spaetere
+      Rueckmeldung ein Beratungstermin vorzusehen.
+    &lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;
+    Als Ergebnis liegt ein vollstaendiger Kurspruefungs-Eintrag vor. Nur das
+    Redaktionsteam exportiert die Eintraege als CSV; die Datenbank selbst
+    versendet keine E-Mails.
+  &lt;/p&gt;
+&lt;/div&gt;</intro>
+    <comments>0</comments>
+    <requiredentries>0</requiredentries>
+    <requiredentriestoview>0</requiredentriestoview>
+    <maxentries>0</maxentries>
+    <rssarticles>0</rssarticles>
+    <approval>0</approval>
+    <defaultsortdir>1</defaultsortdir>
+    <defaultsort>Pruefdatum</defaultsort>
+  </settings>
+  <field>
+    <type>text</type>
+    <name>Kursname</name>
+    <description>Eindeutige Bezeichnung des geprueften Moodle-Kurses.</description>
+    <required>1</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>url</type>
+    <name>Moodle-Kurslink</name>
+    <description>Direkter Link zum geprueften Moodle-Kurs.</description>
+    <required>1</required>
+    <param1>1</param1>
+    <param2>Kurs oeffnen</param2>
+    <param3>1</param3>
+  </field>
+  <field>
+    <type>text</type>
+    <name>Pruefdatum</name>
+    <description>Datum der Kontrolle im Format JJJJ-MM-TT, zum Beispiel 2026-09-14.</description>
+    <required>1</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>menu</type>
+    <name>Klassen und Berechtigungen</name>
+    <description>Klassen sind eingetragen oder die Lehrperson hat die benoetigten Manager:innen-Rechte.</description>
+    <required>1</required>
+    <param1>Erfuellt
+Korrektur noetig
+Nicht anwendbar
+Nicht geprueft</param1>
+  </field>
+  <field>
+    <type>menu</type>
+    <name>Rollenbezeichnungen</name>
+    <description>Trainer/innen = Lehrperson(en), Trainer/in ohne Bearbeitungsrecht = Leitung/Team, Teilnehmer/in = Lernende.</description>
+    <required>1</required>
+    <param1>Erfuellt
+Korrektur noetig
+Nicht anwendbar
+Nicht geprueft</param1>
+  </field>
+  <field>
+    <type>menu</type>
+    <name>Willkommensnachricht</name>
+    <description>Einladungsbereite Nachricht im Forum Nachrichten der Lehrperson(-en).</description>
+    <required>1</required>
+    <param1>Erfuellt
+Korrektur noetig
+Nicht anwendbar
+Nicht geprueft</param1>
+  </field>
+  <field>
+    <type>menu</type>
+    <name>Termine in der Planung</name>
+    <description>Planungstermine sind an das neue Schuljahr angepasst.</description>
+    <required>1</required>
+    <param1>Erfuellt
+Korrektur noetig
+Nicht anwendbar
+Nicht geprueft</param1>
+  </field>
+  <field>
+    <type>menu</type>
+    <name>Externe Links</name>
+    <description>Alle externen Links funktionieren. Bei Korrektur noetig die defekten Links unten dokumentieren.</description>
+    <required>1</required>
+    <param1>Erfuellt
+Korrektur noetig
+Nicht anwendbar
+Nicht geprueft</param1>
+  </field>
+  <field>
+    <type>menu</type>
+    <name>Abgabefenster</name>
+    <description>Beginn, Ende und zeitliche Geltung aller vorhandenen Abgabefenster sind korrekt.</description>
+    <required>1</required>
+    <param1>Erfuellt
+Korrektur noetig
+Nicht anwendbar
+Nicht geprueft</param1>
+  </field>
+  <field>
+    <type>menu</type>
+    <name>Abgabetermine</name>
+    <description>Alle im Kurs erfassten Abgabetermine sind korrekt.</description>
+    <required>1</required>
+    <param1>Erfuellt
+Korrektur noetig
+Nicht anwendbar
+Nicht geprueft</param1>
+  </field>
+  <field>
+    <type>menu</type>
+    <name>Kursstruktur und Kursfuehrung</name>
+    <description>Der Kurs ist verstaendlich strukturiert und fuehrt Lernende nachvollziehbar durch die Inhalte.</description>
+    <required>1</required>
+    <param1>Erfuellt
+Korrektur noetig
+Nicht anwendbar
+Nicht geprueft</param1>
+  </field>
+  <field>
+    <type>textarea</type>
+    <name>Nicht funktionierende externe Links</name>
+    <description>Pro Befund URL und kurze Fehlerbeschreibung, zum Beispiel https://example.org/material - Seite nicht gefunden.</description>
+    <required>0</required>
+    <param2>80</param2>
+    <param3>5</param3>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>textarea</type>
+    <name>Besondere Hinweise</name>
+    <description>Weitere fuer die Rueckmeldung relevante Beobachtungen.</description>
+    <required>0</required>
+    <param2>80</param2>
+    <param3>5</param3>
+    <param5>0</param5>
+  </field>
+</preset>

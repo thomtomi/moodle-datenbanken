@@ -1,17 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
 <preset>
-  <description>Sitzplan für Lehrpersonen: drei Querreihen mit je sieben Tischen; pro Platz Name und optionales Foto.</description>
+  <description>Flexibler Sitzplan: 1 bis 8 Querreihen mit je 1 bis 16 Tischen; pro Platz Name und optionales Foto.</description>
   <settings>
     <intro>&lt;h3 style="color: #000000;"&gt;Einführung&lt;/h3&gt;
-&lt;p&gt;Diese Datenbank enthält Sitzpläne aus Sicht der Lehrperson. Ein Eintrag bildet ein ganzes Schulzimmer mit drei Querreihen und je sieben Tischen ab. Wandtafel und Lehrer:innen-Pult liegen im Plan unten; Reihe 1 ist dem Pult am nächsten.&lt;/p&gt;
+&lt;p&gt;Diese Datenbank enthält Sitzpläne aus Sicht der Lehrperson. Ein Eintrag bildet ein ganzes Schulzimmer mit bis zu acht Querreihen und sechzehn Tischen pro Reihe ab. Wandtafel und Lehrer:innen-Pult liegen im Plan unten; Reihe 1 ist dem Pult am nächsten.&lt;/p&gt;
 &lt;h3 style="color: #000000;"&gt;Auftrag&lt;/h3&gt;
 &lt;ol&gt;
   &lt;li&gt;Erstellen Sie einen Eintrag mit einem eindeutigen Plannamen, zum Beispiel Klasse und Gültigkeitsdatum, und ergänzen Sie bei Bedarf den Raum.&lt;/li&gt;
-  &lt;li&gt;Tragen Sie die Namen an den gewünschten Plätzen ein. Die Plätze 1 bis 7 werden aus Ihrer Sicht von links nach rechts gezählt. Nicht belegte Plätze lassen Sie leer.&lt;/li&gt;
+  &lt;li&gt;Wählen Sie unter «Raumaufteilung» die Anzahl Reihen (1 bis 8) und die Anzahl Tische je Reihe (1 bis 16). Die Reihen dürfen unterschiedlich lang sein und beginnen links. Ohne Auswahl gelten drei Reihen mit je sieben Tischen.&lt;/li&gt;
+  &lt;li&gt;Tragen Sie die Namen an den gewünschten Plätzen ein. Die Plätze werden aus Ihrer Sicht von links nach rechts gezählt. Nicht belegte Plätze lassen Sie leer.&lt;/li&gt;
   &lt;li&gt;Bei Bedarf laden Sie über «Foto» ein Bild am zugehörigen Platz hoch. Ergänzen Sie im Bildfeld einen Alternativtext, zum Beispiel «Porträt von …».&lt;/li&gt;
   &lt;li&gt;Speichern Sie den Eintrag und öffnen Sie den Sitzplan. Prüfen Sie Namen, Fotos und die Orientierung. Bei einer Umplatzierung müssen Name und zugehöriges Foto gemeinsam aktualisiert werden.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Das Ergebnis ist ein gespeicherter Sitzplan in dieser Datenbank. Zum Ändern öffnen Sie das Aktionsmenü des Eintrags und wählen «Bearbeiten».&lt;/p&gt;
+&lt;p&gt;Beim Verkleinern der Raumaufteilung werden überzählige Plätze nur ausgeblendet: Namen und Fotos bleiben erhalten und erscheinen beim Vergrössern wieder. Zum endgültigen Entfernen müssen Sie die betreffenden Felder leeren und speichern. Die eingestellte Anordnung benötigt das Sitzplan-JavaScript; ohne dieses werden alle 128 möglichen Plätze mit einem Hinweis angezeigt.&lt;/p&gt;
 </intro>
     <comments>0</comments>
     <requiredentries>0</requiredentries>
@@ -35,6 +37,196 @@
     <description>Zimmerbezeichnung, optional</description>
     <required>0</required>
     <param1>0</param1>
+  </field>
+  <field>
+    <type>menu</type>
+    <name>Reihen</name>
+    <description>Anzahl Reihen: 1 bis 8; leer entspricht 3.</description>
+    <required>0</required>
+    <param1>1
+2
+3
+4
+5
+6
+7
+8</param1>
+  </field>
+  <field>
+    <type>menu</type>
+    <name>r1_tische</name>
+    <description>Tische in Reihe 1: 1 bis 16; leer entspricht 7.</description>
+    <required>0</required>
+    <param1>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16</param1>
+  </field>
+  <field>
+    <type>menu</type>
+    <name>r2_tische</name>
+    <description>Tische in Reihe 2: 1 bis 16; leer entspricht 7.</description>
+    <required>0</required>
+    <param1>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16</param1>
+  </field>
+  <field>
+    <type>menu</type>
+    <name>r3_tische</name>
+    <description>Tische in Reihe 3: 1 bis 16; leer entspricht 7.</description>
+    <required>0</required>
+    <param1>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16</param1>
+  </field>
+  <field>
+    <type>menu</type>
+    <name>r4_tische</name>
+    <description>Tische in Reihe 4: 1 bis 16; leer entspricht 7.</description>
+    <required>0</required>
+    <param1>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16</param1>
+  </field>
+  <field>
+    <type>menu</type>
+    <name>r5_tische</name>
+    <description>Tische in Reihe 5: 1 bis 16; leer entspricht 7.</description>
+    <required>0</required>
+    <param1>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16</param1>
+  </field>
+  <field>
+    <type>menu</type>
+    <name>r6_tische</name>
+    <description>Tische in Reihe 6: 1 bis 16; leer entspricht 7.</description>
+    <required>0</required>
+    <param1>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16</param1>
+  </field>
+  <field>
+    <type>menu</type>
+    <name>r7_tische</name>
+    <description>Tische in Reihe 7: 1 bis 16; leer entspricht 7.</description>
+    <required>0</required>
+    <param1>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16</param1>
+  </field>
+  <field>
+    <type>menu</type>
+    <name>r8_tische</name>
+    <description>Tische in Reihe 8: 1 bis 16; leer entspricht 7.</description>
+    <required>0</required>
+    <param1>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16</param1>
   </field>
   <field>
     <type>text</type>
@@ -155,6 +347,168 @@
     <type>picture</type>
     <name>r1_p7_foto</name>
     <description>Reihe 1, Platz 7 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r1_p8_name</name>
+    <description>Reihe 1, Platz 8 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r1_p8_foto</name>
+    <description>Reihe 1, Platz 8 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r1_p9_name</name>
+    <description>Reihe 1, Platz 9 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r1_p9_foto</name>
+    <description>Reihe 1, Platz 9 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r1_p10_name</name>
+    <description>Reihe 1, Platz 10 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r1_p10_foto</name>
+    <description>Reihe 1, Platz 10 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r1_p11_name</name>
+    <description>Reihe 1, Platz 11 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r1_p11_foto</name>
+    <description>Reihe 1, Platz 11 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r1_p12_name</name>
+    <description>Reihe 1, Platz 12 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r1_p12_foto</name>
+    <description>Reihe 1, Platz 12 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r1_p13_name</name>
+    <description>Reihe 1, Platz 13 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r1_p13_foto</name>
+    <description>Reihe 1, Platz 13 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r1_p14_name</name>
+    <description>Reihe 1, Platz 14 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r1_p14_foto</name>
+    <description>Reihe 1, Platz 14 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r1_p15_name</name>
+    <description>Reihe 1, Platz 15 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r1_p15_foto</name>
+    <description>Reihe 1, Platz 15 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r1_p16_name</name>
+    <description>Reihe 1, Platz 16 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r1_p16_foto</name>
+    <description>Reihe 1, Platz 16 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
     <required>0</required>
     <param1>160</param1>
     <param2>0</param2>
@@ -290,6 +644,168 @@
   </field>
   <field>
     <type>text</type>
+    <name>r2_p8_name</name>
+    <description>Reihe 2, Platz 8 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r2_p8_foto</name>
+    <description>Reihe 2, Platz 8 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r2_p9_name</name>
+    <description>Reihe 2, Platz 9 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r2_p9_foto</name>
+    <description>Reihe 2, Platz 9 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r2_p10_name</name>
+    <description>Reihe 2, Platz 10 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r2_p10_foto</name>
+    <description>Reihe 2, Platz 10 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r2_p11_name</name>
+    <description>Reihe 2, Platz 11 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r2_p11_foto</name>
+    <description>Reihe 2, Platz 11 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r2_p12_name</name>
+    <description>Reihe 2, Platz 12 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r2_p12_foto</name>
+    <description>Reihe 2, Platz 12 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r2_p13_name</name>
+    <description>Reihe 2, Platz 13 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r2_p13_foto</name>
+    <description>Reihe 2, Platz 13 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r2_p14_name</name>
+    <description>Reihe 2, Platz 14 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r2_p14_foto</name>
+    <description>Reihe 2, Platz 14 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r2_p15_name</name>
+    <description>Reihe 2, Platz 15 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r2_p15_foto</name>
+    <description>Reihe 2, Platz 15 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r2_p16_name</name>
+    <description>Reihe 2, Platz 16 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r2_p16_foto</name>
+    <description>Reihe 2, Platz 16 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
     <name>r3_p1_name</name>
     <description>Reihe 3, Platz 1 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
     <required>0</required>
@@ -407,6 +923,1608 @@
     <type>picture</type>
     <name>r3_p7_foto</name>
     <description>Reihe 3, Platz 7 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r3_p8_name</name>
+    <description>Reihe 3, Platz 8 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r3_p8_foto</name>
+    <description>Reihe 3, Platz 8 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r3_p9_name</name>
+    <description>Reihe 3, Platz 9 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r3_p9_foto</name>
+    <description>Reihe 3, Platz 9 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r3_p10_name</name>
+    <description>Reihe 3, Platz 10 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r3_p10_foto</name>
+    <description>Reihe 3, Platz 10 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r3_p11_name</name>
+    <description>Reihe 3, Platz 11 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r3_p11_foto</name>
+    <description>Reihe 3, Platz 11 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r3_p12_name</name>
+    <description>Reihe 3, Platz 12 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r3_p12_foto</name>
+    <description>Reihe 3, Platz 12 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r3_p13_name</name>
+    <description>Reihe 3, Platz 13 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r3_p13_foto</name>
+    <description>Reihe 3, Platz 13 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r3_p14_name</name>
+    <description>Reihe 3, Platz 14 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r3_p14_foto</name>
+    <description>Reihe 3, Platz 14 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r3_p15_name</name>
+    <description>Reihe 3, Platz 15 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r3_p15_foto</name>
+    <description>Reihe 3, Platz 15 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r3_p16_name</name>
+    <description>Reihe 3, Platz 16 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r3_p16_foto</name>
+    <description>Reihe 3, Platz 16 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r4_p1_name</name>
+    <description>Reihe 4, Platz 1 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r4_p1_foto</name>
+    <description>Reihe 4, Platz 1 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r4_p2_name</name>
+    <description>Reihe 4, Platz 2 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r4_p2_foto</name>
+    <description>Reihe 4, Platz 2 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r4_p3_name</name>
+    <description>Reihe 4, Platz 3 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r4_p3_foto</name>
+    <description>Reihe 4, Platz 3 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r4_p4_name</name>
+    <description>Reihe 4, Platz 4 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r4_p4_foto</name>
+    <description>Reihe 4, Platz 4 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r4_p5_name</name>
+    <description>Reihe 4, Platz 5 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r4_p5_foto</name>
+    <description>Reihe 4, Platz 5 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r4_p6_name</name>
+    <description>Reihe 4, Platz 6 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r4_p6_foto</name>
+    <description>Reihe 4, Platz 6 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r4_p7_name</name>
+    <description>Reihe 4, Platz 7 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r4_p7_foto</name>
+    <description>Reihe 4, Platz 7 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r4_p8_name</name>
+    <description>Reihe 4, Platz 8 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r4_p8_foto</name>
+    <description>Reihe 4, Platz 8 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r4_p9_name</name>
+    <description>Reihe 4, Platz 9 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r4_p9_foto</name>
+    <description>Reihe 4, Platz 9 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r4_p10_name</name>
+    <description>Reihe 4, Platz 10 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r4_p10_foto</name>
+    <description>Reihe 4, Platz 10 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r4_p11_name</name>
+    <description>Reihe 4, Platz 11 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r4_p11_foto</name>
+    <description>Reihe 4, Platz 11 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r4_p12_name</name>
+    <description>Reihe 4, Platz 12 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r4_p12_foto</name>
+    <description>Reihe 4, Platz 12 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r4_p13_name</name>
+    <description>Reihe 4, Platz 13 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r4_p13_foto</name>
+    <description>Reihe 4, Platz 13 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r4_p14_name</name>
+    <description>Reihe 4, Platz 14 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r4_p14_foto</name>
+    <description>Reihe 4, Platz 14 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r4_p15_name</name>
+    <description>Reihe 4, Platz 15 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r4_p15_foto</name>
+    <description>Reihe 4, Platz 15 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r4_p16_name</name>
+    <description>Reihe 4, Platz 16 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r4_p16_foto</name>
+    <description>Reihe 4, Platz 16 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r5_p1_name</name>
+    <description>Reihe 5, Platz 1 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r5_p1_foto</name>
+    <description>Reihe 5, Platz 1 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r5_p2_name</name>
+    <description>Reihe 5, Platz 2 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r5_p2_foto</name>
+    <description>Reihe 5, Platz 2 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r5_p3_name</name>
+    <description>Reihe 5, Platz 3 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r5_p3_foto</name>
+    <description>Reihe 5, Platz 3 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r5_p4_name</name>
+    <description>Reihe 5, Platz 4 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r5_p4_foto</name>
+    <description>Reihe 5, Platz 4 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r5_p5_name</name>
+    <description>Reihe 5, Platz 5 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r5_p5_foto</name>
+    <description>Reihe 5, Platz 5 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r5_p6_name</name>
+    <description>Reihe 5, Platz 6 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r5_p6_foto</name>
+    <description>Reihe 5, Platz 6 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r5_p7_name</name>
+    <description>Reihe 5, Platz 7 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r5_p7_foto</name>
+    <description>Reihe 5, Platz 7 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r5_p8_name</name>
+    <description>Reihe 5, Platz 8 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r5_p8_foto</name>
+    <description>Reihe 5, Platz 8 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r5_p9_name</name>
+    <description>Reihe 5, Platz 9 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r5_p9_foto</name>
+    <description>Reihe 5, Platz 9 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r5_p10_name</name>
+    <description>Reihe 5, Platz 10 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r5_p10_foto</name>
+    <description>Reihe 5, Platz 10 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r5_p11_name</name>
+    <description>Reihe 5, Platz 11 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r5_p11_foto</name>
+    <description>Reihe 5, Platz 11 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r5_p12_name</name>
+    <description>Reihe 5, Platz 12 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r5_p12_foto</name>
+    <description>Reihe 5, Platz 12 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r5_p13_name</name>
+    <description>Reihe 5, Platz 13 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r5_p13_foto</name>
+    <description>Reihe 5, Platz 13 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r5_p14_name</name>
+    <description>Reihe 5, Platz 14 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r5_p14_foto</name>
+    <description>Reihe 5, Platz 14 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r5_p15_name</name>
+    <description>Reihe 5, Platz 15 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r5_p15_foto</name>
+    <description>Reihe 5, Platz 15 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r5_p16_name</name>
+    <description>Reihe 5, Platz 16 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r5_p16_foto</name>
+    <description>Reihe 5, Platz 16 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r6_p1_name</name>
+    <description>Reihe 6, Platz 1 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r6_p1_foto</name>
+    <description>Reihe 6, Platz 1 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r6_p2_name</name>
+    <description>Reihe 6, Platz 2 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r6_p2_foto</name>
+    <description>Reihe 6, Platz 2 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r6_p3_name</name>
+    <description>Reihe 6, Platz 3 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r6_p3_foto</name>
+    <description>Reihe 6, Platz 3 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r6_p4_name</name>
+    <description>Reihe 6, Platz 4 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r6_p4_foto</name>
+    <description>Reihe 6, Platz 4 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r6_p5_name</name>
+    <description>Reihe 6, Platz 5 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r6_p5_foto</name>
+    <description>Reihe 6, Platz 5 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r6_p6_name</name>
+    <description>Reihe 6, Platz 6 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r6_p6_foto</name>
+    <description>Reihe 6, Platz 6 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r6_p7_name</name>
+    <description>Reihe 6, Platz 7 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r6_p7_foto</name>
+    <description>Reihe 6, Platz 7 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r6_p8_name</name>
+    <description>Reihe 6, Platz 8 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r6_p8_foto</name>
+    <description>Reihe 6, Platz 8 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r6_p9_name</name>
+    <description>Reihe 6, Platz 9 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r6_p9_foto</name>
+    <description>Reihe 6, Platz 9 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r6_p10_name</name>
+    <description>Reihe 6, Platz 10 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r6_p10_foto</name>
+    <description>Reihe 6, Platz 10 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r6_p11_name</name>
+    <description>Reihe 6, Platz 11 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r6_p11_foto</name>
+    <description>Reihe 6, Platz 11 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r6_p12_name</name>
+    <description>Reihe 6, Platz 12 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r6_p12_foto</name>
+    <description>Reihe 6, Platz 12 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r6_p13_name</name>
+    <description>Reihe 6, Platz 13 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r6_p13_foto</name>
+    <description>Reihe 6, Platz 13 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r6_p14_name</name>
+    <description>Reihe 6, Platz 14 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r6_p14_foto</name>
+    <description>Reihe 6, Platz 14 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r6_p15_name</name>
+    <description>Reihe 6, Platz 15 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r6_p15_foto</name>
+    <description>Reihe 6, Platz 15 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r6_p16_name</name>
+    <description>Reihe 6, Platz 16 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r6_p16_foto</name>
+    <description>Reihe 6, Platz 16 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r7_p1_name</name>
+    <description>Reihe 7, Platz 1 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r7_p1_foto</name>
+    <description>Reihe 7, Platz 1 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r7_p2_name</name>
+    <description>Reihe 7, Platz 2 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r7_p2_foto</name>
+    <description>Reihe 7, Platz 2 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r7_p3_name</name>
+    <description>Reihe 7, Platz 3 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r7_p3_foto</name>
+    <description>Reihe 7, Platz 3 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r7_p4_name</name>
+    <description>Reihe 7, Platz 4 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r7_p4_foto</name>
+    <description>Reihe 7, Platz 4 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r7_p5_name</name>
+    <description>Reihe 7, Platz 5 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r7_p5_foto</name>
+    <description>Reihe 7, Platz 5 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r7_p6_name</name>
+    <description>Reihe 7, Platz 6 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r7_p6_foto</name>
+    <description>Reihe 7, Platz 6 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r7_p7_name</name>
+    <description>Reihe 7, Platz 7 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r7_p7_foto</name>
+    <description>Reihe 7, Platz 7 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r7_p8_name</name>
+    <description>Reihe 7, Platz 8 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r7_p8_foto</name>
+    <description>Reihe 7, Platz 8 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r7_p9_name</name>
+    <description>Reihe 7, Platz 9 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r7_p9_foto</name>
+    <description>Reihe 7, Platz 9 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r7_p10_name</name>
+    <description>Reihe 7, Platz 10 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r7_p10_foto</name>
+    <description>Reihe 7, Platz 10 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r7_p11_name</name>
+    <description>Reihe 7, Platz 11 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r7_p11_foto</name>
+    <description>Reihe 7, Platz 11 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r7_p12_name</name>
+    <description>Reihe 7, Platz 12 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r7_p12_foto</name>
+    <description>Reihe 7, Platz 12 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r7_p13_name</name>
+    <description>Reihe 7, Platz 13 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r7_p13_foto</name>
+    <description>Reihe 7, Platz 13 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r7_p14_name</name>
+    <description>Reihe 7, Platz 14 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r7_p14_foto</name>
+    <description>Reihe 7, Platz 14 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r7_p15_name</name>
+    <description>Reihe 7, Platz 15 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r7_p15_foto</name>
+    <description>Reihe 7, Platz 15 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r7_p16_name</name>
+    <description>Reihe 7, Platz 16 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r7_p16_foto</name>
+    <description>Reihe 7, Platz 16 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r8_p1_name</name>
+    <description>Reihe 8, Platz 1 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r8_p1_foto</name>
+    <description>Reihe 8, Platz 1 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r8_p2_name</name>
+    <description>Reihe 8, Platz 2 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r8_p2_foto</name>
+    <description>Reihe 8, Platz 2 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r8_p3_name</name>
+    <description>Reihe 8, Platz 3 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r8_p3_foto</name>
+    <description>Reihe 8, Platz 3 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r8_p4_name</name>
+    <description>Reihe 8, Platz 4 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r8_p4_foto</name>
+    <description>Reihe 8, Platz 4 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r8_p5_name</name>
+    <description>Reihe 8, Platz 5 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r8_p5_foto</name>
+    <description>Reihe 8, Platz 5 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r8_p6_name</name>
+    <description>Reihe 8, Platz 6 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r8_p6_foto</name>
+    <description>Reihe 8, Platz 6 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r8_p7_name</name>
+    <description>Reihe 8, Platz 7 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r8_p7_foto</name>
+    <description>Reihe 8, Platz 7 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r8_p8_name</name>
+    <description>Reihe 8, Platz 8 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r8_p8_foto</name>
+    <description>Reihe 8, Platz 8 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r8_p9_name</name>
+    <description>Reihe 8, Platz 9 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r8_p9_foto</name>
+    <description>Reihe 8, Platz 9 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r8_p10_name</name>
+    <description>Reihe 8, Platz 10 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r8_p10_foto</name>
+    <description>Reihe 8, Platz 10 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r8_p11_name</name>
+    <description>Reihe 8, Platz 11 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r8_p11_foto</name>
+    <description>Reihe 8, Platz 11 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r8_p12_name</name>
+    <description>Reihe 8, Platz 12 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r8_p12_foto</name>
+    <description>Reihe 8, Platz 12 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r8_p13_name</name>
+    <description>Reihe 8, Platz 13 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r8_p13_foto</name>
+    <description>Reihe 8, Platz 13 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r8_p14_name</name>
+    <description>Reihe 8, Platz 14 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r8_p14_foto</name>
+    <description>Reihe 8, Platz 14 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r8_p15_name</name>
+    <description>Reihe 8, Platz 15 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r8_p15_foto</name>
+    <description>Reihe 8, Platz 15 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
+    <required>0</required>
+    <param1>160</param1>
+    <param2>0</param2>
+    <param3>2097152</param3>
+    <param4>160</param4>
+    <param5>0</param5>
+  </field>
+  <field>
+    <type>text</type>
+    <name>r8_p16_name</name>
+    <description>Reihe 8, Platz 16 von links aus Lehrpersonensicht: Name; leer für unbesetzten Platz.</description>
+    <required>0</required>
+    <param1>0</param1>
+  </field>
+  <field>
+    <type>picture</type>
+    <name>r8_p16_foto</name>
+    <description>Reihe 8, Platz 16 von links aus Lehrpersonensicht: optionales Foto. Alternativtext mit Namen ergänzen.</description>
     <required>0</required>
     <param1>160</param1>
     <param2>0</param2>
