@@ -1,6 +1,6 @@
 ---
 title: "Moodle-Datenbanken"
-date: 2026-09-09
+date: 2026-09-17
 ---
 
 # Moodle-Datenbanken
@@ -10,6 +10,7 @@ Moodle-Datenbank-Aktivitäten für die Berufsmaturitätsschule: Felddefinitionen
 ## Vorbereitete Datenbanken
 
 - [Hausarbeit-Gruppenerfassung](03-datenbanken/hausarbeit-gruppenerfassung/README.md): vier Exportfelder, geführte Erfassung und responsive Karten; für die eigene Gruppe und die Lehrperson. ZIP, lokale Vorschau und Prüfprotokoll sind im Aktivitätsordner enthalten. Moodle-Import und Gruppenzugriff sind noch in der Zielinstanz zu testen.
+- [SoSafe-Zertifikate](03-datenbanken/sosafe-zertifikate/README.md): aktueller Abgabestatus je Klasse mit rasch erfassbarer Übersicht, Hinweis bei fehlenden Zertifikaten und Anzeige der eintragenden Lehrperson. ZIP, lokale Vorschau und Prüfprotokoll sind im Aktivitätsordner enthalten. Moodle-Import und Rollenprüfung sind noch in der Zielinstanz auszuführen.
 
 ## Regeln für Agents
 

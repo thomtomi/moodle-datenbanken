@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='utf-8'?>
+<preset>
+  <description>Aktuelle Übersicht der SoSafe-Zertifikatsabgaben je Klasse für Lehrpersonen.</description>
+  <settings>
+    <intro>&lt;div class="ss-instruction"&gt;
+  &lt;h3 style="color: #000000"&gt;Einführung&lt;/h3&gt;
+  &lt;p&gt;
+    Diese Datenbank zeigt den aktuellen Stand der SoSafe-Zertifikate je Klasse.
+    Sie unterstützt Lehrpersonen dabei, fehlende Zertifikate rasch zu erkennen
+    und den Stand gemeinsam aktuell zu halten.
+  &lt;/p&gt;
+  &lt;h3 style="color: #000000"&gt;Auftrag&lt;/h3&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Suchen Sie in der Übersicht zuerst nach Ihrer Klasse.&lt;/li&gt;
+    &lt;li&gt;
+      Ist bereits ein Eintrag vorhanden, öffnen und bearbeiten Sie diesen.
+      Erstellen Sie nur dann einen neuen Eintrag, wenn Ihre Klasse noch nicht
+      aufgeführt ist.
+    &lt;/li&gt;
+    &lt;li&gt;
+      Wählen Sie die Klasse und den aktuellen Abgabestatus. Wählen Sie «Alle
+      Zertifikate abgegeben» erst, wenn die Zertifikate aller Lernenden der
+      Klasse vorliegen.
+    &lt;/li&gt;
+    &lt;li&gt;
+      Fehlt genau ein Zertifikat, tragen Sie im Hinweisfeld den Namen der
+      betreffenden lernenden Person ein. Fehlen mehrere Zertifikate, ergänzen
+      Sie einen kurzen sachlichen Hinweis.
+    &lt;/li&gt;
+    &lt;li&gt;
+      Kontrollieren Sie die Angaben und speichern Sie den Eintrag. Der Eintrag
+      zeigt danach die ursprünglich eintragende Lehrperson und den Zeitpunkt der
+      letzten Änderung an.
+    &lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;
+    Als Ergebnis gibt es pro Klasse genau einen aktuellen Eintrag mit dem
+    Abgabestatus der SoSafe-Zertifikate.
+  &lt;/p&gt;
+&lt;/div&gt;</intro>
+    <comments>0</comments>
+    <requiredentries>0</requiredentries>
+    <requiredentriestoview>0</requiredentriestoview>
+    <maxentries>0</maxentries>
+    <rssarticles>0</rssarticles>
+    <approval>0</approval>
+    <defaultsortdir>0</defaultsortdir>
+    <defaultsort>Klasse</defaultsort>
+  </settings>
+  <field>
+    <type>menu</type>
+    <name>Klasse</name>
+    <description>Wählen Sie die Klasse, für welche der aktuelle Abgabestatus gilt.</description>
+    <required>1</required>
+    <param1>BM1-2427
+BM1-2528
+BM1-2629
+BMLMT-2427
+BMLMT-2326
+BM2tz-2527
+BM2tz-2628
+BM2vz-2627</param1>
+  </field>
+  <field>
+    <type>menu</type>
+    <name>Abgabestatus</name>
+    <description>Wählen Sie den aktuellen Stand der SoSafe-Zertifikate für die Klasse.</description>
+    <required>1</required>
+    <param1>Alle Zertifikate abgegeben
+Nicht alle Zertifikate abgegeben</param1>
+  </field>
+  <field>
+    <type>textarea</type>
+    <name>Hinweis zur fehlenden Abgabe</name>
+    <description>Bei genau einer fehlenden Abgabe: Name der betreffenden lernenden Person. Bei mehreren fehlenden Abgaben: kurzer sachlicher Hinweis.</description>
+    <required>0</required>
+    <param2>80</param2>
+    <param3>4</param3>
+    <param5>0</param5>
+  </field>
+</preset>

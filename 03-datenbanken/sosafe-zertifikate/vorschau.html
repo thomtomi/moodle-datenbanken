@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SoSafe-Zertifikate - lokale Vorschau</title>
+  <style>
+    body { background: #eaf1f1; color: #1d3440; margin: 0; }
+    .ss-preview { margin: 0 auto; max-width: 78rem; padding: 1.5rem; }
+    .ss-preview-note { font-family: system-ui, sans-serif; margin: 0 0 1rem; }
+.ss-db {
+  --ss-ink: #1d3440;
+  --ss-muted: #5b6b73;
+  --ss-paper: #ffffff;
+  --ss-line: #c8d4d8;
+  --ss-accent: #086f68;
+  --ss-complete: #1d6f42;
+  --ss-complete-bg: #e3f3e8;
+  --ss-pending: #975d00;
+  --ss-pending-bg: #fff0d6;
+  color: var(--ss-ink);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.5;
+}
+
+.ss-db *,
+.ss-db *::before,
+.ss-db *::after {
+  box-sizing: border-box;
+}
+
+.ss-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  margin: 1rem auto;
+  max-width: 72rem;
+}
+
+.ss-card,
+.ss-single,
+.ss-entry,
+.ss-search {
+  background: var(--ss-paper);
+  border: 1px solid var(--ss-line);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.ss-single,
+.ss-entry,
+.ss-search {
+  margin: 1rem auto;
+  max-width: 48rem;
+}
+
+.ss-card-header,
+.ss-single-header,
+.ss-card-footer {
+  align-items: flex-start;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.ss-eyebrow {
+  color: var(--ss-muted);
+  font-family: system-ui, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.25rem;
+  text-transform: uppercase;
+}
+
+.ss-title,
+.ss-single h2,
+.ss-entry h3,
+.ss-search h3 {
+  color: var(--ss-ink);
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.ss-actions {
+  flex: 0 0 auto;
+}
+
+.ss-status {
+  background: #edf1f2;
+  border: 1px solid var(--ss-line);
+  border-radius: 4px;
+  color: var(--ss-ink);
+  display: inline-block;
+  font-family: system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 1.25rem 0 0;
+  max-width: 100%;
+  padding: 0.5rem 0.65rem;
+}
+
+.ss-status.is-complete {
+  background: var(--ss-complete-bg);
+  border-color: var(--ss-complete);
+  color: var(--ss-complete);
+}
+
+.ss-status.is-pending {
+  background: var(--ss-pending-bg);
+  border-color: var(--ss-pending);
+  color: var(--ss-pending);
+}
+
+.ss-note {
+  color: var(--ss-ink);
+  margin: 0.8rem 0 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.ss-note:empty {
+  display: none;
+}
+
+.ss-card-footer,
+.ss-record-meta {
+  border-top: 1px solid var(--ss-line);
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+}
+
+.ss-meta,
+.ss-record-meta {
+  color: var(--ss-muted);
+  font-family: system-ui, sans-serif;
+  font-size: 0.82rem;
+}
+
+.ss-meta {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.ss-record-meta p {
+  margin: 0.25rem 0;
+}
+
+.ss-detail-link {
+  color: var(--ss-accent);
+  flex: 0 0 auto;
+  font-family: system-ui, sans-serif;
+  font-weight: 700;
+}
+
+.ss-section {
+  border-top: 1px solid var(--ss-line);
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+}
+
+.ss-section h3 {
+  color: var(--ss-ink);
+  margin: 0;
+}
+
+.ss-note-detail {
+  min-height: 1.5rem;
+}
+
+.ss-entry-header {
+  border-bottom: 3px solid var(--ss-accent);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.ss-entry-header > p:not(.ss-eyebrow) {
+  color: var(--ss-muted);
+  margin-bottom: 0;
+}
+
+.ss-form-section {
+  border: 0;
+  margin: 1.5rem 0;
+  padding: 0;
+}
+
+.ss-field {
+  border-top: 1px solid var(--ss-line);
+  padding: 1rem 0;
+}
+
+.ss-field label,
+.ss-search label {
+  display: block;
+  font-family: system-ui, sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.ss-field p,
+.ss-privacy-note {
+  color: var(--ss-muted);
+  font-size: 0.92rem;
+  margin: 0 0 0.6rem;
+}
+
+.ss-field input,
+.ss-field select,
+.ss-field textarea,
+.ss-search input,
+.ss-search select {
+  max-width: 100%;
+}
+
+.ss-privacy-note {
+  border-left: 3px solid var(--ss-pending);
+  margin: 1.5rem 0 0;
+  padding-left: 0.75rem;
+}
+
+.ss-search-fields {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 1rem;
+}
+
+.ss-db a:focus-visible,
+.ss-db input:focus-visible,
+.ss-db select:focus-visible,
+.ss-db textarea:focus-visible {
+  outline: 3px solid var(--ss-pending);
+  outline-offset: 2px;
+}
+
+@media (max-width: 42rem) {
+  .ss-list {
+    grid-template-columns: 1fr;
+  }
+
+  .ss-card,
+  .ss-single,
+  .ss-entry,
+  .ss-search {
+    padding: 1rem;
+  }
+
+  .ss-card-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .ss-search-fields {
+    grid-template-columns: 1fr;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <main class="ss-preview">
+    <p class="ss-preview-note">Lokale Vorschau mit ausschliesslich synthetischen Beispieldaten. Kein Moodle-Funktionstest.</p>
+    <h1>Klassenübersicht</h1>
+<div class="ss-list"></div>
+<article class="ss-db ss-card">
+  <header class="ss-card-header">
+    <div>
+      <p class="ss-eyebrow">SoSafe-Zertifikate</p>
+      <h3 class="ss-title">BM1-2427</h3>
+    </div>
+    <div class="ss-actions"></div>
+  </header>
+  <p class="ss-status" data-ss-status>Alle Zertifikate abgegeben</p>
+  <p class="ss-note"></p>
+  <footer class="ss-card-footer">
+    <div class="ss-meta">
+      <span>Erfasst von: Anna Muster</span>
+      <span>Zuletzt geändert: 17. September 2026, 09:15</span>
+    </div>
+    <a class="ss-detail-link" href="#vollstaendig">Details öffnen</a>
+  </footer>
+</article>
+<article class="ss-db ss-card">
+  <header class="ss-card-header">
+    <div>
+      <p class="ss-eyebrow">SoSafe-Zertifikate</p>
+      <h3 class="ss-title">BMLMT-2427</h3>
+    </div>
+    <div class="ss-actions"></div>
+  </header>
+  <p class="ss-status" data-ss-status>Nicht alle Zertifikate abgegeben</p>
+  <p class="ss-note">Nora Beispiel hat ihr Zertifikat noch nicht abgegeben.</p>
+  <footer class="ss-card-footer">
+    <div class="ss-meta">
+      <span>Erfasst von: Marco Beispiel</span>
+      <span>Zuletzt geändert: 17. September 2026, 10:40</span>
+    </div>
+    <a class="ss-detail-link" href="#unvollstaendig">Details öffnen</a>
+  </footer>
+</article>
+</div>
+
+    <h1>Einzelansichten</h1>
+<section id="vollstaendig"><article class="ss-db ss-single">
+  <header class="ss-single-header">
+    <div>
+      <p class="ss-eyebrow">SoSafe-Zertifikate</p>
+      <h2>BM1-2427</h2>
+    </div>
+    <div class="ss-actions"></div>
+  </header>
+  <section class="ss-section" aria-label="Abgabestatus">
+    <h3>Aktueller Abgabestatus</h3>
+    <p class="ss-status" data-ss-status>Alle Zertifikate abgegeben</p>
+  </section>
+  <section class="ss-section">
+    <h3>Hinweis zur fehlenden Abgabe</h3>
+    <div class="ss-note ss-note-detail"></div>
+  </section>
+  <footer class="ss-record-meta">
+    <p>Erfasst von: Anna Muster</p>
+    <p>Zuletzt geändert: 17. September 2026, 09:15</p>
+  </footer>
+</article>
+</section><section id="unvollstaendig"><article class="ss-db ss-single">
+  <header class="ss-single-header">
+    <div>
+      <p class="ss-eyebrow">SoSafe-Zertifikate</p>
+      <h2>BMLMT-2427</h2>
+    </div>
+    <div class="ss-actions"></div>
+  </header>
+  <section class="ss-section" aria-label="Abgabestatus">
+    <h3>Aktueller Abgabestatus</h3>
+    <p class="ss-status" data-ss-status>Nicht alle Zertifikate abgegeben</p>
+  </section>
+  <section class="ss-section">
+    <h3>Hinweis zur fehlenden Abgabe</h3>
+    <div class="ss-note ss-note-detail">Nora Beispiel hat ihr Zertifikat noch nicht abgegeben.</div>
+  </section>
+  <footer class="ss-record-meta">
+    <p>Erfasst von: Marco Beispiel</p>
+    <p>Zuletzt geändert: 17. September 2026, 10:40</p>
+  </footer>
+</article>
+</section>
+  </main>
+  <script>
+(function () {
+  "use strict";
+
+  function markStatuses() {
+    document
+      .querySelectorAll(".ss-db [data-ss-status]")
+      .forEach(function (status) {
+        var value = status.textContent.trim();
+        status.classList.remove("is-complete", "is-pending");
+        if (value === "Alle Zertifikate abgegeben") {
+          status.classList.add("is-complete");
+        } else if (value === "Nicht alle Zertifikate abgegeben") {
+          status.classList.add("is-pending");
+        }
+      });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", markStatuses);
+  } else {
+    markStatuses();
+  }
+})();
+
+  </script>
+</body>
+</html>
